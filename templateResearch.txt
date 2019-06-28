@@ -1,237 +1,46 @@
-astedit57501
+Very apparent that there is a format being used that creates the complete HTML page
+In order to narrow down which page it is, I need to look through all these
+Take notes on specific files being called as well as formats
+From there I will have to look at the most likely files until we know for sure it is the charges page
 
-astfull57501
+Also to be aware of is the naming convention
+Many times the names are abbreviated in an easy way to understand
+As I understand the naming convention, I will update it in NotesOnFormat.txt
 
-astfull57509
+Big Success! The comments at the bottom are calling lines for the identifying 3 letter abbreviations,
+Since Big comment is <!-- slp SLP --> that means we can lower it down to 7 HTML file templates
 
-astlist57501
+slpview22501.html does not have the <!-- slp SLP --> comment, removing
 
-astlist57509
-
-astslct57501
-
-astsrnt75001
-
-bctfull42501
-
-bctfull42509
-
-bctlist42501
-
-bctlist42509
-
-bctslct42501
-
-cmplist47501
-
-cmpview47501
-
-cmt2fa
-
-cmtforcepw
-
-cntedit35001
-
-cntfull35001
-
-cntlist35001
-
-cntsrnt75001
-
-crdedit10001
-
-crdfull10001
-
-crdfull10001
-
-crdslct10001
-
-crdsrnt75001
-
-docedit17501
-
-docfull17501
-
-doclist17501
-
-doclist17509
-
-docupld17501
-
-docupld17509
-
-docview17501
-
-emsedit62501
-
-emsfull62501
-
-emsview62501
-
-emsview62509
-
-ev1list15001
-
-evtedit15001
-
-evtlist15001
-
-evtlist15009
-
-evtview15001
-
-evtview15009
-
-genhomepage1
-
-genhomepage9
-
-glslist82501
-
-hobfull87501
-
-inflist50001
-
-infview50001
-
-itmedit27501
-
-itmfull27501
-
-itmlist27501
-
-itmview27501
-
-iwerror
-
-kbaedit60001
-
-kbafull60001
-
-kbafull60009
-
-kbalist60001
-
-kbalist60009
-
-kbaslct60001
-
-maledit25001
-
-malfull25001
-
-mallist25001
-
-malview25001
-
-ntbedit20001
-
-ntbedit20009
-
-ntbfull20001
-
-ntblist20001
-
-ntblist20009
-
-ntbview20001
-
-ntbview20009
-
-oppedit40001
-
-oppfull40001
-
-opplist40001
-
-oppslct40001
-
-preprrp80001
-
-pswedit85001
-
-pswlist85001
-
-pswview85001
-
-qteedit67501
-
-qteedit67509
-
-qtefull67501
-
-qtefull67509
-
-qtelist67501
-
-qtelist67509
-
-qtledit70011
-
-qtledit70021
-
-qtllist70009
-
-qtlview70011
-
-qtlview70019
-
-qtlview70021
-
-qtlview70029
-
-remedit90001
-
-rpxedit65001
+Attempting to open all extensions and look for additional comments
 
 slpedit22501
-
+  - Contains <!--CmtSysInfo1--> and <!--CmtSysInfo2-->
+  - Contians comments that are not present in actual charges
 slpedit22531
-
+  - Contains <!--CmtSysInfo1--> and <!--CmtSysInfo2-->
+  - Contians comments that are not present in actual charges
 slpfull22501
-
+  - Contains <!--CmtSysInfo1--> and <!--CmtSysInfo2-->
+  - Contians comments that are not present in actual charges
 slplist22501
-
+  - Contains <!--CmtSysInfo1--> and <!--CmtSysInfo2-->
 slplist22509
-
-slpview22501
-
+  - Contains <!--CmtSysInfo1--> and <!--CmtSysInfo2-->
 slpview22509
+  - Contains <!--CmtSysInfo1--> and <!--CmtSysInfo2-->
+  - Contians comments that are not present in actual charges
 
-temlist52501
+After this quick check through comments, I will narrow it down to 
+slplist22509.html and slplist22501.html
 
-temview52501
+Only difference I clearly see when switching between the two is right before the body ends
+22501 has {%CmtEmpMdlFrmCode%} whereas 22509 does not
+Here are my additional notes seperating these
 
-tktdsgn77501
+CmtEmpMdlFrmCode is not found in the CommitCRM folder which leads me to believe it os slplist22509.html
 
-tktedit12501
+slplist22509.html is the main screen
 
-tktedit12509
-
-tktedit12531
-
-tktedit12541
-
-tktfull12501
-
-tktfull12501r00001
-
-tktfull12501r00002
-
-tktfull12509
-
-tktlist12501
-
-tktlist12509
-
-tktslct12501
-
-tsklist45001
-
-waulist55001
-
-wauview55001
-
-wrkfull37501
-
-wrklist37501
+improved method by writing within the files and found that adding charges can be found on
+slpedit22501.html

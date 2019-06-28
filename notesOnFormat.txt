@@ -1,0 +1,26 @@
+{%[***myofficesetting1***]%}
+This format gets the file "myofficesetting1" 
+no matter where its directory is or not matter what type of file it is
+
+So when you see {%[...]%}
+Know it is calling another file to use it
+
+Other specifics are based on bootstrap (to understand spacing)
+Basically all you need to know is col-sm-2 is column small-2
+
+Another good source of finding what HTML file we are dealing with could be comments
+so look for comments that look similar
+
+Biggest comment lead
+  --> <!-- slp SLP -->
+
+Look for 
+  --> cmtedtdatafldslpcardid_fldcrdfullname
+
+Notes on full, list, view, edit
+  - So far they are given these names based on what you can do on that page
+  - like in the beginning charges page, it list your charges
+  - and on the adding a charge you are technically 'editing' a charge
+
+Continuing on we need to know how some of the pieces speak together to get this fully functioning
+Since many of the areas are empty but have many elements present once on the actual HTML

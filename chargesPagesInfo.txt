@@ -1,0 +1,5 @@
+slplist22509
+  - is the page to see charges (when you first click on charges)
+slpedit22501
+  - is the Labor Charge - Insert page
+
