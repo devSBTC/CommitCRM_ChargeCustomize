@@ -1,0 +1,79 @@
+myofficesetting1
+    SBTC Online Ticketing Portal
+    <!
+      Please DO NOT use the following
+      HTML tags in the file:
+      HTML HEAD BODY 
+    > 
+
+
+MyOfficeSettingMobile1
+    SBTC Online Ticketing Portal
+    
+    <!
+      Your logo (in HTML format) and/or business name may be specified here.
+    
+      This will serve as the header for all pages displayed in Mobile mode.
+
+      We recommend using a very short text to serve as your header.
+
+      Please DO NOT use the following
+      HTML tags in the file: HTML, HEAD, BODY 
+
+      By default (i.e. if you do not modify this file) your business name will appear as the header.
+      (the system automatically replaces the ***CmtMyLicBusinessName*** token with your business name)
+    >
+    &nbsp;<B>***CmtMyLicBusinessName***</B>
+
+
+myofficesetting2
+    SBTC is a non-profit organization whose mission is to help other non-profits to excel in their missions through the use of technology.
+
+    St. Benedict Technology Consortium 
+    3525 S. Lake Park Ave,Chicago, IL 60653 
+    Phone: (224) 301-8130 
+    Fax: (847) 563-1378 
+
+    Help Desk Phone: (773) 509-3805 
+    Help Desk E-mail: helpdesk@sbtcsupport.org
+
+
+    <!
+      Please DO NOT use the following
+      HTML tags in the file:
+      HTML HEAD BODY 
+    >
+
+
+MyOfficeSettingMobile2
+    SBTC is a non-profit organization whose mission is to help other non-profits to excel in their missions through the use of technology.
+
+    St. Benedict Technology Consortium 
+    3525 S. Lake Park Ave,Chicago, IL 60653 
+    Phone: (224) 301-8130 
+    Fax: (847) 563-1378 
+
+    Help Desk Phone: (773) 509-3805 
+    Help Desk E-mail: helpdesk@sbtcsupport.org
+
+
+    <!
+      Please DO NOT use the following
+      HTML tags in the file:
+      HTML HEAD BODY 
+    >
+
+
+    <!
+      Your logo (in HTML format) and/or business name may be specified here.
+    
+      This will serve as the footer for all pages displayed in Mobile mode.
+
+      Please DO NOT use the following
+      HTML tags in the file: HTML, HEAD, BODY 
+
+      By default (i.e. if you do not modify this file) your business name will appear as the footer.
+      (the system automatically replaces the ***CmtMyLicBusinessName*** token with your business name)
+    >
+    &nbsp;<B>***CmtMyLicBusinessName***</B>
+
