@@ -7,45 +7,36 @@ Try to web these funcitons to their relative scripts and success is close
 JS files I am checking and results
   cmtgenutils20000.js
     - Nothing found
-  moment.min.js
-    - 
-  bootstrap-datetimepicker.min.js
-    - 
-  select2.min.js
-    - 
   cmtmsggeneng20000.js
-    - 
+    - Nothing found
   cmtchkgen20000.js
-    - 
+    - Nothing found
   cmtchkslp20000.js
-    - 
+    - Found a few
   cmtgensettings.js
-    - 
+    - Nothing found
   cmtcalendarcommon20000.js
-    - 
+    - Nothing found
   cmtcalendarpopup20000.js
-    - 
-  chosen.jquery.min.js
-    - 
-  chosen.proto.min.js
-    - 
+    - Nothing found
   cmtitmservices20000.js
-    - 
+    - Nothing found
   cmtbctservices20000.js
-    - 
+    - Nothing found
   cmtlclstrgcrd20000.js
-    - 
-  cmttmpdatacrdlqc44jkf2qd20v3lhryn.js
-    - 
+    - Nothing Found
   cmtcmbselect2services20000.js
-    - 
+    - Nothing found
   cmtgeneditservices20000.js
-    - 
+    - Nothing found
   cmtpopup20000.js
-    - 
+    - No "cmt" or "btn" found so assuming functions will not be here
   cmtitmf.js
-    - 
+    - seems to just hold variables but none of the functions
 
+This does not seem like the best way to find the functions/pieces of code so find new method
+
+---------------------------------------------------------------------------
 
 CmtGenTopBackGenedit
   - 
@@ -75,7 +66,8 @@ cmtedtdatafldslpcardid_fldcrdfullname_cmttabindex1
   - 
 
 cmtseldatafldslpcardid_fldcrdfullname
-  - 
+  - cmtchkslp20000
+  - CmtSetCrdSlct()
 
 cmtclrdatafldslpcardid_fldcrdfullname
   - 
@@ -102,12 +94,6 @@ cmtclrdatafldslpticketid_FLDTKTCLCINFO
   - 
 
 cmtLBLdatafldslpticketid_FLDGENCLCLNKRECIDMEMO
-  - 
-
-cmtseldatafldslpticketid_FLDTKTCLCINFO
-  - 
-
-cmtclrdatafldslpticketid_FLDTKTCLCINFO
   - 
 
 cmtlbldescfldslpbcrecid
@@ -210,7 +196,8 @@ cmtlbldescfldslpbilltotal
   - 
 
 cmtedtdatafldslpbilltotal
-  - 
+  - cmtchkslp20000
+  - document.forms[0].cmtedtdatafldslpbilltotal.value = CmtGetCoinSign() + CmtDefFloatToStr(aBillTotal);
 
 cmtlbldescfldslpdesc
   - 
