@@ -22,5 +22,8 @@ Notes on full, list, view, edit
   - like in the beginning charges page, it list your charges
   - and on the adding a charge you are technically 'editing' a charge
 
-Continuing on we need to know how some of the pieces speak together to get this fully functioning
-Since many of the areas are empty but have many elements present once on the actual HTML
+{% %}
+  - Django programming language
+  - Whatever text is inbetween this is a call to a special function or code running, 
+    and the result of that will be here
+

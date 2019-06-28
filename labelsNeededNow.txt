@@ -1,191 +1,243 @@
+These were not present as files within the server
+these are function or code running that must be found
+
+Most likely they will be found in the JavaScript files that are attached in the head of the webpage
+Try to web these funcitons to their relative scripts and success is close
+
+JS files I am checking and results
+  cmtgenutils20000.js
+    - Nothing found
+  moment.min.js
+    - 
+  bootstrap-datetimepicker.min.js
+    - 
+  select2.min.js
+    - 
+  cmtmsggeneng20000.js
+    - 
+  cmtchkgen20000.js
+    - 
+  cmtchkslp20000.js
+    - 
+  cmtgensettings.js
+    - 
+  cmtcalendarcommon20000.js
+    - 
+  cmtcalendarpopup20000.js
+    - 
+  chosen.jquery.min.js
+    - 
+  chosen.proto.min.js
+    - 
+  cmtitmservices20000.js
+    - 
+  cmtbctservices20000.js
+    - 
+  cmtlclstrgcrd20000.js
+    - 
+  cmttmpdatacrdlqc44jkf2qd20v3lhryn.js
+    - 
+  cmtcmbselect2services20000.js
+    - 
+  cmtgeneditservices20000.js
+    - 
+  cmtpopup20000.js
+    - 
+  cmtitmf.js
+    - 
+
+
 CmtGenTopBackGenedit
-  - Not found
+  - 
 
 cmttabmenugenedit
-
+  - 
 
 cmtsbjslpedit
-
+  - 
 
 cmtoperslpedit
-
+  - 
 
 cmtpreventeditmsgslpedit
-
+  - 
 
 cmtprivmsgslpedit
-
+  - 
 
 cmterrmsgslpedit
-
+  - 
 
 cmtlnkdescfldslpcardid_fldcrdfullname
-
+  - 
 
 cmtedtdatafldslpcardid_fldcrdfullname_cmttabindex1
-
+  - 
 
 cmtseldatafldslpcardid_fldcrdfullname
-
+  - 
 
 cmtclrdatafldslpcardid_fldcrdfullname
-
+  - 
 
 cmtlnkdescfldslpcontactid_fldcrdcontact
-
+  - 
 
 cmtedtdatafldslpcontactid_fldcrdcontact_cmttabindex2
-
+  - 
 
 cmbslpeditselectrecid
-
+  - 
 
 cmtlbldescfldslpticketid
-
+  - 
 
 cmtedtdatafldslpticketid_FLDTKTCLCLNKRECIDSHORT
-
+  - 
 
 cmtseldatafldslpticketid_FLDTKTCLCINFO
-
+  - 
 
 cmtclrdatafldslpticketid_FLDTKTCLCINFO
-
+  - 
 
 cmtLBLdatafldslpticketid_FLDGENCLCLNKRECIDMEMO
-
+  - 
 
 cmtseldatafldslpticketid_FLDTKTCLCINFO
-
+  - 
 
 cmtclrdatafldslpticketid_FLDTKTCLCINFO
-
+  - 
 
 cmtlbldescfldslpbcrecid
-
+  - 
 
 cmtedtdatafldslpbcrecid_fldbctclccodename_cmttabindex3
-
+  - 
 
 cmtlnkdatafldslpbcrecid_fldbctclctypedates
-
+  - 
 
 cmtlbldatafldslpbcrecid_fldbctclcbcrcurstate
-
+  - 
 
 cmtlbldescfldslpbcrecid_fldbctdescexternal
-
+  - 
 
 cmtlbldatafldslpbcrecid_fldbctdescexternal
-
+  - 
 
 cmtlbldescfldslpbcrecid_fldbctdescinternal
-
+  - 
 
 cmtlbldatafldslpbcrecid_fldbctdescinternal
-
+  - 
 
 cmtlbldescfldslpbcrecid_fldbctnote
-
+  - 
 
 cmtlbldatafldslpbcrecid_fldbctnote
-
+  - 
 
 cmtlnkdescfldslpworkerid_fldwrknickname
-
+  - 
 
 cmtedtdatafldslpworkerid_fldwrknickname_cmttabindex4
-
+  - 
 
 cmtlbldescfldslpslipdate
-
+  - 
 
 cmtedtdatafldslpslipdate_cmttabindex5
-
+  - 
 
 CmtLblDescQFrToTimeGenLdTmplCmb
-
+  - 
 
 CmtLblDataQFrToTimeGenLdTmplCmb
-
+  - 
 
 cmtedtdescfldslpstarttime
-
+  - 
 
 cmtedtdatafldslpstarttime_cmttabindex6
-
+  - 
 
 cmtedtdatafldslpendtime_cmttabindex7
-
+  - 
 
 cmtlbldescSysRulexxyyzzCaptionSlpDrt
-
+  - 
 
 cmtedtdataFLDSLPTIMESPENTINMIN_cmttabindex8
-
+  - 
 
 btggnslpeditfldslpclcfromtotime
-
+  - 
 
 cmtlnkdescfldslpitemid_flditmitemno
-
+  - 
 
 cmtedtdatafldslpitemid_flditmclccodename_cmttabindex9
-
+  - 
 
 cmtlbldescfldslpclcamount
-
+  - 
 
 cmtedtdatafldslpclcamount_cmttabindex10
-
+  - 
 
 cmtlbldescfldslpprice
-
+  - 
 
 cmtedtdatafldslpprice_cmttabindex11
-
+  - 
 
 cmtlbldescfldslpadjust
-
+  - 
 
 cmtedtdatafldslpadjust_cmttabindex12
-
+  - 
 
 cmtedtdatafldslpadjusttype_cmttabindex13
-
+  - 
 
 cmtedtdatafldslpclcadjustamount_cmttabindex14
-
+  - 
 
 cmtlbldescfldslpbilltotal
-
+  - 
 
 cmtedtdatafldslpbilltotal
+  - 
 
+cmtlbldescfldslpdesc
+  - 
 
-cmtlbldescfldslpdesc%}{%ctpcmbxxxcmbMemoLstDrfldslpdesc
-
+ctpcmbxxxcmbMemoLstDrfldslpdesc
+  - 
 
 cmtedtdatafldslpdesc_cmttabindex15
-
+  - 
 
 cmtlbldescfldslpuser1
-
+  - 
 
 cmtedtdatafldslpuser1_cmttabindex16
-
+  - 
 
 cmtedtdataFLDSLPCLCBILLKIND_cmttabindex17
-
+  - 
 
 cmtlbldataFLDSLPBILLKIND
-
+  - 
 
 btnslpeditsave1
-
+  - 
 
 btnslpeditcancel
-
+  - 
 
 cmtlbldesctkteditfldGenLabels
-
+  - 
