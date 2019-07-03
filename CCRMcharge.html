@@ -163,15 +163,20 @@
 <link href="/files/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="/filesnc/cmtgenstyles20000.css" rel="stylesheet" type="text/css"><link href="/filesnc/cmtlangstyleseng20000.css" rel="stylesheet" type="text/css"><link href="/filesnc/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css"><link href="/filesnc/select2.min.css" rel="stylesheet" type="text/css"><link href="/filesnc/select2-bootstrap.min.css" rel="stylesheet" type="text/css"><link href="/filesnc/chosen.min.css" rel="stylesheet" type="text/css"><link href="/filesnc/chosen-bootstrap.css" rel="stylesheet" type="text/css"><link href="/filesnc/cmttmpdatagencmtdrpdnbtnnx0eg53k2t.css" rel="stylesheet" type="text/css"><script type="text/javascript">
   //Just a bunch of CSS
 
-function FormDefaultSubmit()
-{return false;}
+function FormDefaultSubmit(){
+  return false;
+}
+
 var GIsPartialUpdate=false;
 var GOnResizetimeout=1000;
 var GURLBase="/1breayh0adc6nv180um7d0hs3ocl";
 var GAppID="1breayh0adc6nv180um7d0hs3ocl";
 var GTrackID=4;
 
-function IWTop(){return window;}
+function IWTop(){
+  return window;
+}
+
 var GActiveControl = null;
 history.go(1);
 
@@ -183,120 +188,97 @@ function Validate() {
 function InitIWCLObjects() {
 
 }
+
 function Initialize() {
-StaticInit();
-GActivateLock = true;
-InitRects(741, 907);
-InitIWCLObjects();
-if (document.body.leftMargin < 0 && document.body.topMargin < 0) {
-  document.body.leftMargin = 0;
-  document.body.topMargin = 0;
+  StaticInit();
+  GActivateLock = true;
+  InitRects(741, 907);
+  InitIWCLObjects();
+  if (document.body.leftMargin < 0 && document.body.topMargin < 0) {
+    document.body.leftMargin = 0;
+    document.body.topMargin = 0;
+  }
+  ReleaseLock();
+  CmtRenWinName();
+  CmtSetUrl();
+  window.onpopstate = function(event) {history.go(1);} 
+  CmtGenSetFocusOnLoad("cmtedtdatafldslpstarttime")
+  CmtGENOnLoad();
 }
-ReleaseLock();
-CmtRenWinName();
-CmtSetUrl();
- window.onpopstate = function(event) {history.go(1);} 
-CmtGenSetFocusOnLoad("cmtedtdatafldslpstarttime")
-CmtGENOnLoad();
 
-
-}
 </script>
 <title>Labor&nbsp;Charge: 06/24/2019,Labor,John Mikos - CommitCRM</title><script type="text/javascript">
 
- function CmtGENOnB4UnLoad(e)
-{
- return(CmtslpeditOnB4UnLoad(e)); 
+function CmtGENOnB4UnLoad(e){
+  return(CmtslpeditOnB4UnLoad(e)); 
 }
 
- function CmtGENOnLoad()
-{
- 
-CmtslpeditOnLoad();
-window.onbeforeunload = CmtGENOnB4UnLoad; 
+function CmtGENOnLoad(){
+  CmtslpeditOnLoad();
+  window.onbeforeunload = CmtGENOnB4UnLoad; 
 }
 
- function CmtGenChkByApp_slp()
-{
+function CmtGenChkByApp_slp(){
   return CmtslpChk(); 
 }
 
- function CmtGenRqrByFld_slp()
-{
-  return true 
+function CmtGenRqrByFld_slp(){
+  return true ;
 }
 
- function CmtGenChkByFld_slp()
-{
- var TmpResult = false;
- if (!CmtChkValidDateVal(document.forms[0].cmtedtdatafldslpslipdate.value,"Date",false,false))
-{
- document.forms[0].cmtedtdatafldslpslipdate.focus(); 
-}
-else
- if (!CmtChkValidTimeVal(document.forms[0].cmtedtdatafldslpstarttime.value,"Start Time",false,false))
-{
- document.forms[0].cmtedtdatafldslpstarttime.focus(); 
-}
-else
- if (!CmtChkValidTimeVal(document.forms[0].cmtedtdatafldslpendtime.value,"End Time",false,false))
-{
- document.forms[0].cmtedtdatafldslpendtime.focus(); 
-}
-else
- if (!CmtChkValidFloatVal(document.forms[0].cmtedtdatafldslpclcamount.value,"Units",false,false))
-{
- document.forms[0].cmtedtdatafldslpclcamount.focus(); 
-}
-else
-{TmpResult = true;}
-return(TmpResult); 
+function CmtGenChkByFld_slp(){
+  var TmpResult = false;
+  if (!CmtChkValidDateVal(document.forms[0].cmtedtdatafldslpslipdate.value,"Date",false,false)){
+    document.forms[0].cmtedtdatafldslpslipdate.focus(); 
+  }
+  else if (!CmtChkValidTimeVal(document.forms[0].cmtedtdatafldslpstarttime.value,"Start Time",false,false)) {
+      document.forms[0].cmtedtdatafldslpstarttime.focus(); 
+    }
+  else if (!CmtChkValidTimeVal(document.forms[0].cmtedtdatafldslpendtime.value,"End Time",false,false)) {
+    document.forms[0].cmtedtdatafldslpendtime.focus(); 
+  }
+  else if (!CmtChkValidFloatVal(document.forms[0].cmtedtdatafldslpclcamount.value,"Units",false,false)) {
+    document.forms[0].cmtedtdatafldslpclcamount.focus(); 
+  }
+  else {
+    TmpResult = true;
+  }
+  return(TmpResult); 
 }
 
- function CmtMakeCancel_slp(xSender)
-{
- if(CmtCanMakeCancelGEN())
-{
- getSubmitForm().cmthidegenslpedit.value = xSender.id; 
- SubmitClickConfirm("lnkgenslpedit","", true,""); 
-} 
+function CmtMakeCancel_slp(xSender){
+  if(CmtCanMakeCancelGEN()){
+    getSubmitForm().cmthidegenslpedit.value = xSender.id; 
+    SubmitClickConfirm("lnkgenslpedit","", true,""); 
+  } 
 }
 
- function CmtCanMakeCancelGEN()
-{
+function CmtCanMakeCancelGEN() {
   return CmtCanMakeCancel_slp(); 
 }
 
- function CmtslpMakeSaveByCtrl(xcSender)
-{
- CmtMakeSave_slp(xcSender.id) 
+function CmtslpMakeSaveByCtrl(xcSender) {
+  CmtMakeSave_slp(xcSender.id) 
 }
 
- function CmtExeSave_slp(xcSender)
-{
- CmtExeSavePRP__slp(xcSender);
- SubmitClickConfirm("lnkgenslpedit","", true,""); 
- 
+function CmtExeSave_slp(xcSender) {
+  CmtExeSavePRP__slp(xcSender);
+  SubmitClickConfirm("lnkgenslpedit","", true,""); 
 }
 
- function CmtExeSavePRP__slp(xcSender)
-{
- CmtslpBeforeSave(xcSender);
- CmtGEN_slpSetCtrls2HiddenFlds();
- getSubmitForm().cmthidegenslpedit.value = xcSender;  
+function CmtExeSavePRP__slp(xcSender) {
+  CmtslpBeforeSave(xcSender);
+  CmtGEN_slpSetCtrls2HiddenFlds();
+  getSubmitForm().cmthidegenslpedit.value = xcSender;  
 }
 
- function CmtMakeSave_slp(xcSender)
-{
-  if (CmtGenChkSubj_slp()) 
-{
- CmtExeSave_slp(xcSender) 
-}
- 
+function CmtMakeSave_slp(xcSender){
+  if (CmtGenChkSubj_slp()) {
+    CmtExeSave_slp(xcSender) 
+  }
 }
 
- function CmtGenChkSubj_slp()
-{
+function CmtGenChkSubj_slp() {
   var TmpResult = false; 
 
   if (CmtGenChkByFld_slp() && CmtGenChkByApp_slp() && CmtGenRqrByFld_slp())
@@ -305,29 +287,27 @@ return(TmpResult);
   return(TmpResult); 
 }
 
- function CmtGEN_slpSetCtrls2HiddenFlds()
-{
- if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpcardid_fldcrdfullname ,document.forms[0].cmtedtdatafldslpcardid_fldcrdfullname))  getSubmitForm().cmthideedtdatafldslpcardid_fldcrdfullname.value = document.forms[0].cmtedtdatafldslpcardid_fldcrdfullname.value; 
-if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpcontactid_fldcrdcontact ,document.forms[0].cmtedtdatafldslpcontactid_fldcrdcontact))  getSubmitForm().cmthideedtdatafldslpcontactid_fldcrdcontact.value = document.forms[0].cmtedtdatafldslpcontactid_fldcrdcontact.selectedIndex; 
-if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpticketid_fldtktclclnkrecidshort ,document.forms[0].cmtedtdatafldslpticketid_fldtktclclnkrecidshort))  getSubmitForm().cmthideedtdatafldslpticketid_fldtktclclnkrecidshort.value = document.forms[0].cmtedtdatafldslpticketid_fldtktclclnkrecidshort.selectedIndex; 
-if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpbcrecid_fldbctclccodename ,document.forms[0].cmtedtdatafldslpbcrecid_fldbctclccodename))  getSubmitForm().cmthideedtdatafldslpbcrecid_fldbctclccodename.value = document.forms[0].cmtedtdatafldslpbcrecid_fldbctclccodename.selectedIndex; 
-if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpslipdate ,document.forms[0].cmtedtdatafldslpslipdate))  getSubmitForm().cmthideedtdatafldslpslipdate.value = CmtTrim(document.forms[0].cmtedtdatafldslpslipdate.value); 
-if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpstarttime ,document.forms[0].cmtedtdatafldslpstarttime))  getSubmitForm().cmthideedtdatafldslpstarttime.value = CmtTrim(document.forms[0].cmtedtdatafldslpstarttime.value); 
-if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpendtime ,document.forms[0].cmtedtdatafldslpendtime))  getSubmitForm().cmthideedtdatafldslpendtime.value = CmtTrim(document.forms[0].cmtedtdatafldslpendtime.value); 
-if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslptimespentinmin ,document.forms[0].cmtedtdatafldslptimespentinmin))  getSubmitForm().cmthideedtdatafldslptimespentinmin.value = CmtTrim(document.forms[0].cmtedtdatafldslptimespentinmin.value); 
-if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpitemid_flditmclccodename ,document.forms[0].cmtedtdatafldslpitemid_flditmclccodename))  getSubmitForm().cmthideedtdatafldslpitemid_flditmclccodename.value = document.forms[0].cmtedtdatafldslpitemid_flditmclccodename.selectedIndex; 
-if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpclcamount ,document.forms[0].cmtedtdatafldslpclcamount))  getSubmitForm().cmthideedtdatafldslpclcamount.value = CmtTrim(document.forms[0].cmtedtdatafldslpclcamount.value); 
-if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpdesc ,document.forms[0].cmtedtdatafldslpdesc))  getSubmitForm().cmthideedtdatafldslpdesc.value = CmtTrim(document.forms[0].cmtedtdatafldslpdesc.value); 
-if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpuser1 ,document.forms[0].cmtedtdatafldslpuser1))  getSubmitForm().cmthideedtdatafldslpuser1.value = document.forms[0].cmtedtdatafldslpuser1.selectedIndex;
- CmtslpSetCtrls2HiddenFlds(); 
+function CmtGEN_slpSetCtrls2HiddenFlds() {
+  if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpcardid_fldcrdfullname ,document.forms[0].cmtedtdatafldslpcardid_fldcrdfullname))  getSubmitForm().cmthideedtdatafldslpcardid_fldcrdfullname.value = document.forms[0].cmtedtdatafldslpcardid_fldcrdfullname.value; 
+  if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpcontactid_fldcrdcontact ,document.forms[0].cmtedtdatafldslpcontactid_fldcrdcontact))  getSubmitForm().cmthideedtdatafldslpcontactid_fldcrdcontact.value = document.forms[0].cmtedtdatafldslpcontactid_fldcrdcontact.selectedIndex; 
+  if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpticketid_fldtktclclnkrecidshort ,document.forms[0].cmtedtdatafldslpticketid_fldtktclclnkrecidshort))  getSubmitForm().cmthideedtdatafldslpticketid_fldtktclclnkrecidshort.value = document.forms[0].cmtedtdatafldslpticketid_fldtktclclnkrecidshort.selectedIndex; 
+  if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpbcrecid_fldbctclccodename ,document.forms[0].cmtedtdatafldslpbcrecid_fldbctclccodename))  getSubmitForm().cmthideedtdatafldslpbcrecid_fldbctclccodename.value = document.forms[0].cmtedtdatafldslpbcrecid_fldbctclccodename.selectedIndex; 
+  if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpslipdate ,document.forms[0].cmtedtdatafldslpslipdate))  getSubmitForm().cmthideedtdatafldslpslipdate.value = CmtTrim(document.forms[0].cmtedtdatafldslpslipdate.value); 
+  if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpstarttime ,document.forms[0].cmtedtdatafldslpstarttime))  getSubmitForm().cmthideedtdatafldslpstarttime.value = CmtTrim(document.forms[0].cmtedtdatafldslpstarttime.value); 
+  if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpendtime ,document.forms[0].cmtedtdatafldslpendtime))  getSubmitForm().cmthideedtdatafldslpendtime.value = CmtTrim(document.forms[0].cmtedtdatafldslpendtime.value); 
+  if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslptimespentinmin ,document.forms[0].cmtedtdatafldslptimespentinmin))  getSubmitForm().cmthideedtdatafldslptimespentinmin.value = CmtTrim(document.forms[0].cmtedtdatafldslptimespentinmin.value); 
+  if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpitemid_flditmclccodename ,document.forms[0].cmtedtdatafldslpitemid_flditmclccodename))  getSubmitForm().cmthideedtdatafldslpitemid_flditmclccodename.value = document.forms[0].cmtedtdatafldslpitemid_flditmclccodename.selectedIndex; 
+  if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpclcamount ,document.forms[0].cmtedtdatafldslpclcamount))  getSubmitForm().cmthideedtdatafldslpclcamount.value = CmtTrim(document.forms[0].cmtedtdatafldslpclcamount.value); 
+  if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpdesc ,document.forms[0].cmtedtdatafldslpdesc))  getSubmitForm().cmthideedtdatafldslpdesc.value = CmtTrim(document.forms[0].cmtedtdatafldslpdesc.value); 
+  if (CmtslpChkCanSetHideFld( getSubmitForm().cmthideedtdatafldslpuser1 ,document.forms[0].cmtedtdatafldslpuser1))  getSubmitForm().cmthideedtdatafldslpuser1.value = document.forms[0].cmtedtdatafldslpuser1.selectedIndex;
+  CmtslpSetCtrls2HiddenFlds(); 
 }
 
- function CmtCallToSrv(xcCtrlName,xcCanSetHiddenFlds)
-{
- if (xcCanSetHiddenFlds) 
+function CmtCallToSrv(xcCtrlName,xcCanSetHiddenFlds) {
+  if (xcCanSetHiddenFlds) 
   CmtGEN_slpSetCtrls2HiddenFlds();
- getSubmitForm().cmthidegenslpedit.value = "CmtSrv"+xcCtrlName; ;
- SubmitClickConfirm("lnkgenslpedit","", true,"");  
+  getSubmitForm().cmthidegenslpedit.value = "CmtSrv"+xcCtrlName; ;
+  SubmitClickConfirm("lnkgenslpedit","", true,"");  
 }
 
 </script>
@@ -979,15 +959,9 @@ Wintrust Bank">Wintrust Bank</option></select><span class="select2 select2-conta
                   </div>
 
 <!-- <label class="col-sm-2 control-label CmtEdit ">Contact</label> -->
-
-                      
-
-                    
-                    
+                  
                   </div>
                   
-                  
-
                 </div>
               
                 <div class="row CmtDataArea">
@@ -995,7 +969,6 @@ Wintrust Bank">Wintrust Bank</option></select><span class="select2 select2-conta
                   <div class="col-sm-4">
 
                     
-
 <span class="select2 select2-container select2-container--bootstrap select2-container--below" dir="ltr">
 <div class="form-group">
      <span class="select2 select2-container select2-container--bootstrap select2-container--below" dir="ltr">
@@ -1008,7 +981,6 @@ Wintrust Bank">Wintrust Bank</option></select><span class="select2 select2-conta
      </div>
 </span>
 
-                    
                   </div>  
                   
                   <!-- <div class="col-sm-6">                  
@@ -1107,9 +1079,7 @@ zNetwork Research - Network Research-DHCP Scope Expansion">zNetwork Research - N
 	<div class="input-group mb-3">
     <input type="text" class="form-control" placeholder="Quote #" aria-label="Quote #" aria-describedby="inputGroup-sizing-default">
 </div>
-    
-    
-                      
+                          
 <!--
     <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" title="Hit the Space or Enter keys in order to start searching." tabindex="9" aria-labelledby="select2-cmtedtdatafldslpitemid_flditmclccodename-container"><span class=" select2-selection__rendered" =""="" id="select2-cmtedtdatafldslpitemid_flditmclccodename-container" title="Hit the Space or Enter keys in order to start searching.
       --- Select Value ---">Quote #</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
@@ -1157,14 +1127,11 @@ zNetwork Research - Network Research-DHCP Scope Expansion">zNetwork Research - N
 </div>
 
 
-
 <div class="row CmtDataArea">
 	<div class="col-sm-12">
     <div class="form-group">
-    <div class="col-sm-3">
-        
- 
-       <div placeholder="Start Time" id="cmtedtdatafldslpstarttimeTR6U6DQG0T" class="input-group date">
+    <div class="col-sm-3"> 
+     <div placeholder="Start Time" id="cmtedtdatafldslpstarttimeTR6U6DQG0T" class="input-group date">
       <input type="text" value="" class="form-control CmtDateTimeInp" name="cmtedtdatafldslpstarttime" id="cmtedtdatafldslpstarttime" placeholder="Start Time" tabindex="6">
       <span class="input-group-addon">
           <span class="glyphicon glyphicon-time"></span>
@@ -1186,8 +1153,7 @@ zNetwork Research - Network Research-DHCP Scope Expansion">zNetwork Research - N
     
     </div>
     <div class="col-sm-3">
-        
-                        
+                           
    <div class="input-group date" id="cmtedtdatafldslpendtimeNV3G0B5IO3">
       <input type="text" value="" class="form-control CmtDateTimeInp" name="cmtedtdatafldslpendtime" id="cmtedtdatafldslpendtime" placeholder="End Time" tabindex="7">
       <span class="input-group-addon">
@@ -1226,6 +1192,7 @@ zNetwork Research - Network Research-DHCP Scope Expansion">zNetwork Research - N
 -->                      
                     </div>
     </div>
+
 <div class="col-sm-3">
         
     <input type="number" name="cmtedtdatafldslpclcamount" id="cmtedtdatafldslpclcamount" value="" tabindex="10" maxlength="100" onchange="CmtCtrlFLDSLPCLCAMOUNTChange(this)" class="form-control ClsGenIdfldslpclcamount" placeholder="Time Worked">
@@ -1240,13 +1207,8 @@ zNetwork Research - Network Research-DHCP Scope Expansion">zNetwork Research - N
     </div>   
 </div>
 </div>
-    </div>
-
-  
-                
-                  
-
-                <div class="row CmtDataArea">
+</div>
+  <div class="row CmtDataArea">
     <div class="col-sm-12">
 	
 <div class="d-flex justify-content-center">
@@ -1258,36 +1220,13 @@ zNetwork Research - Network Research-DHCP Scope Expansion">zNetwork Research - N
 </div>
 </div>  
                   
-                <div class="row CmtDataArea">
-                  <div class="col-sm-12">
-
-                    
+              <div class="row CmtDataArea">
+                <div class="col-sm-12">
                       <textarea name="cmtedtdatafldslpdesc" id="cmtedtdatafldslpdesc" tabindex="15" rows="5" cols="88" class="form-control ClsGenIdfldslpdesc" placeholder="Description" style="margin: 0px -2px 0px 0px; height: 66px; width: 674px;"></textarea>
-
-
                   </div>
-                </div>                
-
-                             
-
+                </div>               
             </div>
-
-
-
-
-
-
-                    
         </div>
-                            
-
-    
-
-
-
-                            
-
-
         <!-- Insert "Add another entry" secton here -->
 
 <div class="form-horizontal" role="form">
@@ -1295,42 +1234,37 @@ zNetwork Research - Network Research-DHCP Scope Expansion">zNetwork Research - N
             <input type="submit" name="addEntry" value="+">
 <font color="grey"><label>Add another entry</label></font> 
 
-        
 <!--    </div>  -->
 </div>
-
 
 <div class="form-horizontal" role="form">
 	
 </div>
 
-
 <hr>
 
 <div class="row CmtDataArea">
 
-          <div class="col-xs-6 col-sm-6">
-            <div class="pull-right">
-              
-            <input type="button" name="btnslpeditsave1" id="btnslpeditsave1" value="Save" onclick="CmtslpMakeSaveByCtrl(this)" class="btn btn-primary clsbtngenedit"></div>
-          </div>
+  <div class="col-xs-6 col-sm-6">
+    <div class="pull-right">          
+      <input type="button" name="btnslpeditsave1" id="btnslpeditsave1" value="Save" onclick="CmtslpMakeSaveByCtrl(this)" class="btn btn-primary clsbtngenedit"></div>
+    </div>
 
-          <div class="col-xs-6 col-sm-6">
-            <div>
-              
-            <input type="button" name="btnslpeditcancel" id="btnslpeditcancel" value="Cancel" onclick="CmtMakeCancel_slp(this)" class="btn btn-default clsbtngenedit"></div>
-          </div>
+    <div class="col-xs-6 col-sm-6">
+      <div>              
+        <input type="button" name="btnslpeditcancel" id="btnslpeditcancel" value="Cancel" onclick="CmtMakeCancel_slp(this)" class="btn btn-default clsbtngenedit"></div>
+      </div>
                   
-        </div>
+  </div>
 
-      <div class="row CmtLineSpc"></div><div class="row CmtLineSpc"></div><div class="row CmtLineSpc"></div>
+  <div class="row CmtLineSpc"></div><div class="row CmtLineSpc"></div><div class="row CmtLineSpc"></div>
 
-    </div><!--CmtMainDiv-->
+  </div><!--CmtMainDiv-->
       
-    <div class="container-fluid">
-      <div class="row highlight">
-        <div class="col-sm-2">&nbsp;</div>
-        <div class="col-sm-8 CmtScSysCol">Registered Version
+  <div class="container-fluid">
+    <div class="row highlight">
+      <div class="col-sm-2">&nbsp;</div>
+      <div class="col-sm-8 CmtScSysCol">Registered Version
 
 Licensed to SBTC: St. Benedict Technology Consortium<!--CmtSysInfo1--></div>
         <div class="col-sm-2 CmtThrdSysCol"><a href="http://www.CommitCRM.com" target="_blank">Powered by CommitCRM</a><!--CmtSysInfo2--></div>
@@ -1403,16 +1337,9 @@ Help Desk E-mail: helpdesk@sbtcsupport.org
 
 </div>
 
- 
-
- <!--
- -->
-
-
 
 <div id="GenEditHideDiv" style="display:hidden;">
 </div>
-
   </form>
 
 <form method="POST" name="SubmitForm" action="/0os64nf1kki16l1ewt6810ah2h8n/$">
@@ -1504,16 +1431,16 @@ Help Desk E-mail: helpdesk@sbtcsupport.org
       '.chosen-select-no-single' : {disable_search:true},
       '.chosen-select-width'     : {width:"95%"}
       }
+    
     for (var selector in config) {
       $(selector).chosen(config[selector]);
     }
     
     $(".chosen-container").bind('keydown',function(e) {
-    //alert(9119);alert(e.which);
-     if ((e.which === 9)||(e.which === 13)) { 
-      CmtOnCmbKeyExist(C_ADD_IF_NOT_EX,this.id)
-    }
-    
+      //alert(9119);alert(e.which);
+      if ((e.which === 9)||(e.which === 13)) { 
+        CmtOnCmbKeyExist(C_ADD_IF_NOT_EX,this.id)
+      }
     });
     
   </script>
