@@ -1,0 +1,230 @@
+These were not present as files within the server
+these are function or code running that must be found
+
+Most likely they will be found in the JavaScript files that are attached in the head of the webpage
+Try to web these funcitons to their relative scripts and success is close
+
+JS files I am checking and results
+  cmtgenutils20000.js
+    - Nothing found
+  cmtmsggeneng20000.js
+    - Nothing found
+  cmtchkgen20000.js
+    - Nothing found
+  cmtchkslp20000.js
+    - Found a few
+  cmtgensettings.js
+    - Nothing found
+  cmtcalendarcommon20000.js
+    - Nothing found
+  cmtcalendarpopup20000.js
+    - Nothing found
+  cmtitmservices20000.js
+    - Nothing found
+  cmtbctservices20000.js
+    - Nothing found
+  cmtlclstrgcrd20000.js
+    - Nothing Found
+  cmtcmbselect2services20000.js
+    - Nothing found
+  cmtgeneditservices20000.js
+    - Nothing found
+  cmtpopup20000.js
+    - No "cmt" or "btn" found so assuming functions will not be here
+  cmtitmf.js
+    - seems to just hold variables but none of the functions
+
+This does not seem like the best way to find the functions/pieces of code so find new method
+
+---------------------------------------------------------------------------
+
+CmtGenTopBackGenedit
+  - 
+
+cmttabmenugenedit
+  - 
+
+cmtsbjslpedit
+  - 
+
+cmtoperslpedit
+  - 
+
+cmtpreventeditmsgslpedit
+  - 
+
+cmtprivmsgslpedit
+  - 
+
+cmterrmsgslpedit
+  - 
+
+cmtlnkdescfldslpcardid_fldcrdfullname
+  - 
+
+cmtedtdatafldslpcardid_fldcrdfullname_cmttabindex1
+  - 
+
+cmtseldatafldslpcardid_fldcrdfullname
+  - cmtchkslp20000
+  - CmtSetCrdSlct()
+
+cmtclrdatafldslpcardid_fldcrdfullname
+  - 
+
+cmtlnkdescfldslpcontactid_fldcrdcontact
+  - 
+
+cmtedtdatafldslpcontactid_fldcrdcontact_cmttabindex2
+  - 
+
+cmbslpeditselectrecid
+  - 
+
+cmtlbldescfldslpticketid
+  - 
+
+cmtedtdatafldslpticketid_FLDTKTCLCLNKRECIDSHORT
+  - 
+
+cmtseldatafldslpticketid_FLDTKTCLCINFO
+  - 
+
+cmtclrdatafldslpticketid_FLDTKTCLCINFO
+  - 
+
+cmtLBLdatafldslpticketid_FLDGENCLCLNKRECIDMEMO
+  - 
+
+cmtlbldescfldslpbcrecid
+  - 
+
+cmtedtdatafldslpbcrecid_fldbctclccodename_cmttabindex3
+  - 
+
+cmtlnkdatafldslpbcrecid_fldbctclctypedates
+  - 
+
+cmtlbldatafldslpbcrecid_fldbctclcbcrcurstate
+  - 
+
+cmtlbldescfldslpbcrecid_fldbctdescexternal
+  - 
+
+cmtlbldatafldslpbcrecid_fldbctdescexternal
+  - 
+
+cmtlbldescfldslpbcrecid_fldbctdescinternal
+  - 
+
+cmtlbldatafldslpbcrecid_fldbctdescinternal
+  - 
+
+cmtlbldescfldslpbcrecid_fldbctnote
+  - 
+
+cmtlbldatafldslpbcrecid_fldbctnote
+  - 
+
+cmtlnkdescfldslpworkerid_fldwrknickname
+  - 
+
+cmtedtdatafldslpworkerid_fldwrknickname_cmttabindex4
+  - 
+
+cmtlbldescfldslpslipdate
+  - 
+
+cmtedtdatafldslpslipdate_cmttabindex5
+  - 
+
+CmtLblDescQFrToTimeGenLdTmplCmb
+  - 
+
+CmtLblDataQFrToTimeGenLdTmplCmb
+  - 
+
+cmtedtdescfldslpstarttime
+  - 
+
+cmtedtdatafldslpstarttime_cmttabindex6
+  - 
+
+cmtedtdatafldslpendtime_cmttabindex7
+  - 
+
+cmtlbldescSysRulexxyyzzCaptionSlpDrt
+  - 
+
+cmtedtdataFLDSLPTIMESPENTINMIN_cmttabindex8
+  - 
+
+btggnslpeditfldslpclcfromtotime
+  - 
+
+cmtlnkdescfldslpitemid_flditmitemno
+  - 
+
+cmtedtdatafldslpitemid_flditmclccodename_cmttabindex9
+  - 
+
+cmtlbldescfldslpclcamount
+  - 
+
+cmtedtdatafldslpclcamount_cmttabindex10
+  - 
+
+cmtlbldescfldslpprice
+  - 
+
+cmtedtdatafldslpprice_cmttabindex11
+  - 
+
+cmtlbldescfldslpadjust
+  - 
+
+cmtedtdatafldslpadjust_cmttabindex12
+  - 
+
+cmtedtdatafldslpadjusttype_cmttabindex13
+  - 
+
+cmtedtdatafldslpclcadjustamount_cmttabindex14
+  - 
+
+cmtlbldescfldslpbilltotal
+  - 
+
+cmtedtdatafldslpbilltotal
+  - cmtchkslp20000
+  - document.forms[0].cmtedtdatafldslpbilltotal.value = CmtGetCoinSign() + CmtDefFloatToStr(aBillTotal);
+
+cmtlbldescfldslpdesc
+  - 
+
+ctpcmbxxxcmbMemoLstDrfldslpdesc
+  - 
+
+cmtedtdatafldslpdesc_cmttabindex15
+  - 
+
+cmtlbldescfldslpuser1
+  - 
+
+cmtedtdatafldslpuser1_cmttabindex16
+  - 
+
+cmtedtdataFLDSLPCLCBILLKIND_cmttabindex17
+  - 
+
+cmtlbldataFLDSLPBILLKIND
+  - 
+
+btnslpeditsave1
+  - 
+
+btnslpeditcancel
+  - 
+
+cmtlbldesctkteditfldGenLabels
+  - 
