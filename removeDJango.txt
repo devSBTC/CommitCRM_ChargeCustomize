@@ -1,0 +1,244 @@
+This file will give notes on each {%%} in hopes to center where functions are
+Or lead to me entirely rewriting everything myself
+Sorry if it seems a bit like a science report
+
+Note: {%[***myofficesetting2***]%} and {%[***MyOfficeSettingMobile2***]%}
+        are text files that are present, but unneccessary (display purposes only)
+    Also the files listed below were searched for within the entire CCRM server,
+        but nothing was found :(
+        
+The sole purpose of this research is to save work
+A rewrite seems inevitable, but an attempt to pinpoint certain sources
+(mainly CSS files and certain JavaScript functionalities) to save time
+and better performance
+
+----------------------------------------------------------------------------------------------------------
+
+Method: 
+    The work done here is completely meant to improve the functionality of the labor charges
+    This is entirely web interface of CommitCRM, 
+    So we will only be focusing on the Web Interface server
+
+    Step 1: Open slpedit22501.html in notepad
+            since this was the file isolated as the charge page    
+    Step 2: Comment out the {%%} pair you want with HTML notation (<!-- -->)
+            Save the file 
+    Step 3: In services, restart "CommitWebInterface"
+    Step 4: After it has restarted and says "Running", 
+            refresh the page where you have the charges page loaded
+            Note: You may need to relogin to get here
+                    In that case More->Charges->New Charge->Labor
+    Step 5: Observe any immediate changes
+            Make sure to open developer tools and look at the code present in elements
+            Most important
+                CHANGES TO STYLE
+                HEADER Missing
+                drop down not working
+    Step 6: Remove the comment you made, and repeat the process with the next {%%} pair
+
+    Notes are found below
+
+----------------------------------------------------------------------------------------------------------
+
+Notes on Django parts:
+ommitted {% at start and %} at end, so if {%abc%} I have written abc
+Duplicates removed
+
+CmtGenTopBackGenedit
+    - 
+
+cmttabmenugenedit
+    - 
+
+cmtsbjslpedit
+    - 
+
+cmtoperslpedit
+    - 
+
+cmtpreventeditmsgslpedit
+    - 
+
+cmtprivmsgslpedit
+    - 
+
+cmterrmsgslpedit
+    - 
+
+cmtlnkdescfldslpcardid_fldcrdfullname
+    - 
+
+cmtedtdatafldslpcardid_fldcrdfullname_cmttabindex1
+    - 
+
+cmtseldatafldslpcardid_fldcrdfullname
+    - 
+
+cmtclrdatafldslpcardid_fldcrdfullname
+    - 
+
+cmtlnkdescfldslpcontactid_fldcrdcontact
+    - 
+
+cmtedtdatafldslpcontactid_fldcrdcontact_cmttabindex2
+    - 
+
+cmbslpeditselectrecid
+    - 
+
+cmtlbldescfldslpticketid
+    - 
+
+cmtedtdatafldslpticketid_FLDTKTCLCLNKRECIDSHORT
+    - 
+
+cmtseldatafldslpticketid_FLDTKTCLCINFO
+    - 
+
+cmtclrdatafldslpticketid_FLDTKTCLCINFO
+    - 
+
+cmtLBLdatafldslpticketid_FLDGENCLCLNKRECIDMEMO
+    - 
+
+cmtlbldescfldslpbcrecid
+    - 
+
+cmtedtdatafldslpbcrecid_fldbctclccodename_cmttabindex3
+    - 
+
+cmtlbldescfldslpbcrecid_fldbctdescexternal
+    - 
+
+cmtlbldatafldslpbcrecid_fldbctdescexternal
+    - 
+
+cmtlbldescfldslpbcrecid_fldbctdescinternal
+    - 
+
+cmtlbldatafldslpbcrecid_fldbctdescinternal
+    - 
+
+cmtlbldescfldslpbcrecid_fldbctnote
+    - 
+
+cmtlbldatafldslpbcrecid_fldbctnote
+    - 
+
+cmtlnkdescfldslpworkerid_fldwrknickname
+    - 
+
+cmtedtdatafldslpworkerid_fldwrknickname_cmttabindex4
+    - 
+
+cmtlbldescfldslpslipdate
+    - 
+
+cmtedtdatafldslpslipdate_cmttabindex5
+    - 
+
+CmtLblDescQFrToTimeGenLdTmplCmb
+    - 
+
+CmtLblDataQFrToTimeGenLdTmplCmb
+    - 
+
+cmtedtdescfldslpstarttime
+    - 
+
+cmtedtdatafldslpstarttime_cmttabindex6
+    - 
+
+cmtedtdatafldslpendtime_cmttabindex7
+    - 
+
+cmtlbldescSysRulexxyyzzCaptionSlpDrt
+    - 
+
+cmtedtdataFLDSLPTIMESPENTINMIN_cmttabindex8
+    - 
+
+btggnslpeditfldslpclcfromtotime
+    - 
+
+cmtlnkdescfldslpitemid_flditmitemno
+    - 
+
+cmtedtdatafldslpitemid_flditmclccodename_cmttabindex9
+    - 
+
+cmtlbldescfldslpclcamount
+    - 
+
+cmtedtdatafldslpclcamount_cmttabindex10
+    - 
+
+cmtlbldescfldslpprice
+    - 
+
+cmtedtdatafldslpprice_cmttabindex11
+    - 
+
+cmtlbldescfldslpadjust
+    - 
+
+cmtedtdatafldslpadjust_cmttabindex12
+    - 
+
+cmtedtdatafldslpadjusttype_cmttabindex13
+    - 
+
+cmtedtdatafldslpclcadjustamount_cmttabindex14
+    - 
+
+cmtlbldescfldslpbilltotal
+    - 
+
+cmtedtdatafldslpbilltotal
+    - 
+
+cmtlbldescfldslpdesc
+    - 
+
+ctpcmbxxxcmbMemoLstDrfldslpdesc
+    - 
+
+cmtedtdatafldslpdesc_cmttabindex15
+    - 
+
+cmtlbldescfldslpuser1
+    - 
+
+cmtedtdatafldslpuser1_cmttabindex16
+    - 
+
+cmtedtdataFLDSLPCLCBILLKIND_cmttabindex17
+    - 
+
+cmtlbldataFLDSLPBILLKIND
+    - 
+
+btnslpeditsave1
+    - 
+
+btnslpeditcancel
+    - 
+
+cmtlbldesctkteditfldGenLabels
+    - 
+
+----------------------------------------------------------------------------------------------------------
+
+Notes on href JavaScript:
+only name of javascript file given
+Duplicates removed
+
+fldgenLINKrecid_FLDGENCLCLNKRECIDMEMO
+    - 
+
+tktedit12501_cmtlnkdatafldslpbcrecid_fldbctclccodename
+    - 
+
+cmtmakeFLDSLPCLCFROMTOTIMEclick()
+    - 
+
