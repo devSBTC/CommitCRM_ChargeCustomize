@@ -21,20 +21,22 @@ Method:
 
     Step 1: Open slpedit22501.html in notepad
             since this was the file isolated as the charge page    
-    Step 2: Comment out the {%%} pair you want with HTML notation (<!-- -->)
+    Step 2: Add a unique comment next to the specified {%%}
+            Copy the entire file to copyToCompare.html to later check for differences
+    Step 3: Comment out the {%%} pair you want with HTML notation (<!-- -->)
             Save the file 
-    Step 3: In services, restart "CommitWebInterface"
-    Step 4: After it has restarted and says "Running", 
+    Step 4: In services, restart "CommitWebInterface"
+    Step 5: After it has restarted and says "Running", 
             refresh the page where you have the charges page loaded
             Note: You may need to relogin to get here
                     In that case More->Charges->New Charge->Labor
-    Step 5: Observe any immediate changes
+    Step 6: Observe any immediate changes
             Make sure to open developer tools and look at the code present in elements
             Most important
                 CHANGES TO STYLE
                 HEADER Missing
                 drop down not working
-    Step 6: Remove the comment you made, and repeat the process with the next {%%} pair
+    Step 7: Remove the comment you made, and repeat the process with the next {%%} pair
 
     Notes are found below
 
@@ -43,195 +45,223 @@ Method:
 Notes on Django parts:
 ommitted {% at start and %} at end, so if {%abc%} I have written abc
 Duplicates removed
+If says seems empty or empty call, it probably will call correctly once items inputted
+Something to notice, these really don't have any design dependencies
 
 CmtGenTopBackGenedit
-    - 
+    - No clear visual changes near that area
 
 cmttabmenugenedit
-    - 
+    - No clear visual changes near that area
 
 cmtsbjslpedit
-    - 
+    - No clear visual changes
+    - Only removes the Labor Charge part at the top of the page
+      "Labor&nbsp;Charge"
 
 cmtoperslpedit
-    - 
+    - Only removes the Insert Part on front page
 
 cmtpreventeditmsgslpedit
-    - 
-
+    - Completely removes the charges, second attampt to remove the line that includes next part
+    - remove the entire line and nothing happens
 cmtprivmsgslpedit
-    - 
+    - Completely removes the charges, second attampt to remove the line that includes next part
+    - When scrolled over nothing get highlighted
+      Supposed to be part of the Labor Charge - Insert. When whole line removed nothing changes
+      Literally no visible signs
 
 cmterrmsgslpedit
-    - 
+    - Makes a red box appear, probably from error message
+    - Removed entire line and nothing happpened
+    - Scroll over the line, and nothing is highlighted
 
 cmtlnkdescfldslpcardid_fldcrdfullname
-    - 
+    - The Account part is Missing
+    - Therefore this call is to get the word account
 
 cmtedtdatafldslpcardid_fldcrdfullname_cmttabindex1
-    - 
+    - Missing box for accounts
+    - All accounts missing
 
 cmtseldatafldslpcardid_fldcrdfullname
-    - 
+    - Missing Hourglass from next to account
+    - This sends to a new page to see all accounts then returns once one chosen
+    - this next page is crd CRD page
 
 cmtclrdatafldslpcardid_fldcrdfullname
-    - 
+    - Doesnt seem to do anything
+    - maybe supposed to change size of hourglass
 
 cmtlnkdescfldslpcontactid_fldcrdcontact
-    - 
+    - Will remove Contact word
 
 cmtedtdatafldslpcontactid_fldcrdcontact_cmttabindex2
-    - 
+    - Removed entire contact dropdown section
+    - removes this line <select maxlength="40" name="cmtedtdatafldslpcontactid_fldcrdcontact" id="cmtedtdatafldslpcontactid_fldcrdcontact" tabindex="-1" data-placeholder="..." class="clscmbgenedit form-control ClsGenIdfldslpcontactid_fldcrdcontact chosen-select" style="display: none;"><option value="" selected=""></option></select><div class="chosen-container chosen-container-single" style="width: 256px;" title="" id="cmtedtdatafldslpcontactid_fldcrdcontact_chosen"><a class="chosen-single chosen-default" tabindex="-1"><span>...</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" tabindex="2"></div><ul class="chosen-results"></ul></div></div></div>
+    - Should probably keep this
 
 cmbslpeditselectrecid
-    - 
+    - No visible change, maybe a call to ticket system if existed
 
 cmtlbldescfldslpticketid
-    - 
+    - Removes Ticket label
 
 cmtedtdatafldslpticketid_FLDTKTCLCLNKRECIDSHORT
-    - 
+    - seems to call tickets
+    - removes <input type="text" disabled="" id="cmtedtdatafldslpticketid_fldtktclclnkrecidshort" value="" class="form-control Edtcmtedtdatafldslpticketid_fldtktclclnkrecidshort">
 
 cmtseldatafldslpticketid_FLDTKTCLCINFO
-    - 
+    - Has to do with calling the tickets (onSubmit present)
 
 cmtclrdatafldslpticketid_FLDTKTCLCINFO
-    - 
+    - Empty pull
 
 cmtLBLdatafldslpticketid_FLDGENCLCLNKRECIDMEMO
-    - 
+    - Empty pull
 
 cmtlbldescfldslpbcrecid
-    - 
+    - Pulls Contact Label
 
 cmtedtdatafldslpbcrecid_fldbctclccodename_cmttabindex3
-    - 
+    - Removes entire contact label
 
 cmtlbldescfldslpbcrecid_fldbctdescexternal
-    - 
+    - No clear change
+    - Meant for Descriptions to put in later
 
 cmtlbldatafldslpbcrecid_fldbctdescexternal
-    - 
+    - No clear change
+    - Meant for Descriptions to put in later
 
 cmtlbldescfldslpbcrecid_fldbctdescinternal
-    - 
+    - No clear change
+    - Meant for Descriptions to put in later
 
 cmtlbldatafldslpbcrecid_fldbctdescinternal
-    - 
+    - No clear change
+    - Meant for Descriptions to put in later
 
 cmtlbldescfldslpbcrecid_fldbctnote
-    - 
+    - No clear change
+    - Meant for Descriptions to put in later
 
 cmtlbldatafldslpbcrecid_fldbctnote
-    - 
+    - No clear change
+    - Meant for Descriptions to put in later
 
 cmtlnkdescfldslpworkerid_fldwrknickname
-    - 
+    - Calls employee label
 
 cmtedtdatafldslpworkerid_fldwrknickname_cmttabindex4
-    - 
+    - Calls the login name for user
 
 cmtlbldescfldslpslipdate
-    - 
+    - Calls Date label
 
 cmtedtdatafldslpslipdate_cmttabindex5
-    - 
+    - Calls the entire date attribute
 
 CmtLblDescQFrToTimeGenLdTmplCmb
-    - 
+    - Calls the Quick Entry Label
 
 CmtLblDataQFrToTimeGenLdTmplCmb
-    - 
+    - Just callls a bunch of quick times that link to giving the time
 
 cmtedtdescfldslpstarttime
-    - 
+    - Calls time label
 
 cmtedtdatafldslpstarttime_cmttabindex6
-    - 
+    - takes care of the entire start time part
 
 cmtedtdatafldslpendtime_cmttabindex7
-    - 
+    - takes care of the entire end time part
 
 cmtlbldescSysRulexxyyzzCaptionSlpDrt
-    - 
+    - Calls Time Spent label
 
 cmtedtdataFLDSLPTIMESPENTINMIN_cmttabindex8
-    - 
+    - Takes in a numerical time input for Time Spent
 
 btggnslpeditfldslpclcfromtotime
-    - 
+    - Probably copies information to the Hours/Unit 
 
 cmtlnkdescfldslpitemid_flditmitemno
-    - 
+    - Calls the Item label
 
 cmtedtdatafldslpitemid_flditmclccodename_cmttabindex9
-    - 
+    - The entire part for the select value drop down of item
 
 cmtlbldescfldslpclcamount
-    - 
+    - Calls the Hours/Unit Label
 
 cmtedtdatafldslpclcamount_cmttabindex10
-    - 
+    - input from Hours/unit
 
 cmtlbldescfldslpprice
-    - 
+    - Looks like An unused and useless label After
+    - comes after Hours/Unit
 
 cmtedtdatafldslpprice_cmttabindex11
-    - 
+    - No big change seen
 
 cmtlbldescfldslpadjust
-    - 
+    - No big change seen
 
 cmtedtdatafldslpadjust_cmttabindex12
-    - 
+    - No big change seen
 
 cmtedtdatafldslpadjusttype_cmttabindex13
-    - 
+    - No big change seen
 
 cmtedtdatafldslpclcadjustamount_cmttabindex14
-    - 
+    - No big change seen
 
 cmtlbldescfldslpbilltotal
-    - 
+    - No big change seen
 
 cmtedtdatafldslpbilltotal
-    - 
+    - No big change seen
 
 cmtlbldescfldslpdesc
-    - 
+    - Calls description label
 
 ctpcmbxxxcmbMemoLstDrfldslpdesc
-    - 
+    - No big change seen
 
 cmtedtdatafldslpdesc_cmttabindex15
-    - 
+    - Creates a textarea textbox that allows to type up a description
 
 cmtlbldescfldslpuser1
-    - 
+    - Calls Field1 label
 
 cmtedtdatafldslpuser1_cmttabindex16
-    - 
+    - Gets all parts of Field for select value
 
 cmtedtdataFLDSLPCLCBILLKIND_cmttabindex17
-    - 
+    - No change seen
 
 cmtlbldataFLDSLPBILLKIND
-    - 
+    - No change seen
 
 btnslpeditsave1
-    - 
+    - This is the save button
+    - Most liekly saves everything once complete
 
 btnslpeditcancel
-    - 
+    - This is the cancel button
 
 cmtlbldesctkteditfldGenLabels
-    - 
+    - Doesn't seem to do anything
 
 ----------------------------------------------------------------------------------------------------------
 
 Notes on href JavaScript:
 only name of javascript file given
 Duplicates removed
+
+Will work on this later, since the above searching through proved helpful
+Also these are difficult to track and most likely do not affect where I want to work
 
 fldgenLINKrecid_FLDGENCLCLNKRECIDMEMO
     - 
