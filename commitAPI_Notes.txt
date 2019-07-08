@@ -1,4 +1,59 @@
+--------------------------------------------------------------------------------------------------
+
 Have looked into the API a lot
 but to show I have read through it all
 I will take notes to make sure I truly understand every possible aspect
+http://www.commitcrm.com/wiki/Commit_API_Developers_Guide 
 
+--------------------------------------------------------------------------------------------------
+
+Web API
+ - "The Web API allows you to interact with your CommitCRM server and 
+    data over the Web using HTTP"
+
+CommitCRM API 
+    - "CommitCRM provides an API which allows you to add and update records in the 
+       CommitCRM database. The API includes a list of possible actions and parameters."
+    - 
+
+ODBC Link (Open Data Base Connectivity)
+    - "ODBC is a function library which provides a common API for ODBC compliant databses.
+       CommitCRM provides an open database and allows other applications to access the 
+       databse using ODBC for read-only purposes."
+    - 
+
+Record
+    - "Each entity in the CommitCRM database (such as Ticket, Account, Asset, Item, 
+       Appointment, Task, etc.) is considered a 'record.'"
+    - 
+
+Database fields
+    - "Each record contains a list of fields, each of which holds the record's data."
+    - 
+
+Transaction
+    - "All additions or updates to record in the database are done by using a transaction.
+      Each transaction includes the operation you wish to perform, the data type you wish
+      to add/update and the additional parameters (databse fields and their values)."
+    - 
+
+Transaction Parameters
+    - "Each transaction contains the parameters for performing the transaction: 
+      record type, list of databse fields and a list of the values to be updated in 
+      these fields."
+    - 
+
+External Application
+    - "This refers to the external program which integrates with CommitCRM in order to 
+      update the database. This name should be passed when performing updates to the 
+      database, and it will be saved in the CommitCRM record to indiicated who performed 
+      the changes."
+    - 
+
+Record ID (REC ID)
+    - "Each record in the CommitCRMhas a unique Record ID which is created when adding the 
+      record to the database. Every ID is 20 characters and should be transferred with the 
+      API transaction when you need to update an existing record."
+    - 
+
+--------------------------------------------------------------------------------------------------
