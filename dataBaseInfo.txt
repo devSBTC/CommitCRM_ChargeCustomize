@@ -1,7 +1,13 @@
 So far best bet is to go to 
   E://CommitCRM/Server/
 And look through those files for database information
+NOT FOUND HERE
 
 Have to be aware that CommitCRM focuses a lot on the desktop version
 Because of this finding the information may still be in 
   E://CommitCRM/WebInterface
+NOTHING FOUND HERE
+
+Now checking
+  E://CommitCRM/DbSys or E://CommitCRM/Db
+Hoping here is more successful
