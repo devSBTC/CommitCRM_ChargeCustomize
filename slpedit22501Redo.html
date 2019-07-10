@@ -35,12 +35,6 @@
           </div>
         </div>
 
-        
-
-        <!-- Work from here -->
-
-        
-
         <div id="cmtslpEdtbleGuiSct" class="row CmtGenEdtForm CmtGenEdtFormLft CmtLineSpc">
 
             <div class="form-horizontal" role="form">
@@ -52,12 +46,99 @@
                     <div class="form-group">
                       <div class="col-sm-4">
                         <!-- Select Account -->
+
+                        <!-- 
+                          <div class="form-group">
+                            <label  class=" col-sm-2 control-label CmtEdit ">{%cmtlnkdescfldslpcardid_fldcrdfullname%}</label>
+                            <div class=" col-sm-8 ">
+                              <div class="CmtCrdSellxx105 CmtNoPdRight">
+                                {%cmtedtdatafldslpcardid_fldcrdfullname_cmttabindex1%}
+                              </div>
+                            </div>
+
+                            Hourglass, send new page
+                            <div class="col-sm-2 CmtNoPdLeftNoMbl CmtMgCnBtn">
+                              <span>{%cmtseldatafldslpcardid_fldcrdfullname%}</span>
+                              <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpcardid_fldcrdfullname%}</span>
+                            </div>
+                          </div>
+                        -->
                       </div>
+
+
                       <div class="col-sm-4">
                         <!-- Select Ticket -->
+
+                        <!--
+                          <div class="form-group">
+                            <label id="CmbGenLnkRecId" class=" col-sm-2 control-label CmtEdit ">{%cmbslpeditselectrecid%}{%cmtlbldescfldslpticketid%}</label>
+                            <div class=" col-sm-8 ">
+                              <div class="CmtCrdSellxx105 CmtNoPdRight">
+                                {%cmtedtdatafldslpticketid_FLDTKTCLCLNKRECIDSHORT%}
+                                <span class="CmtMgCnBtn visible-xs-block">
+                                <span>{%cmtseldatafldslpticketid_FLDTKTCLCINFO%}</span>
+                                <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpticketid_FLDTKTCLCINFO%}</span>
+                                  <span class="CmtInlBlkMbl CmtMgCnBtnSpc">
+                                    <a data-toggle="tooltip" data-placement="top" id="fldgenLINKrecid_FLDGENCLCLNKRECIDMEMOIncDec1" href="javascript:ShowHide('fldgenLINKrecid_FLDGENCLCLNKRECIDMEMO');" class="CmtIncDecSection CmtGenDefMvUpDn"><span>+/-</span></a>
+                                  </span>
+                                </span>
+                              </div>
+                              <div id="fldgenLINKrecid_FLDGENCLCLNKRECIDMEMO" style="display:none;">
+                              </div>
+                            </div>
+                            <div class="col-sm-2 CmtNoPdLeftNoMbl CmtMgCnBtn hidden-xs">
+                              <span>{%cmtseldatafldslpticketid_FLDTKTCLCINFO%}</span>
+                              <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpticketid_FLDTKTCLCINFO%}</span>
+                              <span class="CmtInlBlkMbl CmtMgCnBtnSpc">
+                                <a data-toggle="tooltip" data-placement="top" id="fldgenLINKrecid_FLDGENCLCLNKRECIDMEMOIncDec2" href="javascript:ShowHide('fldgenLINKrecid_FLDGENCLCLNKRECIDMEMO');" class="CmtIncDecSection CmtGenDefMvUpDn"><span>+/-</span></a>
+                              </span>
+                            </div>
+                          </div>  
+                        -->
                       </div>
+
+
                       <div class="col-sm-4">
                         <!-- Select Contract -->
+
+                        <!--
+                          <div class="form-group CmtTktBctMblGen">
+                            <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpbcrecid%}</label>
+                            <div class="col-sm-8">
+                              {%cmtedtdatafldslpbcrecid_fldbctclccodename_cmttabindex3%}
+
+                              <span id="cmtedtdatafldslpbcrecid_fldbctclccodenameIncDecSpn" class="CmtInlBlkMbl visible-xs-block">
+                                <a data-toggle="tooltip" data-placement="top" id="cmtedtdatafldslpbcrecid_fldbctclccodenameIncDec1" href="javascript:ShowHide('tktedit12501_cmtlnkdatafldslpbcrecid_fldbctclccodename');" class="CmtIncDecSection CmtGenDefMvUpDn"><span>+/-</span></a>
+                              </span>
+
+                            </div>
+                            <div class="col-sm-2 CmtNoPdLeftNoMbl CmtMgCnBtn">
+                              <span id="cmtedtdatafldslpbcrecid_fldbctclccodenameIncDecSpn1" class="CmtInlBlkMbl CmtMgCnBtnSpc hidden-xs">
+                                <a data-toggle="tooltip" data-placement="top" id="cmtedtdatafldslpbcrecid_fldbctclccodenameIncDec2" href="javascript:ShowHide('tktedit12501_cmtlnkdatafldslpbcrecid_fldbctclccodename');" class="CmtIncDecSection CmtGenDefMvUpDn "><span>+/-</span></a>
+                              </span>
+                            </div>
+                          </div>
+
+
+                          <div class="form-group">
+                            <div class="col-sm-offset-2  col-sm-8 ">
+                              <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl">{%cmtlnkdatafldslpbcrecid_fldbctclctypedates%}</div>
+                                <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl"> {%cmtlbldatafldslpbcrecid_fldbctclcbcrcurstate%}</div>
+                                  <div class="CmtTextInstOfCtrl" id="tktedit12501_cmtlnkdatafldslpbcrecid_fldbctclccodename" style="display:none;">
+                                    <br>
+                                    <strong>{%cmtlbldescfldslpbcrecid_fldbctdescexternal%}</strong><br>
+                                    {%cmtlbldatafldslpbcrecid_fldbctdescexternal%}<br><br>
+                                    <strong>{%cmtlbldescfldslpbcrecid_fldbctdescinternal%}</strong><br>
+                                    {%cmtlbldatafldslpbcrecid_fldbctdescinternal%}<br><br>
+                                    <strong>{%cmtlbldescfldslpbcrecid_fldbctnote%}</strong><br>
+                                    {%cmtlbldatafldslpbcrecid_fldbctnote%}<br><br>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>          
+                        -->
                       </div>
                     </div>
                   </div>
@@ -66,12 +147,58 @@
                 <div class="row CmtDataArea">
                     <div class="col-sm-4">
                       <!-- Employee -->
+
+                      <!--
+                        <div class="form-group  ">
+                          <label class="col-sm-2 control-label CmtEdit ">{%cmtlnkdescfldslpworkerid_fldwrknickname%}</label>
+                          <div class="col-sm-8" id="fldslpworkerid_fldwrknicknameData">
+                            {%cmtedtdatafldslpworkerid_fldwrknickname_cmttabindex4%}
+                          </div>
+                        </div>
+                      -->
                     </div>
+
+
                     <div class="col-sm-4">
                       <!-- Labor Type -->
+
+                      <!--
+                        <div class="form-group  ">
+                          <label class="col-sm-2 control-label CmtEdit ">{%cmtlnkdescfldslpitemid_flditmitemno%}</label>
+                          <div class="col-sm-8" >
+                            {%cmtedtdatafldslpitemid_flditmclccodename_cmttabindex9%}
+                          </div>
+                        </div>
+                      -->
                     </div>
+
+
                     <div class="col-sm-4">
                       <!-- Date -->
+
+                      <!--
+                        <div class="form-group  ">
+                          <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpslipdate%}</label>
+                          <div class="col-sm-3"> 
+                            {%cmtedtdatafldslpslipdate_cmttabindex5%}
+                          </div>
+                          <div class="CmtEDtFrm2Flds"></div>
+                            <div id="CmtLblDescQFrToTimeGenLdTmplCmbDiv" class=" col-sm-3">  
+
+                              <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="CmtSlpQckTimEnrty" data-toggle="dropdown" aria-expanded="true">
+                                  {%CmtLblDescQFrToTimeGenLdTmplCmb%}&nbsp;
+                                  <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="CmtSlpQckTimEnrty">
+                                  {%CmtLblDataQFrToTimeGenLdTmplCmb%}
+                                </ul>
+                              </div>
+
+                            </div>  
+                          </div>
+                        </div>
+                      -->
                     </div>
                 </div>
 
@@ -80,12 +207,45 @@
                     <div class="form-group">
                       <div class="col-sm-3">
                         <!-- Quote # -->
+
+                        <!--
+                          <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Quote #" aria-label="Quote #" aria-describedby="inputGroup-sizing-default">
+                          </div>
+                        -->
                       </div>
+
+
                       <div class="col-sm-7">
                         <!-- Equipment Deployed -->
+
+                        <!--
+                          <div class="form-group">
+                            <div class="col-sm-6">
+                              <label class="col-sm-4">Equipment&nbsp;Deployed</label>
+                            </div>
+                            <div class="col-sm-6=">
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <span class="form-check-label1" for="inlineRadio1">N/A</span>
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1">
+                                <span class="form-check-label2" for="inlineRadio2">Yes</span>
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1">
+                                <span class="form-check-label3" for="inlineRadio3">No</span>
+                              </div>
+                            </div>
+                          </div>
+                        -->
                       </div>
+
+
                       <div class="col-sm-2">
                         <!-- Billable -->
+
+                        <!-- 
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                          <label class="form-check-label" for="defualtCheck1">Billable</label>
+                        -->
                       </div>
                     </div>
                   </div>
@@ -96,15 +256,48 @@
                     <div class="form-group">
                       <div class="col-sm-3">
                         <!-- Start Time -->
+
+                        <!--
+                          {%cmtedtdatafldslpstarttime_cmttabindex6%}
+                        -->
                       </div>
+
+
                       <div class="col-sm-3">
                         <!-- End Time -->
+
+                        <!--
+                          {%cmtedtdatafldslpendtime_cmttabindex7%}
+                        -->
                       </div>
+
+
                       <div class="col-sm-3">
                         <!-- Break Length -->
+
+                        <!--
+                          <div id="CmtSlpTimeSpntFrmGrg" class="form-group  ">             
+                            <div class="col-sm-12">
+                              <input type="text" name="cmtedtdatafldslptimespentinmin" id="cmtedtdatafldslptimespentinmin" value="" tabindex="8" maxlength="5" onchange="CmtCtrlFLDSLPTIMESPENTINMINChange(this)" class="form-control ClsGenIdfldslptimespentinmin" placeholder="Break Length">
+                            </div>
+                          </div>
+                        -->
                       </div>
+
+
                       <div class="col-sm-3">
                         <!-- Time Worked -->
+
+                        <!--
+                          <div id="CmtSlpTimeSpntFrmGrg" class="form-group  ">
+                            <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescSysRulexxyyzzCaptionSlpDrt%}</label>
+                            <div class="col-sm-3" >
+                              {%cmtedtdataFLDSLPTIMESPENTINMIN_cmttabindex8%}
+                            </div>                     
+                          </div>                    
+
+                  </div> 
+                        -->
                       </div>
                     </div>
                   </div>
@@ -114,6 +307,14 @@
                   <div class="col-sm-12">
                     <div class="d-flex justify-content-center">
                       <!-- Quick Clicks -->
+
+                      <!--
+                        <div class="d-flex justify-content-center">
+                          <button type="button" class="btn btn-light btn-sm">Tech&nbsp;Day&nbsp;Summary</button>
+    	                    <button type="button" class="btn btn-light btn-sm">Network&nbsp;TS&nbsp;Summary</button>
+    	                    <button type="button" class="btn btn-light btn-sm">LV&nbsp;Summary</button>
+                        </div>
+                      -->
                     </div>
                   </div>
                 </div>
@@ -121,290 +322,19 @@
                 <div class="row CmtDataArea">
                   <div class="col-sm-12">
                     <!-- Description -->
+
+                    <!--
+                      <div class="form-group  ">
+                        <label class="col-sm-1 control-label CmtEdit ">{%cmtlbldescfldslpdesc%}{%ctpcmbxxxcmbMemoLstDrfldslpdesc%}</label>
+                        <div class="col-sm-10">
+                          {%cmtedtdatafldslpdesc_cmttabindex15%}
+                        </div>
+                      </div>
+                    -->
                   </div>
                 </div>
 
-              <!-- End Change -->
-
-                <div class="row CmtDataArea">
-
-                  <div class="col-sm-6">
-
-                    <div class="form-group">
-                      <label  class=" col-sm-2 control-label CmtEdit ">{%cmtlnkdescfldslpcardid_fldcrdfullname%}</label>
-                      <div class=" col-sm-8 ">
-                        <div class="CmtCrdSellxx105 CmtNoPdRight">
-                           {%cmtedtdatafldslpcardid_fldcrdfullname_cmttabindex1%}
-                        </div><!-- /input-group -->
-                      </div>
-                      <div class="col-sm-2 CmtNoPdLeftNoMbl CmtMgCnBtn">
-                        <span>{%cmtseldatafldslpcardid_fldcrdfullname%}</span>
-                        <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpcardid_fldcrdfullname%}</span>
-                      </div>
-                    </div>
-
-                    <div class="form-group  ">
-                      <label class="col-sm-2 control-label CmtEdit ">{%cmtlnkdescfldslpcontactid_fldcrdcontact%}</label>
-                      <div class="col-sm-8">
-                        {%cmtedtdatafldslpcontactid_fldcrdcontact_cmttabindex2%}
-                      </div>
-                    </div>
-                    
-                  </div>
-                  
-                  <div class="col-sm-6">
-                  
-                    <div class="form-group">
-                      <label id="CmbGenLnkRecId" class=" col-sm-2 control-label CmtEdit ">{%cmbslpeditselectrecid%}{%cmtlbldescfldslpticketid%}</label>
-                      <div class=" col-sm-8 ">
-                        <div class="CmtCrdSellxx105 CmtNoPdRight">
-                            {%cmtedtdatafldslpticketid_FLDTKTCLCLNKRECIDSHORT%}
-                          <span class="CmtMgCnBtn visible-xs-block">
-                            <span>{%cmtseldatafldslpticketid_FLDTKTCLCINFO%}</span>
-                            <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpticketid_FLDTKTCLCINFO%}</span>
-                            <span class="CmtInlBlkMbl CmtMgCnBtnSpc">
-                              <a data-toggle="tooltip" data-placement="top" id="fldgenLINKrecid_FLDGENCLCLNKRECIDMEMOIncDec1" href="javascript:ShowHide('fldgenLINKrecid_FLDGENCLCLNKRECIDMEMO');" class="CmtIncDecSection CmtGenDefMvUpDn"><span>+/-</span></a>
-                           </span>
-                          </span>
-                        </div><!-- /input-group -->
-                        <div id="fldgenLINKrecid_FLDGENCLCLNKRECIDMEMO" style="display:none;">
-                          <!-- {%cmtLBLdatafldslpticketid_FLDGENCLCLNKRECIDMEMO%} -->
-                        </div>
-                      </div>
-                      <div class="col-sm-2 CmtNoPdLeftNoMbl CmtMgCnBtn hidden-xs">
-                        <span>{%cmtseldatafldslpticketid_FLDTKTCLCINFO%}</span>
-                        <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpticketid_FLDTKTCLCINFO%}</span>
-                          <span class="CmtInlBlkMbl CmtMgCnBtnSpc">
-                            <a data-toggle="tooltip" data-placement="top" id="fldgenLINKrecid_FLDGENCLCLNKRECIDMEMOIncDec2" href="javascript:ShowHide('fldgenLINKrecid_FLDGENCLCLNKRECIDMEMO');" class="CmtIncDecSection CmtGenDefMvUpDn"><span>+/-</span></a>
-                          </span>
-                      </div>
-                    </div>                      
-                    
-                    <div class="form-group CmtTktBctMblGen">
-                      <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpbcrecid%}</label>
-                      <div class="col-sm-8">
-                        {%cmtedtdatafldslpbcrecid_fldbctclccodename_cmttabindex3%}
-
-                        <span id="cmtedtdatafldslpbcrecid_fldbctclccodenameIncDecSpn" class="CmtInlBlkMbl visible-xs-block">
-                          <a data-toggle="tooltip" data-placement="top" id="cmtedtdatafldslpbcrecid_fldbctclccodenameIncDec1" href="javascript:ShowHide('tktedit12501_cmtlnkdatafldslpbcrecid_fldbctclccodename');" class="CmtIncDecSection CmtGenDefMvUpDn"><span>+/-</span></a>
-                        </span>
-
-                      </div>
-                      <div class="col-sm-2 CmtNoPdLeftNoMbl CmtMgCnBtn">
-                        <span id="cmtedtdatafldslpbcrecid_fldbctclccodenameIncDecSpn1" class="CmtInlBlkMbl CmtMgCnBtnSpc hidden-xs">
-                          <a data-toggle="tooltip" data-placement="top" id="cmtedtdatafldslpbcrecid_fldbctclccodenameIncDec2" href="javascript:ShowHide('tktedit12501_cmtlnkdatafldslpbcrecid_fldbctclccodename');" class="CmtIncDecSection CmtGenDefMvUpDn "><span>+/-</span></a>
-                        </span>
-                      </div>
-                    </div>
-
-
-                    <div class="form-group">
-                      <div class="col-sm-offset-2  col-sm-8 ">
-                        <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl">{%cmtlnkdatafldslpbcrecid_fldbctclctypedates%}</div>
-                        <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl"> {%cmtlbldatafldslpbcrecid_fldbctclcbcrcurstate%}</div>
-                        <div class="CmtTextInstOfCtrl" id="tktedit12501_cmtlnkdatafldslpbcrecid_fldbctclccodename" style="display:none;">
-                          <br>
-                          <strong>{%cmtlbldescfldslpbcrecid_fldbctdescexternal%}</strong><br>
-                          {%cmtlbldatafldslpbcrecid_fldbctdescexternal%}<br><br>
-                          <strong>{%cmtlbldescfldslpbcrecid_fldbctdescinternal%}</strong><br>
-                          {%cmtlbldatafldslpbcrecid_fldbctdescinternal%}<br><br>
-                          <strong>{%cmtlbldescfldslpbcrecid_fldbctnote%}</strong><br>
-                          {%cmtlbldatafldslpbcrecid_fldbctnote%}<br><br>
-                        </div>
-
-                      </div>
-                    </div>                      
-                    
-                  </div>
-
-                </div>
-              
-                <div class="row CmtDataArea">
-
-                  <div class="col-sm-6">
-
-                    <div class="form-group  ">
-                      <label class="col-sm-2 control-label CmtEdit ">{%cmtlnkdescfldslpworkerid_fldwrknickname%}</label>
-                      <div class="col-sm-8" id="fldslpworkerid_fldwrknicknameData">
-                        {%cmtedtdatafldslpworkerid_fldwrknickname_cmttabindex4%}
-                      </div>
-                    </div>
-                    
-                  </div>  
-                  
-                  <div class="col-sm-6">                  
-                  </div>                    
-                  
-                </div>                    
-                  
-                <div class="row CmtDataArea">
-
-                  <div class="col-sm-6">
-                
-                    <div class="form-group  ">
-                      <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpslipdate%}</label>
-                      <div class="col-sm-3"> 
-                        {%cmtedtdatafldslpslipdate_cmttabindex5%}
-                      </div>
-                      <div class="CmtEDtFrm2Flds"></div>
-                      <div id="CmtLblDescQFrToTimeGenLdTmplCmbDiv" class=" col-sm-3">  
-
-                        <div class="dropdown">
-                          <button class="btn btn-default dropdown-toggle" type="button" id="CmtSlpQckTimEnrty" data-toggle="dropdown" aria-expanded="true">
-                            {%CmtLblDescQFrToTimeGenLdTmplCmb%}&nbsp;
-                            <span class="caret"></span>
-                          </button>
-                          <ul class="dropdown-menu" role="menu" aria-labelledby="CmtSlpQckTimEnrty">
-                            {%CmtLblDataQFrToTimeGenLdTmplCmb%}
-                          </ul>
-                        </div>
-
-                     </div>  
-                    </div>
-                    
-                    <div id="CmtSlpTimeFrmGrg" class="form-group  ">
-                      <label class="col-sm-2 control-label CmtEdit ">{%cmtedtdescfldslpstarttime%}</label>
-                      <div class="col-sm-4" >
-                        {%cmtedtdatafldslpstarttime_cmttabindex6%}
-                      </div>
-                      
-                      <div class="CmtEDtFrm2Flds"></div>
-                      
-                      <div class="col-sm-4" >
-                        {%cmtedtdatafldslpendtime_cmttabindex7%}
-                      </div>
-                    </div>                    
-                    
-                    <div id="CmtSlpTimeSpntFrmGrg" class="form-group  ">
-                      <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescSysRulexxyyzzCaptionSlpDrt%}</label>
-                      <div class="col-sm-3" >
-                        {%cmtedtdataFLDSLPTIMESPENTINMIN_cmttabindex8%}
-                      </div>
-                      <div class="col-sm-2 CmtNoPdLeftNoMbl CmtMgCnBtn">
-                        <span>
-<a data-original-title="Copy Time Spent to the Hours Amount field (rounded)" 
-id="btnslpeditFLDSLPCLCFROMTOTIME"
- href="javascript: cmtmakeFLDSLPCLCFROMTOTIMEclick()" 
-onmouseover="window.status='';return true" class="CmtGenDefMvUpDn" 
-data-toggle="tooltip" data-placement="top" title=""><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></a>                        
-                        
-                        {%btggnslpeditfldslpclcfromtotime%}</span>
-                      </div>                      
-                    </div>                    
-
-                  </div>                                        
-                  
-                  <div class="col-sm-6">
-                    
-                  </div>  
-                  
-                </div>  
-                
-                <div class="row CmtDataArea">
-
-                  <div class="col-sm-6">                
-                  
-                    <div class="form-group  ">
-                      <label class="col-sm-2 control-label CmtEdit ">{%cmtlnkdescfldslpitemid_flditmitemno%}</label>
-                      <div class="col-sm-8" >
-                        {%cmtedtdatafldslpitemid_flditmclccodename_cmttabindex9%}
-                      </div>
-                    </div>                      
-                    
-                    <div class="form-group  ">
-                      <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpclcamount%}</label>
-                      <div class="col-sm-3" >
-                        {%cmtedtdatafldslpclcamount_cmttabindex10%}
-                      </div>
-                      
-                      <div class="CmtEDtFrm2Flds"></div>
-                      
-                      <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpprice%}</label>
-                      <div class="col-sm-3" >
-                        {%cmtedtdatafldslpprice_cmttabindex11%}
-                      </div>
-                    </div>        
-                  
-                  </div>                    
-                  
-                  <div class="col-sm-6">                             
-                  </div>  
-                  
-                </div>  
-
-                <div class="row CmtDataArea">
-
-                  <div class="col-sm-6">                   
-                    
-                    <div class="form-group  ">
-                      <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpadjust%}</label>
-                      <div class="col-sm-3" >
-                        {%cmtedtdatafldslpadjust_cmttabindex12%}
-                      </div>
-
-                      <div class="CmtEDtFrm2Flds"></div>
-                      
-                      <div class="col-sm-2" >
-                        {%cmtedtdatafldslpadjusttype_cmttabindex13%}
-                      </div>
-                      
-                      <div class="CmtEDtFrm2Flds"></div>
-                      
-                      <div class="col-sm-3" >
-                        {%cmtedtdatafldslpclcadjustamount_cmttabindex14%}
-                      </div>                      
-
-                    </div>                       
-                    
-                  </div>  
-
-                  <div class="col-sm-6">                   
-
-                    <div class="form-group  ">
-                      <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpbilltotal%}</label>
-                      <div class="col-sm-3" >
-                        {%cmtedtdatafldslpbilltotal%}
-                      </div>
-                    </div>
-                    
-                  </div>  
-                  
-                </div>  
-                  
-                <div class="row CmtDataArea">
-                  <div class="col-sm-12">
-
-                    <div class="form-group  ">
-                      <label class="col-sm-1 control-label CmtEdit ">{%cmtlbldescfldslpdesc%}{%ctpcmbxxxcmbMemoLstDrfldslpdesc%}</label>
-                      <div class="col-sm-10">
-                        {%cmtedtdatafldslpdesc_cmttabindex15%}
-                      </div>
-                    </div>
-
-                  </div>
-                </div>                
-
-                <div class="row CmtDataArea">
-                  
-                  <div class="col-sm-6">
-                    <div class="form-group  ">
-                      <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpuser1%}</label>
-                      <div class="col-sm-8">
-                        {%cmtedtdatafldslpuser1_cmttabindex16%}
-                      </div>
-                    </div>                    
-                  </div>
-
-                  <div class="col-sm-6">
-                    <div class="form-group  ">
-                        <label class="col-sm-2 control-label CmtEdit ">&nbsp;</label>
-                        <div class="col-sm-8">
-                          {%cmtedtdataFLDSLPCLCBILLKIND_cmttabindex17%} {%cmtlbldataFLDSLPBILLKIND%}
-                        </div>
-                    </div>
-                  </div>                  
-                  
-                </div>             
+              <!-- End Change -->          
 
             </div>                    
         </div>

@@ -121,10 +121,10 @@ cmtLBLdatafldslpticketid_FLDGENCLCLNKRECIDMEMO
     - Empty pull
 
 cmtlbldescfldslpbcrecid
-    - Pulls Contact Label
+    - Pulls Contract Label
 
 cmtedtdatafldslpbcrecid_fldbctclccodename_cmttabindex3
-    - Removes entire contact label
+    - Removes entire contract label
 
 cmtlbldescfldslpbcrecid_fldbctdescexternal
     - No clear change
