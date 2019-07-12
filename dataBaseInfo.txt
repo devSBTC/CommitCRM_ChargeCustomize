@@ -40,5 +40,10 @@ Will continue looking into C://Program Files/Advantage 11.10/ Server
 C://Program Files/Advantage 11.10/Server  Help page within is useless
 
 Will create new page for that to list what each thing does/looks like
+This did not Help
+Will try looking through the SQL part and hope for the best for today
 
+Need to find how to conenct to ADS server using 
+  :connect [protocol:]Path[;username[;password]]
+which can be found C://Program Files/Advantage 11.10/Server
 

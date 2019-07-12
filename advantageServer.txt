@@ -19,68 +19,122 @@ This is meant as a double check
 # files
 
 ace64.dll (Apllication extension)
-    - 
+    - opened in Notepad
+    - crazy ling and unknown charset
 
 ads (Application)
-    - 
+    - Opened normally and got this message
+        - The Advantage Database Server is a Windows NT/2000 Service.  
+          It can only be started from the Windows NT/2000 Service Control Manager.
+    - Probably since already set up in services no need to worry
 
 ads_cfg (Application)
-    - 
+    - Opened normally and this time got results!
+    - Claims this is the installation path
+        - C:\Program Files\Advantage 11.10\Server\ADS.EXE
+        - Port : 6262
+            - But Webinterface on is 4961
+            - Seems legit since says current users one, which is me
+    - Says Sybase iAnywhere, so might need look for that type of software
+    - Look into ANSI Character Set and OEM Character Set
 
 ads_cfg (Configuration settings)
-    - 
+    - Opens in notepad and the only thing visible is
+        - [Settings]
+        - ServiceName=Advantage
+    - This is most likely nothing, not worrying about
 
 adsbackup.c (C File)
-    - 
+    - Opened in notepad since C File
+    - very large file so I will give quick info about
+    - Notes: This utility loads ACE32.DLL or libace.so dynamically so it can
+            be used with different versions of ACE.  The minimum ACE version
+            requirement is v6.0.  However, if the server OS is NetWare, the
+            ACE version must be 7.0 or greater.
+        - These files are not present so this may be useless, not sure yet
+    -  While looking through everything, I am led to believe this does not 
+       look like anything important for my line of work
+    - From name, assuming it is how the server is backedup
 
 adsbackup (Application)
-    - 
+    - Open normally, terminal quickly flashes and goes away, nothing else
+    - Ran as administrator and same thing occured
+    - Nothing conclusive, but as a guess I would say it quickly backs up 
+      the server from that instance in time
 
 adscollate (ADM File)
-    - 
+    - Open with notepad and very weird charset
+    - Open with internet explorer
+        - forces me to download
+        - Publisher information is CommitCRM3
 
 adscollate (ADT File)
-    - 
+    - Opened with notepad
+        - Says advantage Table in the beginning
+        - Is followed by languages and such
+        - Very weird char set
 
 adsstamp (Applicaiton)
-    - 
+    - Open normally and gives me 3 options (With descriptions)
+        - Upgrade, Languages, license
+    - Nothing seems important here for what I need
 
 ADSSupportCapture (Application)
-    - 
+    - Opened normally and takes me to terminal
+    - Meant to capture your server at this moment so that it can be sent 
+      out to ADS , gives y/n options
+    - I am not continuing
 
 adsver (Application)
-    - 
+    - I open normally, a transparent window opens quickly and closes
+    - Guess this is to run the server 
+    - Not sure since when I open ads_cfg, up time is not recent
 
 aicu64.dll (Application extension)
-    - 
+    - Opened with notepad and very weird charset
+    - Cannot tell what this is for, and it is a very long file
 
 ansi (CHR File)
-    - 
+    - Opened with notepad and has some labguages at the top
+    - Later followed by very weird charset
+    - No clue except following application may decrypt
 
 ANSICHR (Application)
-    - 
+    - Opened normally
+    - I open pervious file and it seems to be a table to call each later 
+      to a number/letter combination (Hex)
+    - I opened extend and it had error opening
 
 asqlcmd64 (Application)
-    - 
+    - Opened normally and took me to a terminal
+    - Went through and help only has a few functions
+    - Tried to connect but not working the best, 
+      will return if all else fails
 
 axcws64.dll (Application extension)
-    - 
+    - Opened with notepad and very weird charset
+    - Scrolled down and saw some regular letters making calls to SAP information
 
 dbghelp.dll (Application extension)
-    - 
+    - Opened in notepad and very weird charset
+    - Nothing conclusive from this
 
 extend (CHR File)
-    - 
+    - Opened with notepad and very weird charset
+    - Later opened with ANSICHR and did not work
 
 icudt40l.dat (DAT File)
-    - 
+    - Opened with notepad and very weird charset
+    - Nothing conclusive
 
 license (Text Document)
-    - 
+    - Actually is a license 
 
 nt_inst.dll (Application extension)
-    - 
+    - Opened with notepad and weird charset
+    - Nothing conclusive from regular words hidden throughout
 
 nt_inst64.dll (Application extension)
-    - 
+    - Opened with notepad and weird charset
+    - Nothing conclusive from regular words hidden throughout
 
