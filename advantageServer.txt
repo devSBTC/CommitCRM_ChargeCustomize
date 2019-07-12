@@ -1,0 +1,86 @@
+-------------------------------------------------------------------------------------
+
+# What this is
+
+Since CommitCRM is very secure about going around their programs,
+  we need to do science to actually understand this
+For this reason we will go through every file within
+    C://Program Files/Advantage 11.10/Server
+  just to see if we can get someonewhere closer
+Have looked at the Db files from the E://CommitCRM,
+  but it is in an unknown charset
+I have looked through these files already, 
+  but never have been successful
+This is meant as a double check 
+  and maybe push this information to someone else to take a look at
+
+-------------------------------------------------------------------------------------
+
+# files
+
+ace64.dll (Apllication extension)
+    - 
+
+ads (Application)
+    - 
+
+ads_cfg (Application)
+    - 
+
+ads_cfg (Configuration settings)
+    - 
+
+adsbackup.c (C File)
+    - 
+
+adsbackup (Application)
+    - 
+
+adscollate (ADM File)
+    - 
+
+adscollate (ADT File)
+    - 
+
+adsstamp (Applicaiton)
+    - 
+
+ADSSupportCapture (Application)
+    - 
+
+adsver (Application)
+    - 
+
+aicu64.dll (Application extension)
+    - 
+
+ansi (CHR File)
+    - 
+
+ANSICHR (Application)
+    - 
+
+asqlcmd64 (Application)
+    - 
+
+axcws64.dll (Application extension)
+    - 
+
+dbghelp.dll (Application extension)
+    - 
+
+extend (CHR File)
+    - 
+
+icudt40l.dat (DAT File)
+    - 
+
+license (Text Document)
+    - 
+
+nt_inst.dll (Application extension)
+    - 
+
+nt_inst64.dll (Application extension)
+    - 
+

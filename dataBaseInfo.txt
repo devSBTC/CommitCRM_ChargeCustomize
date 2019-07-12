@@ -11,3 +11,34 @@ NOTHING FOUND HERE
 Now checking
   E://CommitCRM/DbSys or E://CommitCRM/Db
 Hoping here is more successful
+
+E://CommitCRM/Db
+seems to be the move and the correct folder
+Once I turned off the Advantage Datavase Server
+I was able to access the files within
+The issue now is trying to decode these files, 
+and then add my parts
+
+The ADI ADM and ADT files all have some of them that are in use when db up
+
+
+Looking into C://Program Files/Advantage 11.10/ Server
+From here using the application parts given and trying to figure something out
+
+There seems to be no way I can access the files within the advantage database Server
+Will continue looking, but real pain
+
+
+Also isolated that the Advantage Database Server is the only .\admin process needed
+The CommitWebInterface is the running part but somehow it calls Advantage Database Server
+
+For executable to Advantage Database Server --> C:\Program Files\Advantage 11.10\Server\ADS.EXE
+Does have dependencies but nothing too useful
+
+
+Will continue looking into C://Program Files/Advantage 11.10/ Server
+C://Program Files/Advantage 11.10/Server  Help page within is useless
+
+Will create new page for that to list what each thing does/looks like
+
+
