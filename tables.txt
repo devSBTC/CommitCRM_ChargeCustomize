@@ -1,0 +1,1079 @@
+Activity Templates (.adi)
+  - 
+
+Activity Templates (.adm)
+  - 
+
+Activity Templates (.adt)
+  - 
+
+Activity TemplatesEntries (.adi)
+  - 
+
+Activity TemplatesEntries (.adm)
+  - 
+
+Activity TemplatesEntries (.adt)
+  - 
+
+Assets (.adi)
+  - 
+
+assets.adi (.BAK)
+  - 
+
+assets (.adm)
+  - 
+
+assets.adm (.BAK)
+  - 
+
+assets (.adt)
+  - 
+
+assets.adt (.BAK)
+  - 
+
+BContracts (.adi)
+  - 
+
+BContracts.adi (.BAK)
+  - 
+
+BContracts (.adm)
+  - 
+
+BContracts.adm (.BAK)
+  - 
+
+BContracts (.adt)
+  - 
+
+BContracts.adt (.BAK)
+  - 
+
+BContractSeries (.adi)
+  - 
+
+BContractSeries (.adt)
+  - 
+
+BPlans (.adi)
+  - 
+
+BPans (.adm)
+  - 
+
+BPlans (.adt)
+  - 
+
+CardContactLink (.adi)
+  - 
+
+CardContactLink (.ADT)
+  - 
+
+CardEmpLinks (.adi)
+  - 
+
+CardEmpLinks (.adt)
+  - 
+
+Cards (.adi)
+  - 
+
+cards (.adm)
+  - 
+
+cards (.adt)
+  - 
+
+CardSearch (.adi)
+  - 
+
+CardSearch (.ADT)
+  - 
+
+CardsLinks (.adi)
+  - 
+
+CardsLinks (.adm)
+  - 
+
+CardsLinks (.ADT)
+  - 
+
+CmtCWorkers (.adi)
+  - 
+
+CmtCWorkers (.adm)
+  - 
+
+CmtCWorkers (.adt)
+  - 
+
+CmtSysPM (.adi)
+  - 
+
+CmtSysPM (.adm)
+  - 
+
+CmtSysPM (.adt)
+  - 
+
+CmtVer (.cmt)
+  - 
+
+CommitCRM (.add)
+  - 
+
+CommitCRM.ai (.ai)
+  - 
+
+CommitCRM.am (.am)
+  - 
+
+CommitCRMz (.add)
+  - 
+
+CommitCRMz.ai (.ai)
+  - 
+
+CommitCRMz.am (.am)
+  - 
+
+CWorkers (.adi)
+  - 
+
+CWorkers (.adm)
+  - 
+
+CWorkers (.adt)
+  - 
+
+DBQry (.adi)
+  - 
+
+DBQry (.adm)
+  - 
+
+DBQry (.adt)
+  - 
+
+DBQryDB (.adi)
+  - 
+
+DBQryDB (adm)
+  - 
+
+DBQryDB (.adt)
+  - 
+
+DBQryDBUser (.adi)
+  - 
+
+DBQryDBUser (.adm)
+  - 
+
+DBQryDBUser (.adt)
+  - 
+
+DBQryUserDef (.adi)
+  - 
+
+DBQryUserDef (.adm)
+  - 
+
+DBQryUserDef (.adt)
+  - 
+
+DicFields (.adi)
+  - 
+
+DicFields (.ADT)
+  - 
+
+DicFieldsType (.adi)
+  - 
+
+DicFieldsType (.ADT)
+  - 
+
+DicTables (.adi)
+  - 
+
+DicTables (.ADT)
+  - 
+
+DicUserFields (.adi)
+  - 
+
+DicUserFields (.ADT)
+  - 
+
+Docs (.adi)
+  - 
+
+docs (.adm)
+  - 
+
+docs (.adt)
+  - 
+
+EEPopIds (.cmt)
+  - 
+
+EmailMessages (.adi)
+  - 
+
+eMAILMESSAGES (.adm)
+  - 
+
+eMAILMESSAGES (.adt)
+  - 
+
+EmailRules (.adi)
+  - 
+
+emailrules.adi (.BAK)
+  - 
+
+emailrules (.adm)
+  - 
+
+emailrules.adm (.BAK)
+  - 
+
+emailrules (.adt)
+  - 
+
+emailrules.adt (.BAK)
+  - 
+
+EmailSentSysTmp (.adi)
+  - 
+
+EmailSentSysTmp (.adt)
+  - 
+
+EmailTemplates (.adi)
+  - 
+
+EmailTemplates(.adm)
+  - 
+
+EmailTemplates (.adt)
+  - 
+
+EReminders (.adi)
+  - 
+
+Ereminders.adi (.BAK)
+  - 
+
+Ereminders (.adm)
+  - 
+
+Ereminders (.adt)
+  - 
+
+Ereminders.adt (.BAK)
+  - 
+
+Events (.adi)
+  - 
+
+Events (.adm)
+  - 
+
+Events (.ADT)
+  - 
+
+ExportFields (.adi)
+  - 
+
+ExportFields (.adm)
+  - 
+
+ExportFields (.adt)
+  - 
+
+GenLocks (.adi)
+  - 
+
+GenLOcks (.ADT)
+  - 
+
+genmessage (.adi)
+  - 
+
+genmessage (.adm)
+  - 
+
+genmessage (.ADT)
+  - 
+
+HHSync (.adi)
+  - 
+
+HHSync (.ADT)
+  - 
+
+Items (.adi)
+  - 
+
+Items (.adm)
+  - 
+
+Items (.adt)
+  - 
+
+KBArticles (.adi)
+  - 
+
+KBArticles (.adm)
+  - 
+
+KBArticles (.adt)
+  - 
+
+LabelDefaults (.adi)
+  - 
+
+Label Defaults (.adt)
+  - 
+
+LabelLinks (.adi)
+  - 
+
+LabelLinks (.adt)
+  - 
+
+Labels (.adi)
+  - 
+
+Labels (.adt)
+  - 
+
+lang (.adi)
+  - 
+
+Lang (.adt)
+  - 
+
+LangUser (.adi)
+  - 
+
+LangUser (.adt)
+  - 
+
+MailFolders (.adi)
+  - 
+
+MailFolders (.ADT)
+  - 
+
+MailReceivers (.adi)
+  - 
+
+MailReceivers (.ADT)
+  - 
+
+Mails (.adi)
+  - 
+
+Mails (.adm)
+  - 
+
+Mails (.adt)
+  - 
+
+mca (.adi)
+  - 
+
+mca (.adt)
+  - 
+
+NoteBook (.adi)
+  - 
+
+Notebook.adi (.BAK)
+  - 
+
+Notebook (.adm)
+  - 
+
+Notebook.adm (.BAK)
+  - 
+
+Notebook (.adt)
+  - 
+
+Notebook.adt (.BAK)
+  - 
+
+OnlineLinks (.adi)
+  - 
+
+OnlineLinks (.adm)
+  - 
+
+OnlineLinks (.adt)
+  - 
+
+Opps (.adi)
+  - 
+
+Opps (.adm)
+  - 
+
+Opps (.adt)
+  - 
+
+OppSearch (.adi)
+  - 
+
+OppSearch (.ADT)
+  - 
+
+Pref (.adi)
+  - 
+
+Pref (.ADT)
+  - 
+
+PriceLists (.adi)
+  - 
+
+PriceLists (.adm)
+  - 
+
+PriceLists (.adt)
+  - 
+
+priv (.adi)
+  - 
+
+priv (.ADT)
+  - 
+
+QuoteLines (.adi)
+  - 
+
+QuoteLines (.adm)
+  - 
+
+QuoteLines (.adt)
+  - 
+
+Quotes (.adi)
+  - 
+
+quotes (.adm)
+  - 
+
+quotes (.adt)
+  - 
+
+QWDocLinks (.adi)
+  - 
+
+QWDOCLINKS (.adt)
+  - 
+
+RDataview (.adi)
+  - 
+
+Rdataview (.adm)
+  - 
+
+Rdataview (.ADT)
+  - 
+
+Regex (.adi)
+  - 
+
+Regex (.adm)
+  - 
+
+Regex (.adt)
+  - 
+
+ReportsLists (.adi)
+  - 
+
+ReportsLists (.adt)
+  - 
+
+ReportsTmp (.adi)
+  - 
+
+ReportsTmp (.adt)
+  - 
+
+ReportsUser (.adi)
+  - 
+
+ReportsUser (.adm)
+  - 
+
+ReportsUser (.adt)
+  - 
+
+RREPORTS (.adi)
+  - 
+
+RREPORTS (.adm)
+  - 
+
+RREPORTS (.ADT)
+  - 
+
+SchedContracts (.adi)
+  - 
+
+SchedContracts (.adm)
+  - 
+
+SchedContracts (.adt)
+  - 
+
+SchedReportsQrySystem (.adi)
+  - 
+
+SchedReportsQrySystem (.adm)
+  - 
+
+SchedReportsQrySystem (.adt)
+  - 
+
+SchedReportsQryUser (.adi)
+  - 
+
+SchedReportsQryUser (.adm)
+  - 
+
+SchedReportsQryUser (.adt)
+  - 
+
+SchedReportsUserSettings (.adi)
+  - 
+
+SchedReportsUserSettings.adi (.BAK)
+  - 
+
+SchedReportsUserSettings (.adm)
+  - 
+
+SchedReportsUserSettings.adm (.BAK)
+  - 
+
+SchedReportsUserSettings (.adt)
+  - 
+
+SchedReportsUserSettings.adt (.BAK)
+  - 
+
+SchedSlips (.adi)
+  - 
+
+SchedSlips (.adm)
+  - 
+
+SchedSlips (.adt)
+  - 
+
+SchedTickets (.adi)
+  - 
+
+SchedTickets (.adm)
+  - 
+
+SchedTickets (.adt)
+  - 
+
+Screen (.adi)
+  - 
+
+Screen (.ADT)
+  - 
+
+SLA (.adi)
+  - 
+
+SLA (.adm)
+  - 
+
+SLA (.adt)
+  - 
+
+Slips (.adi)
+  - 
+
+slips.adi (.BAK)
+  - 
+
+slips (.adm)
+  - 
+
+slips.adm (.BAK)
+  - 
+
+slips (.adt)
+  - 
+
+slips.adt (.BAK)
+  - 
+
+SNoteTemplates (.adi)
+  - 
+
+SNoteTemplates (.adm)
+  - 
+
+SNoteTemplates (.adt)
+  - 
+
+SNoteTemplatesSystem (.adi)
+  - 
+
+SNoteTemplatesSystem (.adm)
+  - 
+
+SNoteTemplatesSystem (.adt)
+  - 
+
+SubjectScreen (.adi)
+  - 
+
+SubjectScreen (.ADT)
+  - 
+
+SubSubject (.adi)
+  - 
+
+SubSubject (.ADT)
+  - 
+
+SyncLinkIds (.adi)
+  - 
+
+Synclinkids (.adt)
+  - 
+
+SyncPorfiles (.adi)
+  - 
+
+SyncPorfiles (.adm)
+  - 
+
+SyncPorfiles (.adt)
+  - 
+
+SysCsSqlnf (.adi)
+  - 
+
+SysCsSqlnf (.adm)
+  - 
+
+SysCsSqlnf (.adt)
+  - 
+
+SysELog (.adi)
+  - 
+
+SysELog (.adt)
+  - 
+
+SYSIDS (.adi)
+  - 
+
+SYSIDS (.ADT)
+  - 
+
+SysLock (.adt)
+  - 
+
+SysMerge (.adi)
+  - 
+
+SysMerge (.adt)
+  - 
+
+SysMinf (.adi)
+  - 
+
+SysMinf (.adm)
+  - 
+
+SysMinf (.adt)
+  - 
+
+SysPM (.adi)
+  - 
+
+SysPM.adi (.BAK)
+  - 
+
+SysPM (.adm)
+  - 
+
+SysPM.adm (.BAK)
+  - 
+
+SysPM (.adt)
+  - 
+
+SysPM.adt (.BAK)
+  - 
+
+SysRec (.adm)
+  - 
+
+SysRec (.adt)
+  - 
+
+SysTst (.adt)
+  - 
+
+Taxes (.adi)
+  - 
+
+taxes (.adt)
+  - 
+
+TBLSUBUSRCRDAR2YEK9U6LC (.adi)
+  - 
+
+TBLSUBUSRCRDAR2YEK9U6LC.adi (.BAK)
+  - 
+
+TBLSUBUSRCRDAR2YEK9U6LC (.adt)
+  - 
+
+TBLSUBUSRCRDAR2YEK9U6LC.adt (.BAK)
+  - 
+
+TBLSUBUSRCRDQYVQ6MM33PR (.adi)
+  - 
+
+TBLSUBUSRCRDQYVQ6MM33PR.adi (.BAK)
+  - 
+
+TBLSUBUSRCRDQYVQ6MM33PR (.adt)
+  - 
+
+TBLSUBUSRCRDQYVQ6MM33PR.adt (.BAK)
+  - 
+
+TicketsLinks (.adi)
+  - 
+
+TicketLinks (.adt)
+  - 
+
+Tickets (.adi)
+  - 
+
+Tickets (.adm)
+  - 
+
+Tickets (.adt)
+  - 
+
+TodoLists (.adi)
+  - 
+
+TodoLists (.adt)
+  - 
+
+TodoListTemplates (.adi)
+  - 
+
+TodoListTemplates (.adm)
+  - 
+
+TodoListTemplates (.adt)
+  - 
+
+Todos (.adi)
+  - 
+
+todos (.adm)
+  - 
+
+todos (.adt)
+  - 
+
+TreeTbl (.adi)
+  - 
+
+TreeTbl (.ADT)
+  - 
+
+UPageFields (.adi)
+  - 
+
+UPageFields (.ADT)
+  - 
+
+UPageIDKind (.adi)
+  - 
+
+UPageIDKind (.adt)
+  - 
+
+UPages (.adi)
+  - 
+
+Upages (.ADT)
+  - 
+
+valtblacoin (.adi)
+  - 
+
+valtblacoin (.ADT)
+  - 
+
+valtblRsubject (.adi)
+  - 
+
+valtblRsubject (.ADT)
+  - 
+
+ValueListKind (.adi)
+  - 
+
+ValueListKind (.ADT)
+  - 
+
+ValueMemoListKind (.adi)
+  - 
+
+ValueMemoListKind (.ADT)
+  - 
+
+ValuesList (.adi)
+  - 
+
+ValuesList.adi (.BAK)
+  - 
+
+ValuesList (.adt)
+  - 
+
+ValuesList.adt (.BAK)
+  - 
+
+ValuesListSettings (.adi)
+  - 
+
+ValuesListSettings (.adm)
+  - 
+
+ValuesListSettings (.adt)
+  - 
+
+ValuesListSettingsUser (.adi)
+  - 
+
+ValuesListSettingsUser (.adm)
+  - 
+
+ValuesListSettingsUser (.adt)
+  - 
+
+ValuesMemoList (.adi)
+  - 
+
+ValuesMemoList (.adm)
+  - 
+
+ValuesMemoList (.ADT)
+  - 
+
+ViewsSystem (.adi)
+  - 
+
+ViewsSystem (.adm)
+  - 
+
+ViewsSystem (.adt)
+  - 
+
+ViewsUser (.adi)
+  - 
+
+ViewsUser (.adm)
+  - 
+
+ViewsUser (.adt)
+  - 
+
+WaCds (.adi)
+  - 
+
+WaCds (.adt)
+  - 
+
+WaCustPriv (.adi)
+  - 
+
+WaCustPriv (.adt)
+  - 
+
+WaLogin (.adi)
+  - 
+
+WALogin (.adt)
+  - 
+
+WaMru (.adi)
+  - 
+
+WaMru (.adt)
+  - 
+
+WaUsers (.adi)
+  - 
+
+WaUsers (.adm)
+  - 
+
+WaUsers (.adt)
+  - 
+
+WAZRPX (.adi)
+  - 
+
+WAZRPX (.adm)
+  - 
+
+WAZRPX (.adt)
+  - 
+
+WHS (.adi)
+  - 
+
+WHS (.adm)
+  - 
+
+WHS (.adt)
+  - 
+
+WHSExceptions (.adi)
+  - 
+
+WHSExceptions (.adt)
+  - 
+
+Xsync (.adi)
+  - 
+
+Xsync (.adt)
+  - 
+
+XTransFiles (.adi)
+  - 
+
+XTransFiles (.adm)
+  - 
+
+XTransFiles (.adt)
+  - 
+
+XTRANSLINKS (.adi)
+  - 
+
+XTRANSLINKS (.adt)
+  - 
+
+ZALERTQ (.adi)
+  - 
+
+ZALERTQ (.adm)
+  - 
+
+ZALERTQ (.adt)
+  - 
+
+ZALERTSysGroupRules (.adi)
+  - 
+
+ZALERTSysGroupRules (.adt)
+  - 
+
+ZALERTUserGroup (.adi)
+  - 
+
+ZALERTUserGroup (.adt)
+  - 
+
+ZALERTUserPref (.adi)
+  - 
+
+ZALERTUserPref.adi (.BAK)
+  - 
+
+ZALERTUserPref (.adt)
+  - 
+
+ZALERTUserPref.adt (.BAK)
+  - 
+
+ZALERTUserRule (.adi)
+  - 
+
+ZALERTUserRule (.adt)
+  - 
+
+zDsgn (.adi)
+  - 
+
+zDsgn (.adm)
+  - 
+
+zDsgn (.adt)
+  - 
+
+zProActiveAlertAudit (.adi)
+  - 
+
+zProActiveAlertAudit (.adt)
+  - 
+
+zProActiveAlertSettings (.adi)
+  - 
+
+zProActiveAlertSettings (.adt)
+  - 
+
+ZRMMAPPS (.adi)
+  - 
+
+ZRMMAPPS (.adm)
+  - 
+
+ZRMMAPPS (.adt)
+  - 
+
+ZRMMLINKS (.adi)
+  - 
+
+ZRMMLinks (.adt)
+  - 
+
+ZRMMLog (.adi)
+  - 
+
+ZRMMLog (.adm)
+  - 
+
+ZRMMLog (.adt)
+  - 
+
+ZRMMRules (.adm)
+  - 
+
+ZRMMRules (.adt)
+  - 

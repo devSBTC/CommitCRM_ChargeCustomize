@@ -47,3 +47,13 @@ Need to find how to conenct to ADS server using
   :connect [protocol:]Path[;username[;password]]
 which can be found C://Program Files/Advantage 11.10/Server
 
+
+
+---------------------------------------------------------
+
+
+
+Installed Advantage Data Architect and can now open the databse files
+Will use E:\\CommitCRM\Db\
+Now creating file to go through each table and will explain what values present
+
