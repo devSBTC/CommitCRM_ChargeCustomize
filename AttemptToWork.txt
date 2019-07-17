@@ -48,3 +48,12 @@ SOURCERECID - N/A
 ASSETRECID - N/A
 SOURCERECID2 - N/A
 TIMESPENTINMIN - 450
+
+
+CardID and ContactID same
+Looking further this is the CardID for SBTC
+
+Multiple uses of BCRECID, therefore I do not believe it to be unique to me
+
+----------
+
