@@ -1,386 +1,459 @@
+*****************************************************************************
+*****************************************************************************
+*****                                                                   *****
+*****   Trying to find what each table has to find to create webpage    *****        
+*****                                                                   *****
+*****************************************************************************
+*****************************************************************************
+
 Activity Templates 
-  - 
+  - "Suspension of Support
+  - Chromebook Proposal
+  - Looks useless
 
 Activity TemplatesEntries 
-  - 
+  - Confirm Suspension of Support
+  - Notify Managemenet Team of approaching
+  - Provide Passwords and rollover documents
+  - Receive Payment
+  - Send invoice for renewal of SoW
+  - Notify Site Administrator
+  - Does not seem necessary
 
 assets 
-  - 
+  - 9149 Entries and is actually the assets page
+  - Not changing anything with assets so no need to worry
 
 BContracts 
-  - 
+  - Contracts do not seem to be present on CommitCRM
+  - Might be random contracts
 
 BContractSeries 
-  - 
+  - Empty
 
 BPlans 
-  - 
+  - Block of Money
+  - Software Subscriptions
+  - All-you-can-eat
+  - IT Project (Fixed-price)
+  - Block of Tickets
+  - No clue and never seen, so dont worry
 
 CardContactLink 
-  - 
+  - Has maincardid, cardid, and linkdesc, but nothing there
 
 CardEmpLinks 
-  - 
+  - empty
 
 cards 
-  - 
+  - Now this is good
+  - Has all users names, contacts, phone numbers, etc.
+  - But does not seem necessary right now
 
 CardSearch
-  - 
+  - Per email, calls your call ID which will probably call cards
 
 CardsLinks 
-  - 
+  - Empty
 
 CmtCWorkers 
-  - 
+  - Do not have encryption password
 
 CmtSysPM 
-  - 
+  - Do not have encryption password
 
 CWorkers 
-  - 
+  - Do not have encryption password
 
 DBQry 
-  - 
+  - 152 Entries
+  - Assumption that this will do the saving
+  - there a bunch of query commands that seem like they can be called
 
 DBQryDB 
-  - 
+  - Cannot see where this would be used
 
 DBQryDBUser
-  - 
+  - Seems to do something with Tickets
 
 DBQryUserDef
-  - 
+  - Empty
 
 DicFields
-  - 
+  - Seems like it calls other parts but nothing too important
+  - Check back if anything
 
 DicFieldsType
-  - 
+  - Has a lot of values that seems to create some type of Report
+  - but does not seem needed for charges page
 
 DicTables
-  - 
+  - Might call the links to other tables
 
 DicUserFields 
-  - 
+  - Nothing useful seems like 
 
 docs 
-  - 
+  - Just a bunch of files meant for inventory or something
+  - Like manuals, and seems like some asset stuff
 
 eMAILMESSAGES 
-  - 
+  - One email and seems useless
 
 emailrules
-  - 
+  - Nothing readable 
+  - All I see is history and tickets so maybe useless
 
 EmailSentSysTmp
-  - 
+  - One entry and cant tell what it does
+  - Probably not important
 
 EmailTemplates 
-  - 
+  - Seems like it will only have to do with emails
+  - Not worrying about it
 
 Ereminders 
-  - 
+  - Empty
 
 Events 
-  - 
+  - Does not seem to do with charges
+  - Just seems like quotes and costing a lot
 
 ExportFields 
-  - 
+  - Empty
 
 GenLocks
-  - 
+  - Looks like locks on files or some
+  - Maybe I try to delete some >:)
 
 genmessage 
-  - 
+  - Some important things here which look like some guides if needed
 
 HHSync 
-  - 
+  - Does not seem important because cannot read it 
 
 Items
-  - 
+  - Looks like the Item section
+  - Item section has been depleted so not worrying 
 
 KBArticles
-  - 
+  - Does not seem necessary since no good information
+  - Seems like logs for technicians or some
 
 Label Defaults 
-  - 
+  - One entry with tickets and seems useless
 
 LabelLinks 
-  - 
+  - One entry and seems useless
 
 Labels
-  - 
+  - Escalated
+  - Pro Bono
+  - RMM
+  - VIP
+  - Hardware
+  - Seems not necessary as it focuses on tickets
 
 Lang 
-  - 
+  - 3370 entries but seems like I won't be able to understand
 
 LangUser 
-  - 
+  - Just seems to contain materials to understand 
+  - what each facility has (like IP, password, etc.)
 
 MailFolders 
-  - 
+  - Inbox
+  - Sent
+  - Deleted
+  - Seems useless
 
 MailReceivers 
-  - 
+  - Have no clue what this could be for or how to read
 
 Mails 
-  - 
+  - 3 entries but does not seem necessary
 
 mca 
-  - 
+  - Full
+  - Sys Admin
+  - Partial
+  - Limited
+  - Subcontractors
+  - Technician
+  - Managers
+  - Not gott worry about this
 
 Notebook 
-  - 
+  - Descriptions talk about forms and audit so I dont know
 
 OnlineLinks 
-  - 
+  - Empty
 
 Opps 
-  - 
+  - Another set of ticketing and such
+  - Has information for what needs to be changed/done
 
 OppSearch 
-  - 
+  - Calls rec id for word (probably has good setup)
 
 Pref 
-  - 
+  - Kind of seems useless
 
 PriceLists 
-  - 
+  - Cannot understand, but might be important
 
 priv 
-  - 
+  - Contians Charges that would be important
+  - but Need to find how to access
 
 QuoteLines 
-  - 
+  - Seems to be for quotes so not worrying
 
 quotes 
-  - 
+  - Seems just like the part for quotes
 
 QWDOCLINKS 
-  - 
+  - Empty
 
 Rdataview 
-  - 
+  - Has everything including charges
 
 Regex 
-  - 
+  - Does not have anything really interesting
 
 ReportsLists 
-  - 
+  - Not much interesting but includes slips
 
 ReportsTmp 
-  - 
+  - Empty
 
 ReportsUser 
-  - 
+  - Contains slips and custom asset Report
 
 RREPORTS 
-  - 
+  - Charge Details Report
+  - List of Charges and Costs
+  - Need to find how to access this
 
 SchedContracts 
-  - 
+  - Empty
 
 SchedReportsQrySystem 
-  - 
+  - Slips and Support Ticket Charges
+  - Might be good to have written down
 
 SchedReportsQryUser 
-  - 
+  - Empty
 
 SchedReportsUserSettings 
-  - 
+  - Cannot read this or understand
 
 SchedSlips 
-  - 
+  - Empty
 
 SchedTickets 
-  - 
+  - Empty
 
 Screen 
-  - 
+  - has some calls but everything is SCR ...
+  - Information for how to display on the screen probably
 
 SLA 
-  - 
+  - One entry and seems useless
 
 slips 
-  - 
+  - Seems to be all charges since system has been used
+  - VERY IMPORTANT!!!!
+  - Check here and find whats needed
 
 SNoteTemplates 
-  - 
+  - Seems useless
 
 SNoteTemplatesSystem 
-  - 
+  - Just have things like antivirus, probably useless
 
 SubjectScreen 
-  - 
+  - Return of the SRC..
+  - continues with the SBJ ...
 
 SubSubject 
-  - 
+  - Lots of SUB...
+  - Not much else that seems important
 
 Synclinkids 
-  - 
+  - Empty
 
 SyncPorfiles 
-  - 
+  - Empty
 
 SysCsSqlnf 
-  - 
+  - Empty
 
 SysELog 
-  - 
+  - Empty
 
 SYSIDS 
-  - 
+  - Two Columns
+  - RECID and ID
 
 SysLock 
-  - 
+  - Empty
 
 SysMerge 
-  - 
+  - One entry, but does not seem useful
 
 SysMinf 
-  - 
+  - Does not seem useful (has some map links)
 
 SysPM 
-  - 
+  - Cannot access due to encryption password
 
 SysRec 
-  - 
+  - 3 entries but nothing helpful seems like
 
 SysTst 
-  - 
+  - 1 entry but no lead
 
 taxes 
-  - 
+  - Empty
 
 TBLSUBUSRCRDAR2YEK9U6LC 
-  - 
+  - 15 entries but does not seem to do anything
 
 TBLSUBUSRCRDQYVQ6MM33PR 
-  - 
+  - 4 entries but doesnt seem to do anything
 
 TicketLinks 
-  - 
+  - Empty
 
 Tickets 
-  - 
+  - Seems to be actual tickets
 
 TodoLists
-  - 
+  - Seems to call items to create a todo List
 
 TodoListTemplates 
-  - 
+  - Empty
 
 todos 
-  - 
+  - Has all todos
 
 TreeTbl 
-  - 
+  - Has many different items like Administration, procedures, etc.
+  - Probably will be used to call and find the path to each of these
 
 UPageFields 
-  - 
+  - Information about ISP's
+  - But nothing else seems needed there
 
 UPageIDKind 
-  - 
+  - Does not seem useful
 
 Upages 
-  - 
+  - Has a bit of information but nothing too necessary
 
 valtblacoin 
-  - 
+  - Has information about currencies
 
 valtblRsubject 
-  - 
+  - Has some information but seems useless
 
 ValueListKind 
-  - 
+  - Seems a way to set up a Value list
 
 ValueMemoListKind 
-  - 
+  - A lot of information with account: notes,
+  - account: Service Disruption, etc.
 
 ValuesList 
-  - 
+  - 902 entries that looks to have countries and software
 
 ValuesListSettings 
-  - 
+  - Cant understand what this is for
 
 ValuesListSettingsUser 
-  - 
+  - Nothing good here
 
 ValuesMemoList 
-  - 
+  - Does not seem needed
 
 ViewsSystem 
-  - 
+  - Has 160 entires with given DicID
+  - Does not seem useful for me
 
 ViewsUser 
-  - 
+  - Has 160 entires with given DicID
+  - Does not seem useful for me
 
 WaCds 
-  - 
+  - Empty
 
 WaCustPriv 
-  - 
+  - Full for Customer Web Users
+  - Partial for Customer Web Users
+  - Limited for Customer Web Users
+  - Might be useful if I can access these files
 
 WALogin 
-  - 
+  - Seems to take track of logining in only
 
 WaMru 
-  - 
+  - Can't read this, do no understand
 
 WaUsers 
-  - 
+  - just has all users for Web Interface with some info
 
 WAZRPX 
-  - 
+  - Empty
 
 WHS 
-  - 
+  - Nothing really important here
 
 WHSExceptions 
-  - 
+  - Empty
 
 Xsync 
-  - 
+  - No clue for this
+  - Lots of entries
 
 XTransFiles 
-  - 
+  - Empty
 
 XTRANSLINKS
-  - 
+  - Do not know what to do with this information
 
 ZALERTQ 
-  - 
+  - Empty
 
 ZALERTSysGroupRules
-  - 
+  - Has 302 entries, but does not seem helpful
 
 ZALERTUserGroup
-  - 
+  - Has information going all the way to 6/5/2019m but do not know what this means
 
 ZALERTUserPref
-  - 
+  - Seems to be notification settings
 
 ZALERTUserRule
-  - 
+  - Empty
 
 zDsgn
-  - 
+  - Empty
 
 zProActiveAlertAudit
-  - 
+  - Empty
 
 zProActiveAlertSettings
-  - 
+  - 566 entries, but I don't understand
 
 ZRMMAPPS
-  - 
+  - 2 entries and does not seem helpful
 
 ZRMMLinks
-  - 
+  - Empty
 
 ZRMMLog
-  - 
+  - Empty
 
 ZRMMRules
-  - 
+  - Empty
