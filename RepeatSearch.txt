@@ -1,0 +1,115 @@
+I have looked through these files before and did a quick search,
+but I now have a better idea of what is needed 
+
+I will be searching for any leads on where the CSS and JavaScript
+files are being called from
+
+Initial guess is that they will still be in Db, 
+but will need to keep looking
+
+Look into files within CommitCRM by searching is-7M252.tmp
+  --> Nothing found
+
+-----------------------------------------------------------------
+
+Client
+  - Seems to only be needed on the desktop version
+  - Does not seem to be helpful
+
+Db
+  - See tables.txt
+
+DbSys
+  - All User + WORKERID just have the letter W in them 
+  - cmtdmdt has some demo SQL commands,
+    refer to this if you want to see some examples
+
+Docs
+  - The files witihn documents are not necessary for functions
+
+DocsExport
+  - Quotes for exporting
+
+Filters
+  - Empty
+
+Help
+  - For help page
+  - Does not seem to be helpful
+
+Import
+  - Just files for uploading
+
+LastVer
+  - Seems like a backup
+  - See this to follow these files to where they are originally
+
+Logs
+  - Lots of logs about updates and such 
+
+RMM
+  - Assuming this is remote monitoring and management
+  - Does not seem to be helpful
+
+SBTCCRM
+  - Just has some files, but useless
+
+Server
+  - ServerConfig only has to do with emails and locations
+  - And according to the README this CommtServer 
+    is only for use of 2 modules
+      - Commit Alerts Server
+      - Commit Email Connector 
+  - This is not being used with our sever so not worrying
+
+ShellG
+  - Empty
+
+Templates
+  - Empty (this is for desktop version), want WebInterface
+
+test
+  - Empty 
+
+ThirdParty
+  - UserDev and QuickBooks present as 3rd party software
+  - Cannot see how either helps or is used within charges
+
+TmpCommit
+  - Can't really use this because I do not know what is what
+
+Utils
+  - This is all for Upgrading, installing, etc.
+  - Could be helpful but nothing super serious
+
+WebInterface
+  - The most important 
+  - Lots of .dll that might be necessary
+  - Found calls to C://admin/Appdata/Local/Temp
+      - Seems like a dead-end, might look into Microsoft IIS
+
+XternalDataFiles1
+  - Does not seem to be helpful
+
+XternalDataFiles2
+  - Does not seem to be helpful
+
+XternalDataFiles3
+  - Does not seem to be helpful
+
+XternalDataFiles4
+  - Does not seem to be helpful
+
+Logs (zipp)
+  - Seems like repeat of logs
+
+LogsUserLog_
+  - Cannot understand where this would be useful from
+  - Looks like it contains information about quotes 
+    but unecessary right now
+
+-----------------------------------------------------------------
+
+Not much success found 
+Nothing up front of what is happening, 
+so now I amgoing to look deeper

@@ -97,7 +97,7 @@ BILLID - N/A, Constant throughout table
 CREATEDATE - 6/19/2019 8:39 AM, gives time of creation of charge
 CREATEUSER - CRDKPEA6TGOF8VB8QDYW, Seems constant for me
 UPDATEDATE - 6/20/2019 12:44 PM, Time of last update, if no update same
-UPDATEUSER - CRD7OL88G9HIVA81B9MN, Some same ome not, this one is more popular
+UPDATEUSER - CRD7OL88G9HIVA81B9MN, Carla Miller, Some same ome not, this one is more popular
 RECVER - 2, Changes quick a bit, but I think it is how many times updated
 USER1 - N/A, Constant throughout table
 CONTACTID - CRD216BAUB2XK6H8SX9P, stays the same but not unique (This is probably Scott)
