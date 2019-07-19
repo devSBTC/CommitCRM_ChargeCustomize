@@ -7,41 +7,150 @@ The files are of all three types (ADM, ADT, ADI)
 
 ----------------------------------------------------------------------
 
+This page about CommitCRM charges is useless
+http://www.commitcrm.com/wiki/Charges 
+It does not describe how to add your own changes
+
+----------------------------------------------------------------------
+
+ERROR POPPING UP: BrowseTable: Error 7016: Corrupt table. 
+                  Make sure you are not attempting to open a 
+                  DBF with an ADT table type or vice versa.
+
 EmailMessages (ADI)
-  - 
+  - Error occurs when opening in Advantage Data Architect
 
 eMAILMESSAGES (ADM)
-  - 
+  - Error again
 
 eMAILMESSAGES (ADT)
-  - 
+  Only one entry which is listed below
+  - RECID - EMSV3IB44BQ6C80Z9IVB
+  - Header - Delivered-To: commitcrm@sbtcsupport.org
+  - TEXTPLAIN - N/A
+  - TEXTPLAINVISUAL - Out of the office Re: Report: Block of Money Clients - Last 12 months, created Feb 2019 - 02/07/2019 08:30 AM
+  - SENDERNAME - Paulo Guedes
+  - SENDEREMAIL - pguedes@sbtc.org
+  - SENDERIPADDRESS - 209.85.220.41
+  - SENDERKIND - 0
+  - SENDERRECID - CRD216BAUB2XK6H8SX9P
+  - TOEMAIL - commitcrm@sbtcsupport.org
+  - CC - N/A
+  - SUBJECT - Out of the office Re: Report: Block of Money Clients - Last 12 months, created Feb 2019 - 02/07/2019 08:30 AM
+  - SUBJECTVISUAL - Out of the office Re: Report: Block of Money Clients - Last 12 months, created Feb 2019 - 02/07/2019 08:30 AM [TKT-0500-1008]
+  - EMAILDATE - 2/7/2019 8:30 AM
+  - EMAILDATEVISUAL - 2/7/2019 8:30 AM
+  - TICKETID - TKTZW56ZPMHEE07BMKVK
+  - ACCOUNTRECID - CRD216BAUB2XK6H8SX9P
+  - DOCID - N/A
+  - EMAILFILENAME - Ticket-0500-1008-2019-02-07-08-30-39-BVCXJ.eml
+  - HASATTACHMENT - N
+  - ISPUBLIC - Y
+  - CREATEUSER - CRDCMTEMAILCONNECTOR
+  - CREATEDATE - 2/7/2019 8:31 AM
+  - UPDATEUSER - CRDCMTEMAILCONNECTOR
+  - UPDATEDATE - 2/7/2019 8:31 AM
+  - REPLYTOEMAIL - N/A
+  - ATTACHMENTS - N/A
 
 Events (ADI)
-  - 
+  - Error
 
 Events (ADM)
-  - 
+  - Error
 
 Events (ADT)
-  - 
+  Columns are as follows (quick description of 286 inputs)
+  - RECID - A unique key
+  - WRITE_TO_ID - Only seems to have values of 2, 9, 10, or 11
+  - AUTO_ADDING - Boolean value (mainly true)
+  - EVENT_DATE - Gives the date of the event
+  - REMIND1_ACTIVE - Boolean (only false values present)
+  - REMIND1_TIMESTAMP - Empty
+  - REMIND1_AMOUNT - 0
+  - REMIND1_AMOUNTKIND - 3
+  - REMIND2_ACTIVE - Boolean (Only false)
+  - REMIND2_TIMESTAMP - Empty
+  - REMIND2_AMOUNT - 0
+  - REMIND2_AMOUNTKIND - 3
+  - PRIVATE - Boolean (mainly False)
+  - Private_ID - Empty
+  - UPDATE_TIMESTAMP - timestamp of when the update was
+  - UPDATE_USER - Gives id of user
+  - WORKER_ID - gets worker ID
+  - CARD_ID - Calls card id
+  - FAMILY - Mostly Empty (only like once something is present)
+  - ACTION - Empty
+  - FREE_TEXT - Gives description and cost (low voltage, network, etc.)
+  - FROM_TIME - Gives start time
+  - TO_TIME - Gives end time
+  - DONE - Boolean (All false)
+  - DONE_DATE - Empty
+  - AUTO_MARK_AS_DONE - Boolean (all false)
+  - CANCELD - Boolean (all false)
+  - PLACE - Empty
+  - PLACE1 - Empty
+  - PLACE2 - Empty
+  - STATUS - Usually 0, otherwise 50
+  - TASK_STATUS - Either 1 or 20 (mainly 20)
+  - TASK_DUE_DATE - Has a date
+  - EVENTID2 - Empty
+  - EVENTID10 - 0
+  - EVENTID11 - Empty
+  - CREATEDATE - Date it was created
+  - CALC_DATE - format of ZZZZ and then opportunity, Quote, or Task Task
+  - DOCID - Empty
+  - CREATUSERID - User id of creator most likely
+  - EVENTID_S_3 - Empty
+  - EVENTID_I_4 - Empty
+  - USERGROUPID - Empty
+  - LINKRECID - Unique id for whatever it is linked to
+  - RECVER - could be the version of the record
+  - CONTACTID - id of contact
+  - RCRSTRCT - Empty
+  - EVENTCOLOR - Consistently -16777211
 
 KBArticles (ADI)
-  - 
+  - Error
 
 KBArticles (ADM)
-  - 
+  - Error
 
 KBArticles (ADT)
-  - 
+  24 entries, descriptions on the columns below
+  - RECID - Record ID 
+  - TITLE - Gives description of what was done
+  - PROBLEM - states problem
+  - SOLUTION - Gives solution
+  - STATUS - Either P or D
+  - RANK - 0
+  - ISPUBLIC - Either Y or N
+  - CATEGORY - Gives category of the problem
+  - SEARCHTEXT - Information about working on it
+  - RECVER - what version of the record
+  - CREATEDATE - gives the date record was created
+  - CREATEUSER - What user created
+  - UPDATEDATE - date updated
+  - UPDAEUSER - What user updated
+  - ACCOUNTRECID - account for record ID
 
 Quotes (ADI)
-  - 
+  - Error
 
 WaLogin (ADI)
-  - 
+  - Error
 
 WALogin (ADT)
-  - 
+  Of 13,275 entries, here is information about columns and what present
+  - RECID - Record ID
+  - USERRECID - recID of user logging in
+  - LOGINDATETIME - time user logged in
+  - LOGOUTDATETIME - time user logged out
+  - LOGOUTSTATUS - Either T, N, or empty
+  - USERIP - Gives IP of user
+  - PORT - 4961
+  - LOGINKIND - Either C or M
+  - LOGINDATETIMEST1 - Empty
 
 ----------------------------------------------------------------------
 
@@ -51,5 +160,118 @@ Reloading from start
   12:39 - Refresh Start - WaLogin
   12:40 - Logout - WAMru
   12:41 - Login - WaLogin (ADI) and WALogin (ADT)
+    - For WALogin, see above
   12:42 - Charges Page - Nothing accessed
   12:43 - New Labor Charge - Nothing accessed
+  12:44 - Delayed
+    - cards (ADT)
+      - RECID - Gives a record id (CRD...)
+      - CARDID2 - Empty
+      - CARDID3 - Empty
+      - ENTITYKIND - number either 1, 4, or 5
+      - FULLNAME - Gives name of an account 
+      - DEAR - gives should you use Mr. or Mrs. or nothing
+      - CONTACT - Contact for that account
+      - LASTNAME - Gives last name of user/person
+      - SUFFIX - Empty
+      - TITLE - Empty
+      - DEPARTMENT - empty
+      - COMPANYNO - only if company is account, else empty
+      - COMPANY - Gives company name
+      - ADDRESS1 = Gives address
+      - ADDRESS2 - Empty
+      - CITY - Gives city where address is
+      - ADDRESS3 - Empty
+      - ZIP - Gives zip code of address
+      - STATE - Gives Country
+      - COUNTRY - Gives states
+      - STICKER - Empty
+      - STICKERINUSE - N
+      - PHONE1 - Gives phone number
+      - PHNDESC1 - Empty
+      - PHONE2 - if secondary phone, else empty
+      - PHNDESC2 - Empty
+      - PHONE3 - Empty
+      - PHNDESC3 - Empty
+      - PHONE4 - Empty
+      - PHNDESC4 - Empty
+      - FAX1 - Gives fax number
+      - FAXDESC1 - Empty
+      - EMAIL1 - Gives email
+      - EMAIL2 - Gives secondary email, else empty
+      - URL1 - Empty
+      - URL2 - Empty
+      - NOTES - Empty
+      - PERSONID - Empty
+      - BATCHNO - 0
+      - ASSIGNCARDID - if you want to assign a id
+      - ASSISTANT - Empty
+      - USER1 - Empty
+      - USER2 - Empty
+      - USER3 - Empty
+      - USER4 - Empty
+      - USER5 - Sometimes Comcast, else empty
+      - CREATEDATE - date created
+      - CREATEUSERID - Creator id
+      - UPDATEDATE - date updated
+      - UPDATEUSERID - user who updated
+      - CARDID4 - Empty
+      - CARDID10 - 0
+      - SHOWMESSAGE - N
+      - CARDMESSAGE - empty
+      - BIRTHDAY - shows BIRTHDAY
+      - SUBCODE - Empty
+      - DOCFOLDER - usally empty unless that account has a documents folder
+      - CARDID11 - Empty
+      - RECVER - version of record
+      - REGIONCODE - what regional code
+      - TAXCODES - Empty
+      - KIND - Usually empty unless supplier, worker, or customer, or parish
+      - VALCODE- gives a long code for validation
+      - TEXT1 - Empty
+      - TEXT2 - Empty
+      - TEXT3 - Empty
+      - BCRECID - has this type of id 
+      - SERVICEDESC - Empty
+      - SERVICEDESCINTERNAL - Empty
+      - SLARECID - Empty
+      - SUBCONTACTSTATUS - Sometimes A, else empty
+      - ACCOUNTSTATUS - Either A or N
+      - STRUCTUREDNOTE - sometimes an <?xml...> part
+      - EML1DEFRCPNT - Eitehr Y or N
+      - EML2DEFRCPNT - Either Y or N
+    - Pref (ADT)
+      - 
+    - slips (ADT)
+      - 
+
+----------------------------------------------------------------------
+
+Reloading from start try 2
+  1:22 - Refresh from home page
+    - SysMinf (ADI)
+      - Error
+    - SysMinf (ADM)
+      - Error
+    - SysMinf (ADT)
+      - 
+    - WaLogin (ADI)
+      - Error
+    - WaUsers (ADI)
+      - Error
+    - WaUsers (ADM)
+      - Error
+    - WaUsers (ADT)
+      - 
+    Quickly notice SysMinf not present way above
+  1:23 - Background loading - WALogin
+  1:26 - Goes to Charges page - Nothing happens
+  1:28 - Create New Labor Charge - Nothing
+From here on I was not using CommitCRM, 
+but here are the additional files that occureed that I did not access
+  2:01 PM - WaMru (ADI)
+    - Error
+  2:01 PM - WAMRU (ADT)
+    - 
+  2:14 PM - Pref (ADT)
+    - 
