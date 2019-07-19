@@ -1,3 +1,7 @@
+Open slips.adt
+
+----------
+
 CardID is not same as present
 Looked at CreateUserID amd found my inserts!
 
@@ -56,4 +60,107 @@ Looking further this is the CardID for SBTC
 Multiple uses of BCRECID, therefore I do not believe it to be unique to me
 
 ----------
+
+Will attempt to find more of my CHARGES
+
+Found all my charges by doing (bottom-left) Order By: WORKERIDINX
+This means that workerID is unique to each worker
+
+----------
+
+What columns are unique to worker
+
+RECID - Not Unique
+SLIPDATE - Unique to date slip opened
+WORKERID - CRDKPEA6TGOF8VB8QDYW, Unique
+CARDID - CRD216BAUB2XK6H8SX9P, constant for me but others have same cardID
+TICKETID - Empty throughout
+ITEMID - ITMMBOPR4913EEMLIP7Q, tied constantly with Consulting
+ITEMTYPE - Consulting, tied with above
+ITEMTYPEGROUP - F, Constant throughout table
+ITEMUNITISHOURS - Y, Constant throughout table
+Description - Based on whatever I put into description portion
+HOURSAMOUNT - Based on what my hours were
+QUANTITY - 0, Constant throughout table
+PRICE - 102, based on item and worker
+TOTAL - 765, price * hoursamount
+ADJUST - N, Constant throughout table
+ADJUSTTYPE - 0, Constant throughout table
+ADJUSTAMOUNT - 0, Constant throughout table
+ADJUSTPERCENT - 0, Constant throughout table
+BILLTOTAL - 765, Same as total
+COINID - 20, Constant throughtout (USD)
+STAGE - D, Constant throughout table
+BILLKIND - N, Some B but keep as N
+HOLD - N, Constant throughout table
+BILLID - N/A, Constant throughout table
+CREATEDATE - 6/19/2019 8:39 AM, gives time of creation of charge
+CREATEUSER - CRDKPEA6TGOF8VB8QDYW, Seems constant for me
+UPDATEDATE - 6/20/2019 12:44 PM, Time of last update, if no update same
+UPDATEUSER - CRD7OL88G9HIVA81B9MN, Some same ome not, this one is more popular
+RECVER - 2, Changes quick a bit, but I think it is how many times updated
+USER1 - N/A, Constant throughout table
+CONTACTID - CRD216BAUB2XK6H8SX9P, stays the same but not unique (This is probably Scott)
+BCRECID - BCT0IE3KZSV9UOU4QNQ9, not unique to me and changes too
+BCCODE - InternalDP, Place where I did the work
+FROMTIME - 8:00 AM, start time entered
+TOTIME - 3:30 PM, End time entered
+XTRANSRECID - N/A, Constant throughout table
+SOURCERECID - N/A, Constant throughout table
+ASSETRECID - N/A, Constant throughout table
+SOURCERECID2 - N/A, Constant throughout table
+TIMESPENTINMIN - 450, time spent in minutes
+
+----------
+
+Made up entry to see if pull from this data table
+
+RECID - SLPYSTY0R27XCZOROE0V
+SLIPDATE - 7/19/2019 9:00 AM
+WORKERID - CRDKPEA6TGOF8VB8QDYW
+CARDID - CRD216BAUB2XK6H8SX9P
+TICKETID - N/A
+ITEMID - ITMMBOPR4913EEMLIP7Q
+ITEMTYPE - Consulting
+ITEMTYPEGROUP - F
+ITEMUNITISHOURS - Y
+Description - Test test TESTING
+HOURSAMOUNT - 5
+QUANTITY - 0
+PRICE - 102 
+TOTAL - 510
+ADJUST - N
+ADJUSTTYPE - 0
+ADJUSTAMOUNT - 0
+ADJUSTPERCENT - 0
+BILLTOTAL - 510
+COINID - 20
+STAGE - D
+BILLKIND - N
+HOLD - N
+BILLID - N/A
+CREATEDATE - 7/19/2019 8:39 AM
+CREATEUSER - CRDKPEA6TGOF8VB8QDYW
+UPDATEDATE - 7/19/2019 12:44 PM
+UPDATEUSER - CRD7OL88G9HIVA81B9MN
+RECVER - 2
+USER1 - N/A
+CONTACTID - CRD216BAUB2XK6H8SX9P
+BCRECID - BCT0IE3KZSV9UOU4QNQ9
+BCCODE - InternalDP
+FROMTIME - 9:00 AM
+TOTIME - 2:00 PM
+XTRANSRECID - N/A
+SOURCERECID - N/A
+ASSETRECID - N/A
+SOURCERECID2 - N/A
+TIMESPENTINMIN - 300
+
+Put this into splips.adt, but the charge comes up empty... 
+Wondering if the RECID calls somewhere else to get information
+The slipdate, workerid, and recID all come up
+Delayed push, but the entire charge came up
+So we know this is the data table called to have shown
+
+Will continue looking for more information in the database
 
