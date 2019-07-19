@@ -1,0 +1,55 @@
+Time is 12:31 refreshing page trying to see when this was accessed
+These files that appear will be the ones from the welcome page
+  --> Tickets
+  --> Charges
+  --> New Charge
+The files are of all three types (ADM, ADT, ADI)
+
+----------------------------------------------------------------------
+
+EmailMessages (ADI)
+  - 
+
+eMAILMESSAGES (ADM)
+  - 
+
+eMAILMESSAGES (ADT)
+  - 
+
+Events (ADI)
+  - 
+
+Events (ADM)
+  - 
+
+Events (ADT)
+  - 
+
+KBArticles (ADI)
+  - 
+
+KBArticles (ADM)
+  - 
+
+KBArticles (ADT)
+  - 
+
+Quotes (ADI)
+  - 
+
+WaLogin (ADI)
+  - 
+
+WALogin (ADT)
+  - 
+
+----------------------------------------------------------------------
+
+Saving is not working, so need to fix this eventually
+
+Reloading from start
+  12:39 - Refresh Start - WaLogin
+  12:40 - Logout - WAMru
+  12:41 - Login - WaLogin (ADI) and WALogin (ADT)
+  12:42 - Charges Page - Nothing accessed
+  12:43 - New Labor Charge - Nothing accessed
