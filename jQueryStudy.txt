@@ -1,0 +1,45 @@
+What can be done in jQuery
+I was asked to do certain tasks with jQuery on the new page, 
+and I am going to take notes and links here
+
+Asked for 
+  - Make the three boxes and see if you can pull in the save features that are currently missing
+      - Three boxes is easy to do
+      - To check to see what is missing need to find what JS code does this first
+      - Will then need to worry about saving
+          - To save will need to search for null fields
+          - Will have to decide what qualifications are needed in order to qualify as saveable
+          - Two options to solve
+              - If fulfills certain requirements, alert/color light that this ticket will be saved
+                  - Color light - a little color light can appear at the top right at the box
+                      - If light green will be saved as seperate charge
+                          - If you scroll over the light it will tell you "Ready to be saved"
+                      - If red, will not be saved because basic requirements not met
+                          - If you scroll over, will list vertically requirements still needed
+                  - Alert, telling which boxes are going to be saved
+              - Create a check box at the top that stages the charge to upload
+                  - If does not meet requirements, alert which staged charge is not applicable to submission
+                      - This will have to have some type of naming convention for each charge
+                  - Else, save each as seperate ticket
+  - According to Paul, want to create two buttons to differentiate Techs and Help Desk
+      - Creating the buttons is easy, just styling needs to find the CSS
+      - if want huge CSS changing, then might need to find the original file
+      - Want once the button is clicked, to expand the box and make new fields
+  - Work on finding jQuery code that allows for onclick to EXPAND AND SHOW NEW FIELDS
+      - https://www.w3schools.com/jquery/jquery_hide_show.asp
+      - https://api.jquery.com/toggle/
+      - https://api.jquery.com/show/
+          - This tutorial just hides/shows a division
+          - If I make a master division for techs and supports, technically everything will be present at once
+          - Some parts will be hidden and expanded once clicked (when clicked I want the tech/support box to change color)
+          - This should work just fine since it is a simple hide/show, so fields can always be filled
+      - I can have the fields show/not show, so from here I think it would be nice to have the color light idea
+      - So that we can have smaller boxes that can grow/shrink and it does not look bad
+      - Will still have to discuss with Paul how he wants account to work
+
+Other issues still present
+  - Currently when I press save, it does not do anything
+  - Also account does not lock in the account once clicked
+      - To fix this I will look to see what {%...%} is missing and does not seem to add another feature
+  - If want more information added, I will need to add columns in the database
+      - Then need to find out what code will access this/it
