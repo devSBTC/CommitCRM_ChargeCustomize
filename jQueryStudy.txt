@@ -43,3 +43,9 @@ Other issues still present
       - To fix this I will look to see what {%...%} is missing and does not seem to add another feature
   - If want more information added, I will need to add columns in the database
       - Then need to find out what code will access this/it
+
+
+Update on situation
+  - Spoke to Paul about design
+  - Version one is what I have been working on for Scott and just need to wait on CommitCRM to reply to make sure items can be staged properly (as separate charges)
+  - Today I will create the three separate charge, leaving the add another entry part for later
