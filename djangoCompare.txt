@@ -73,13 +73,13 @@ Key
   - Will remove Contact label
 
 ❌cmtedtdatafldslpcontactid_fldcrdcontact_cmttabindex2
-👍
+👎
   - Removed entire contact dropdown section
   - removes this line <select maxlength="40" name="cmtedtdatafldslpcontactid_fldcrdcontact" id="cmtedtdatafldslpcontactid_fldcrdcontact" tabindex="-1" data-placeholder="..." class="clscmbgenedit form-control ClsGenIdfldslpcontactid_fldcrdcontact chosen-select" style="display: none;"><option value="" selected=""></option></select><div class="chosen-container chosen-container-single" style="width: 256px;" title="" id="cmtedtdatafldslpcontactid_fldcrdcontact_chosen"><a class="chosen-single chosen-default" tabindex="-1"><span>...</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" tabindex="2"></div><ul class="chosen-results"></ul></div></div></div>
   - Should probably keep this
 
 ❌cmbslpeditselectrecid
-👍
+👎
   - No visible change, maybe a call to ticket system if existed
 
 ❌cmtlbldescfldslpticketid
@@ -92,7 +92,7 @@ Key
   - removes <input type="text" disabled="" id="cmtedtdatafldslpticketid_fldtktclclnkrecidshort" value="" class="form-control Edtcmtedtdatafldslpticketid_fldtktclclnkrecidshort">
 
 ❌cmtseldatafldslpticketid_FLDTKTCLCINFO
-👍👎
+👍
   - Has to do with calling the tickets (onSubmit present)
 
 ❌cmtclrdatafldslpticketid_FLDTKTCLCINFO
@@ -162,7 +162,7 @@ Key
   - Calls the Quick Entry Label
 
 ❌CmtLblDataQFrToTimeGenLdTmplCmb
-👍👎
+👎
   - Just callls a bunch of quick times that link to giving the time
 
 ❌cmtedtdescfldslpstarttime
@@ -186,7 +186,7 @@ Key
   - Takes in a numerical time input for Time Spent
 
 ❌btggnslpeditfldslpclcfromtotime
-👍👎
+👎
   - Probably copies information to the Hours/Unit 
 
 ❌cmtlnkdescfldslpitemid_flditmitemno
@@ -215,27 +215,27 @@ Key
   - No big change seen
 
 ❌cmtlbldescfldslpadjust
-👍
+👎
   - No big change seen
 
 ❌cmtedtdatafldslpadjust_cmttabindex12
-👍
+👎
   - No big change seen
 
 ❌cmtedtdatafldslpadjusttype_cmttabindex13
-👍
+👎
   - No big change seen
 
 ❌cmtedtdatafldslpclcadjustamount_cmttabindex14
-👍
+👎
   - No big change seen
 
 ❌cmtlbldescfldslpbilltotal
-👍
+👎
   - No big change seen
 
 ❌cmtedtdatafldslpbilltotal
-👍
+👎
   - No big change seen
 
 ❌cmtlbldescfldslpdesc
