@@ -10,6 +10,9 @@ Key
   - 👎 - Remove/do not add to slpedit
   - 👍👎 - Not yet sure
 
+These changes will not be reflected in slpedit22501Redo.html till a clear fix is present
+Instead these are visible within toCheck.html
+
 **************************************************************************************
 
 ✅CmtGenTopBackGenedit
@@ -91,15 +94,15 @@ Key
   - seems to call tickets
   - removes <input type="text" disabled="" id="cmtedtdatafldslpticketid_fldtktclclnkrecidshort" value="" class="form-control Edtcmtedtdatafldslpticketid_fldtktclclnkrecidshort">
 
-❌cmtseldatafldslpticketid_FLDTKTCLCINFO
+✅cmtseldatafldslpticketid_FLDTKTCLCINFO
 👍
   - Has to do with calling the tickets (onSubmit present)
 
-❌cmtclrdatafldslpticketid_FLDTKTCLCINFO
+✅cmtclrdatafldslpticketid_FLDTKTCLCINFO
 👍
   - Empty pull
 
-❌cmtLBLdatafldslpticketid_FLDGENCLCLNKRECIDMEMO
+✅cmtLBLdatafldslpticketid_FLDGENCLCLNKRECIDMEMO
 👍
   - Empty pull
 
@@ -111,32 +114,32 @@ Key
 👍
   - Removes entire contract label
 
-❌cmtlbldescfldslpbcrecid_fldbctdescexternal
+✅cmtlbldescfldslpbcrecid_fldbctdescexternal
 👍
   - No clear change
   - Meant for Descriptions to put in later
 
-❌cmtlbldatafldslpbcrecid_fldbctdescexternal
+✅cmtlbldatafldslpbcrecid_fldbctdescexternal
 👍
   - No clear change
   - Meant for Descriptions to put in later
 
-❌cmtlbldescfldslpbcrecid_fldbctdescinternal
+✅cmtlbldescfldslpbcrecid_fldbctdescinternal
 👍
   - No clear change
   - Meant for Descriptions to put in later
 
-❌cmtlbldatafldslpbcrecid_fldbctdescinternal
+✅cmtlbldatafldslpbcrecid_fldbctdescinternal
 👍
   - No clear change
   - Meant for Descriptions to put in later
 
-❌cmtlbldescfldslpbcrecid_fldbctnote
+✅cmtlbldescfldslpbcrecid_fldbctnote
 👍
   - No clear change
   - Meant for Descriptions to put in later
 
-❌cmtlbldatafldslpbcrecid_fldbctnote
+✅cmtlbldatafldslpbcrecid_fldbctnote
 👍
   - No clear change
   - Meant for Descriptions to put in later
@@ -210,7 +213,7 @@ Key
   - Looks like An unused and useless label After
   - comes after Hours/Unit
 
-❌cmtedtdatafldslpprice_cmttabindex11
+✅cmtedtdatafldslpprice_cmttabindex11
 👍
   - No big change seen
 
@@ -242,7 +245,7 @@ Key
 👎
   - Calls description label
 
-❌ctpcmbxxxcmbMemoLstDrfldslpdesc
+✅ctpcmbxxxcmbMemoLstDrfldslpdesc
 👍
   - No big change seen
 
@@ -258,11 +261,11 @@ Key
 👎
   - Gets all parts of Field for select value
 
-❌cmtedtdataFLDSLPCLCBILLKIND_cmttabindex17
+✅cmtedtdataFLDSLPCLCBILLKIND_cmttabindex17
 👍
   - No change seen
 
-❌cmtlbldataFLDSLPBILLKIND
+✅cmtlbldataFLDSLPBILLKIND
 👍
   - No change seen
 

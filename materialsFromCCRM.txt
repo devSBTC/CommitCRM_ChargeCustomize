@@ -1,0 +1,56 @@
+This file is me taking notes on the links I received to search through from CommitCRM
+They do not seem useful but I will give it a try
+
+******************************************************************************************
+------------------------------------------------------------------------------------------
+******************************************************************************************
+------------------------------------------------------------------------------------------
+******************************************************************************************
+
+Viewing link - http://www.commitcrm.com/wiki/Field_Customization
+
+Customizing Existing Fields
+  - Fields in CommitCRM can be customized with the following settings
+      - The Name of the fields as displayed throughout the system where a field name 
+        is displayed
+      - The field Label and Hint
+      - The field title on data grids/tables – Column Title
+      - The default value for new records
+      - The drop-down list that will be displayed for drop-down selection list fields
+      - Enabling the field to be updated in batch update (Accounts fields only)
+      - Enabling lists to be sorted by this field
+  - To modify the field settings, log in to CommitCRM as a user with full privileges, 
+    and double-click on the field label
+
+Adding new tabs
+  - Useless because I do not want to add new tabs right now
+  - I really want to find the code for the files
+    so that I do not have to rewrite everything myself
+
+Creating New Fields
+  - To add new fields to user-defined tabs you can use two options:
+      - Right-click the tab area and choose Add New Field to Tab.
+      - Go to Tools > Field Management and from the Field Management Window, click the 
+        New icon to add a new field.
+  - You can either add existing fields to be displayed in your tab, or create totally 
+    new fields in the database that will be displayed in your tab. 
+  - This seems helpful if I was using Desktop interface, but we will not. I need the 
+    functions
+
+******************************************************************************************
+------------------------------------------------------------------------------------------
+******************************************************************************************
+
+Viewing link - http://www.commitcrm.com/wiki/API_Reference_Manual#Charge_Fields
+
+The only thing that would be of interest to me is the charge fields 
+since this is what I only need to save to
+
+I have already found this table and understood how its works through searching
+What I really need is the {%...%} function files
+
+******************************************************************************************
+------------------------------------------------------------------------------------------
+******************************************************************************************
+
+
