@@ -50,8 +50,8 @@ Instead these are visible within toCheck.html
   - Removed entire line and nothing happpened
   - Scroll over the line, and nothing is highlighted
 
-❌cmtlnkdescfldslpcardid_fldcrdfullname
-👎
+✅cmtlnkdescfldslpcardid_fldcrdfullname
+👍
   - The Account part is Missing
   - Therefore this call is to get the label account
 
@@ -75,14 +75,14 @@ Instead these are visible within toCheck.html
 👎
   - Will remove Contact label
 
-❌cmtedtdatafldslpcontactid_fldcrdcontact_cmttabindex2
-👎
+✅cmtedtdatafldslpcontactid_fldcrdcontact_cmttabindex2
+👍
   - Removed entire contact dropdown section
   - removes this line <select maxlength="40" name="cmtedtdatafldslpcontactid_fldcrdcontact" id="cmtedtdatafldslpcontactid_fldcrdcontact" tabindex="-1" data-placeholder="..." class="clscmbgenedit form-control ClsGenIdfldslpcontactid_fldcrdcontact chosen-select" style="display: none;"><option value="" selected=""></option></select><div class="chosen-container chosen-container-single" style="width: 256px;" title="" id="cmtedtdatafldslpcontactid_fldcrdcontact_chosen"><a class="chosen-single chosen-default" tabindex="-1"><span>...</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" tabindex="2"></div><ul class="chosen-results"></ul></div></div></div>
   - Should probably keep this
 
-❌cmbslpeditselectrecid
-👎
+✅cmbslpeditselectrecid
+👍
   - No visible change, maybe a call to ticket system if existed
 
 ❌cmtlbldescfldslpticketid
@@ -160,12 +160,12 @@ Instead these are visible within toCheck.html
 👍
   - Calls the entire date attribute
 
-❌CmtLblDescQFrToTimeGenLdTmplCmb
-👎
+✅CmtLblDescQFrToTimeGenLdTmplCmb
+👍
   - Calls the Quick Entry Label
 
-❌CmtLblDataQFrToTimeGenLdTmplCmb
-👎
+✅CmtLblDataQFrToTimeGenLdTmplCmb
+👍
   - Just callls a bunch of quick times that link to giving the time
 
 ❌cmtedtdescfldslpstarttime
@@ -188,8 +188,8 @@ Instead these are visible within toCheck.html
 👍
   - Takes in a numerical time input for Time Spent
 
-❌btggnslpeditfldslpclcfromtotime
-👎
+✅btggnslpeditfldslpclcfromtotime
+👍
   - Probably copies information to the Hours/Unit 
 
 ❌cmtlnkdescfldslpitemid_flditmitemno
@@ -200,16 +200,16 @@ Instead these are visible within toCheck.html
 👍
   - The entire part for the select value drop down of item
 
-❌cmtlbldescfldslpclcamount
-👎
+✅cmtlbldescfldslpclcamount
+👍
   - Calls the Hours/Unit Label
 
-❌cmtedtdatafldslpclcamount_cmttabindex10
-👎
+✅cmtedtdatafldslpclcamount_cmttabindex10
+👍
   - input from Hours/unit
 
-❌cmtlbldescfldslpprice
-👎
+✅cmtlbldescfldslpprice
+👍
   - Looks like An unused and useless label After
   - comes after Hours/Unit
 
@@ -217,31 +217,31 @@ Instead these are visible within toCheck.html
 👍
   - No big change seen
 
-❌cmtlbldescfldslpadjust
-👎
+✅cmtlbldescfldslpadjust
+👍
   - No big change seen
 
-❌cmtedtdatafldslpadjust_cmttabindex12
-👎
+✅cmtedtdatafldslpadjust_cmttabindex12
+👍
   - No big change seen
 
-❌cmtedtdatafldslpadjusttype_cmttabindex13
-👎
+✅cmtedtdatafldslpadjusttype_cmttabindex13
+👍
   - No big change seen
 
-❌cmtedtdatafldslpclcadjustamount_cmttabindex14
-👎
+✅cmtedtdatafldslpclcadjustamount_cmttabindex14
+👍
   - No big change seen
 
-❌cmtlbldescfldslpbilltotal
-👎
+✅cmtlbldescfldslpbilltotal
+👍
   - No big change seen
 
-❌cmtedtdatafldslpbilltotal
-👎
+✅cmtedtdatafldslpbilltotal
+👍
   - No big change seen
 
-❌cmtlbldescfldslpdesc
+✅cmtlbldescfldslpdesc
 👎
   - Calls description label
 
@@ -253,12 +253,12 @@ Instead these are visible within toCheck.html
 👍
   - Creates a textarea textbox that allows to type up a description
 
-❌cmtlbldescfldslpuser1
-👎
+✅cmtlbldescfldslpuser1
+👍
   - Calls Field1 label
 
-❌cmtedtdatafldslpuser1_cmttabindex16
-👎
+✅cmtedtdatafldslpuser1_cmttabindex16
+👍
   - Gets all parts of Field for select value
 
 ✅cmtedtdataFLDSLPCLCBILLKIND_cmttabindex17
