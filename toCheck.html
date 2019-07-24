@@ -50,15 +50,19 @@
                               <div class="CmtCrdSellxx105 CmtNoPdRight">
                                 {%cmtedtdatafldslpcardid_fldcrdfullname_cmttabindex1%}
                               </div><!-- /input-group -->
-                            </div>
+                          </div>
+                          <div class="col-sm-1 CmtNoPdLeftNoMbl CmtMgCnBtn">
+                            <span>{%cmtseldatafldslpcardid_fldcrdfullname%}</span>
+                            <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpcardid_fldcrdfullname%}</span>
+                          </div>
+                      </div>
 
-                            <div class="col-sm-1 CmtNoPdLeftNoMbl CmtMgCnBtn">
-                              <span>{%cmtseldatafldslpcardid_fldcrdfullname%}</span>
-                              <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpcardid_fldcrdfullname%}</span>
-                            </div>
+                      <div class="col-sm-4">
+                          {%cmtedtdatafldslpcontactid_fldcrdcontact_cmttabindex2%}
                       </div>
 
                       <!-- Select Ticket -->
+                    <!--
                       <div class="col-sm-4">
                         <div class="CmtCrdSellxx105 CmtNoPdRight">
                             {%cmtedtdatafldslpticketid_FLDTKTCLCLNKRECIDSHORT%}
@@ -66,11 +70,13 @@
                             <span>{%cmtseldatafldslpticketid_FLDTKTCLCINFO%}</span>
                             <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpticketid_FLDTKTCLCINFO%}</span>
                           </span>
-                        </div><!-- /input-group -->
+                        </div>
                         <div id="fldgenLINKrecid_FLDGENCLCLNKRECIDMEMO" style="display:none;">
                           {%cmtLBLdatafldslpticketid_FLDGENCLCLNKRECIDMEMO%}
                         </div>
                       </div>
+                      -->
+                    
                       
                       <!-- Select Contract -->
                       <div class="col-sm-4">
@@ -245,9 +251,7 @@
                   <div class="col-sm-12">
                     <!-- Description -->
                     <label class="col-sm-1 control-label CmtEdit ">{%ctpcmbxxxcmbMemoLstDrfldslpdesc%}</label>
-                    <div class="form-group  ">
-                      {%cmtedtdatafldslpdesc_cmttabindex15%}
-                    </div>
+                    {%cmtedtdatafldslpdesc_cmttabindex15%}
                     <!--
                       <div class="form-group  ">
                         <label class="col-sm-1 control-label CmtEdit ">{%cmtlbldescfldslpdesc%}{%ctpcmbxxxcmbMemoLstDrfldslpdesc%}</label>
