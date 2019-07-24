@@ -46,26 +46,23 @@
                     <div class="form-group">
                       <div class="col-sm-4">
                         <!-- Select Account -->
-                          <div class=" col-sm-11 ">
-                              <div class="CmtCrdSellxx105 CmtNoPdRight">
-                                {%cmtedtdatafldslpcardid_fldcrdfullname_cmttabindex1%}
-                              </div>
+                        <div class=" col-sm-10 ">
+                            <div class="CmtCrdSellxx105 CmtNoPdRight">
+                              {%cmtedtdatafldslpcardid_fldcrdfullname_cmttabindex1%}
                             </div>
-
-                            <div class="col-sm-1 CmtNoPdLeftNoMbl CmtMgCnBtn">
-                              <span>{%cmtseldatafldslpcardid_fldcrdfullname%}</span>
-                              <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpcardid_fldcrdfullname%}</span>
-                            </div>
+                        </div>
+                        <div class="col-sm-2 CmtNoPdLeftNoMbl CmtMgCnBtn">
+                          <span>{%cmtseldatafldslpcardid_fldcrdfullname%}</span>
+                          <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpcardid_fldcrdfullname%}</span>
+                        </div>
                         <!-- 
                           <div class="form-group">
                             <label  class=" col-sm-2 control-label CmtEdit ">{%cmtlnkdescfldslpcardid_fldcrdfullname%}</label>
                             <div class=" col-sm-8 ">
                               <div class="CmtCrdSellxx105 CmtNoPdRight">
                                 {%cmtedtdatafldslpcardid_fldcrdfullname_cmttabindex1%}
-                              </div>
+                              </div>  
                             </div>
-
-                            Hourglass, send new page
                             <div class="col-sm-2 CmtNoPdLeftNoMbl CmtMgCnBtn">
                               <span>{%cmtseldatafldslpcardid_fldcrdfullname%}</span>
                               <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpcardid_fldcrdfullname%}</span>
@@ -74,12 +71,17 @@
                         -->
                       </div>
 
-
+                      <!-- Select Contact -->
                       <div class="col-sm-4">
-                        <!-- Select Ticket -->
+                        {%cmtedtdatafldslpcontactid_fldcrdcontact_cmttabindex2%}
+                      </div>
+
+                      <!--
+                      <div class="col-sm-4">
+                         Select Ticket 
                         <div class="CmtCrdSellxx105 CmtNoPdRight">
                             {%cmtedtdatafldslpticketid_FLDTKTCLCLNKRECIDSHORT%}
-                            <!--
+                            
                             <span class="CmtMgCnBtn visible-xs-block">
                             <span>{%cmtseldatafldslpticketid_FLDTKTCLCINFO%}</span>
                             <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpticketid_FLDTKTCLCINFO%}</span>
@@ -87,12 +89,12 @@
                             <a data-toggle="tooltip" data-placement="top" id="fldgenLINKrecid_FLDGENCLCLNKRECIDMEMOIncDec1" href="javascript:ShowHide('fldgenLINKrecid_FLDGENCLCLNKRECIDMEMO');" class="CmtIncDecSection CmtGenDefMvUpDn"><span>+/-</span></a>
                             </span>
                             </span>
-                          -->
+                          
                           </div>
                           <div id="fldgenLINKrecid_FLDGENCLCLNKRECIDMEMO" style="display:none;">
                           </div>
 
-                        <!--
+                        
                           <div class="form-group">
                             <label id="CmbGenLnkRecId" class=" col-sm-2 control-label CmtEdit ">{%cmbslpeditselectrecid%}{%cmtlbldescfldslpticketid%}</label>
                             <div class=" col-sm-8 ">
@@ -117,14 +119,14 @@
                               </span>
                             </div>
                           </div>  
-                        -->
+                        
                       </div>
+                    -->
 
 
                       <div class="col-sm-4">
                         <!-- Select Contract -->
                         {%cmtedtdatafldslpbcrecid_fldbctclccodename_cmttabindex3%}
-
                         <!-- 
                         <span id="cmtedtdatafldslpbcrecid_fldbctclccodenameIncDecSpn" class="CmtInlBlkMbl visible-xs-block">
                           <a data-toggle="tooltip" data-placement="top" id="cmtedtdatafldslpbcrecid_fldbctclccodenameIncDec1" href="javascript:ShowHide('tktedit12501_cmtlnkdatafldslpbcrecid_fldbctclccodename');" class="CmtIncDecSection CmtGenDefMvUpDn"><span>+/-</span></a>
@@ -375,9 +377,7 @@
                 <div class="row CmtDataArea">
                   <div class="col-sm-12">
                     <!-- Description -->
-                    <div class="form-group  ">
-                      {%cmtedtdatafldslpdesc_cmttabindex15%}
-                    </div>
+                    {%cmtedtdatafldslpdesc_cmttabindex15%}
                     <!--
                       <div class="form-group  ">
                         <label class="col-sm-1 control-label CmtEdit ">{%cmtlbldescfldslpdesc%}{%ctpcmbxxxcmbMemoLstDrfldslpdesc%}</label>
