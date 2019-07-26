@@ -214,7 +214,7 @@
                       <!-- Time Worked -->
                       <div class="col-sm-3">
                         <div id="CmtSlpTimeSpntFrmGrg" class="form-group  ">
-                          {%cmtedtdataFLDSLPTIMESPENTINMIN_cmttabindex8%}                    
+                          
                         </div>
                         <div class="col-sm-2 CmtNoPdLeftNoMbl CmtMgCnBtn" style="display: none;">
                             <span>
@@ -233,7 +233,9 @@
                         <div id="CmtSlpTimeSpntFrmGrg" class="form-group  ">             
                           <div class="col-sm-12">
                             <!-- Start writing this text box myself -->
-                            <input type="text" name="cmtedtdatafldslptimespentinmin" id="cmtedtdatafldslptimespentinmin" value="" tabindex="8" maxlength="5" onchange="CmtCtrlFLDSLPTIMESPENTINMINChange(this)" class="form-control ClsGenIdfldslptimespentinmin" placeholder="Break Length">
+                            <!--Close By CommitCRM -->
+                            <!--<input type="text" name="cmtedtdatafldslptimespentinmin" id="cmtedtdatafldslptimespentinmin" value="" tabindex="8" maxlength="5" onchange="CmtCtrlFLDSLPTIMESPENTINMINChange(this)" class="form-control ClsGenIdfldslptimespentinmin" placeholder="Break Length"> -->  
+                            {%cmtedtdataFLDSLPTIMESPENTINMIN_cmttabindex8%}                    
                             <!-- End writing this text box myself -->
                           </div>
                         </div>
@@ -328,8 +330,8 @@
 
                 <div class="row CmtDataArea">
                   
-                  <!--
-                    <div class="col-sm-6">
+                    <!-- Change by CommitCRM-->
+                    <div class="col-sm-6 CmtDisplayNone">
                       <div class="form-group  ">
                         <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpuser1%}</label>
                         <div class="col-sm-8">
@@ -337,7 +339,7 @@
                         </div>
                       </div>                    
                     </div>
-                  -->
+
                     <div class="col-sm-6">
                       <div class="form-group  ">
                           <label class="col-sm-2 control-label CmtEdit ">&nbsp;</label>
