@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Test test test -->
+    <script type="text/javascript">
+      function CmtCreateGen(xcInx) { 
+        getSubmitForm().cmthidecmbslplistcrg.value = xcInx; 
+        getSubmitForm().cmthidegenslplist.value = "cmbgengencrg"; 
+        SubmitClickConfirm("lnkgenslplist","", true,""); 
+      } 
+    </script>
+  </head>
   <body>
 
     <div class="container-fluid">
@@ -382,8 +392,10 @@
 <!-- Start add new entry button here -->
     <div class="form-horizontal" role="form">
       <!-- <div class="col-sm-12"> -->
-      <input type="submit" name="addEntry" value="+">
-      <font color="grey"><label>Add another entry</label></font> 
+      <a href="javascript:CmtCallToSrvEx('lnkgenslplist','cmthidegenslplist','btnXClickslplistinsertslpf_slp')">+ Add another entry</a>
+      <!--<input type="submit" name="addEntry" value="+">-->
+      <!--<font color="grey"><label>Add another entry</label></font> -->
+
     </div>
 <!-- End new entry button -->
 
