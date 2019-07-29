@@ -49,8 +49,6 @@
 
             <div class="form-horizontal" role="form">
 
-              <!-- Start Change -->
-
               <div class="row CmtDataArea">
                   <div class="col-sm-12">
                     <div class="form-group">
@@ -332,9 +330,23 @@
                     <div class="d-flex justify-content-center">
                       <!-- Quick Clicks -->
                       <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-light btn-sm">Tech&nbsp;Day&nbsp;Summary</button>
-    	                  <button type="button" class="btn btn-light btn-sm">Network&nbsp;TS&nbsp;Summary</button>
-                        <button type="button" class="btn btn-light btn-sm">LV&nbsp;Summary</button>
+                        <script>
+                          function autoFillTech(){
+                            $("#cmtedtdatafldslpdesc_cmttabindex15").val(1);
+                            alert(1);
+                          }
+                          function autoFillNetwork(){
+                            $("#cmtedtdatafldslpdesc_cmttabindex15").val(2);
+                            alert(2);
+                          }
+                          function autoFillLV(){
+                            $("#cmtedtdatafldslpdesc_cmttabindex15").val(3);
+                            alert(3);
+                          }
+                        </script> 
+                        <button type="button" class="btn btn-light btn-sm" onclick="autoFillTech()">Tech&nbsp;Day&nbsp;Summary</button>
+    	                  <button type="button" class="btn btn-light btn-sm" onclick="autoFillNetwork()">Network&nbsp;TS&nbsp;Summary</button>
+                        <button type="button" class="btn btn-light btn-sm" onclick="autoFillLV()">LV&nbsp;Summary</button>
                         <!-- These buttons need to access something, wrote in myself -->
                       </div>
                     </div>
@@ -376,14 +388,9 @@
                             {%cmtedtdataFLDSLPCLCBILLKIND_cmttabindex17%} {%cmtlbldataFLDSLPBILLKIND%}
                           </div>
                       </div>
-                    </div>                  
-                    
-                  </div>             
-  
-              </div>                  
-
-              <!-- End Change -->          
-
+                    </div>
+                  </div>
+                </div>
             </div>                    
         </div>
 
