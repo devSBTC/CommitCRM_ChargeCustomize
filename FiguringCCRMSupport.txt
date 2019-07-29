@@ -1,0 +1,37 @@
+On line 217, cmtedtdataFLDSLPTIMESPENTINMIN_cmttabindex8 is removed
+
+Line 236 add comment close by CommitCRM
+Line 237 comments out line 236
+On line 238 added cmtedtdataFLDSLPTIMESPENTINMIN_cmttabindex8
+
+Between line 333 to 334, CommitCRM takes out this originally commented section
+
+   <!-- Change by CommitCRM-->
+    <div class="col-sm-6 CmtDisplayNone">  
+        <div class="form-group  ">
+            <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpuser1%}</label>
+            <div class="col-sm-8">
+                {%cmtedtdatafldslpuser1_cmttabindex16%}
+            </div>               
+        </div>
+    </div>
+
+All this should do is make the part present but not shown hopefully
+
+**********************************************************************
+
+The {%%} calls made and what they mean
+  - cmtedtdataFLDSLPTIMESPENTINMIN_cmttabindex8
+      - Takes in a numerical time input for Time Spent
+  - cmtlbldescfldslpuser1
+      - Calls Field1 label
+  - cmtedtdatafldslpuser1_cmttabindex16
+      - Gets all parts of Field for select value
+
+So looking over this, it seems like the last two calls are useless
+Since of course the Field part does not show up
+It may be necessary to have everything else work 
+
+There is no clear way as to why the Save began to work except maybe the field part
+
+**********************************************************************
