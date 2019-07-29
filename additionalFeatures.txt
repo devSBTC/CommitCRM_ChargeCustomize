@@ -1,0 +1,72 @@
+Here are the parts that create a new charge
+
+To do the quick key to create a new charge the code is
+    <a href="javascript:CmtCreateGen(12)">Labor Charge</a>
+seems to call a function that must be on the labor charge page
+
+Then to create a new charge by going to charge-> new-> Labor charge
+    <a href="javascript:CmtCallToSrvEx('lnkgenslplist','cmthidegenslplist','btnXClickslplistinsertslpf_slp')">Labor</a>
+This may be the better function to use since it seems to call a service, 
+whereas aboce it seems to call a function that must be on the labor charge page
+
+If need to look for parts missing that do no allow an onlick working,
+The file with the charges is in slplist22501.html
+Can later add a file to see what parts are missing
+
+As for the jQUery part that Paul wants, need to continue looking into that
+
+
+Looking at what calls are made in the head for charges page and labor charge page
+  - Charges page
+      - cmttmpdatawrkwrkqx4cqqvow3lawk7.js
+      - cmtwrkservices20000.js
+      - cmtmsggeneng20000.js
+      - cmtlistgen20000.js
+      - cmtlistslp20000.js
+      - IWCommon.js_11.0.60
+      - IWCL.js_11.0.60
+      - IWAjax.js_11.0.60
+      - IWGecko.js_11.0.60
+      - IWPreScript.js_11.0.60
+      - bootstrap.min.css
+      - cmtgenstyles20000.css
+      - cmtlangstyleseng20000.css
+  - Labor Charge
+      - jquery.min.js
+      - bootstrap.min.js
+      - cmtgenutils20000.js
+      - moment.min.js
+      - bootstrap-datetimepicker.min.js
+      - select2.min.js
+      - cmtmsggeneng20000.js
+      - cmtchkgen20000.js
+      - cmtchkslp20000.js
+      - cmtgensettings.js
+      - cmtcalendarcommon20000.js
+      - cmtcalendarpopup20000.js
+      - chosen.jquery.min.js
+      - chosen.proto.min.js
+      - cmtitmservices20000.js
+      - cmtbctservices20000.js
+      - cmtlclstrgcrd20000.js
+      - cmttmpdatacrdlqc44jkf2qd20v3lhryn.js
+      - cmtcmbselect2services20000.js
+      - cmtgeneditservices20000.js
+      - cmtpopup20000.js
+      - cmttmpdataslpadnu3f1y9eheh9vnh732.js
+      - cmtitmf.js
+      - IWCommon.js_11.0.60
+      - IWCL.js_11.0.60
+      - IWAjax.js_11.0.60
+      - IWGecko.js_11.0.60
+
+Seems like the first 2 files are not present
+Looking deeper into functions
+I can see that Charges page contains CmtCreateGen(12) 
+in its javascript section
+    function CmtCreateGen(xcInx) { 
+        getSubmitForm().cmthidecmbslplistcrg.value = xcInx; 
+        getSubmitForm().cmthidegenslplist.value = "cmbgengencrg"; 
+        SubmitClickConfirm("lnkgenslplist","", true,""); 
+    } 
+So if needed link this where add a new section and try to see what we can do
