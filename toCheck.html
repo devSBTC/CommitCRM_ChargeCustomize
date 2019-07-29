@@ -212,6 +212,7 @@
                       </div>
 
                       <!-- Time Worked -->
+                      <!--
                       <div class="col-sm-3">
                         <div id="CmtSlpTimeSpntFrmGrg" class="form-group  ">
                           
@@ -227,24 +228,39 @@
                             {%btggnslpeditfldslpclcfromtotime%}</span>
                           </div> 
                       </div>
+                    -->
 
-                      <!-- Break Length -->
-                      <div class="col-sm-3">
-                        <div id="CmtSlpTimeSpntFrmGrg" class="form-group  ">             
-                          <div class="col-sm-12">
-                            <!-- Start writing this text box myself -->
-                            <!--Close By CommitCRM -->
-                            <!--<input type="text" name="cmtedtdatafldslptimespentinmin" id="cmtedtdatafldslptimespentinmin" value="" tabindex="8" maxlength="5" onchange="CmtCtrlFLDSLPTIMESPENTINMINChange(this)" class="form-control ClsGenIdfldslptimespentinmin" placeholder="Break Length"> -->  
-                            {%cmtedtdataFLDSLPTIMESPENTINMIN_cmttabindex8%}                    
-                            <!-- End writing this text box myself -->
-                          </div>
-                        </div>
-                        <div class="col-sm-3" >
-                            {%cmtedtdatafldslpprice_cmttabindex11%}
-                          </div>
+                     <!-- Break Length -->
+                     <div class="col-sm-3">
+                      <div id="CmtSlpTimeSpntFrmGrg" class="form-group  ">             
+                        <div class="col-sm-12">
+                          <!-- Start writing this text box myself -->
+                          <!--Close By CommitCRM -->
+                          <!--<input type="text" name="cmtedtdatafldslptimespentinmin" id="cmtedtdatafldslptimespentinmin" value="" tabindex="8" maxlength="5" onchange="CmtCtrlFLDSLPTIMESPENTINMINChange(this)" class="form-control ClsGenIdfldslptimespentinmin" placeholder="Break Length"> -->  
+                          {%cmtedtdataFLDSLPTIMESPENTINMIN_cmttabindex8%}
+                          <!-- End writing this text box myself -->
                         </div>
                       </div>
-                      <div class="form-group" style="display: none;">
+                      <!--
+                      <div class="col-sm-3" >
+                          {%cmtedtdatafldslpprice_cmttabindex11%}
+                        </div>
+                      </div>
+                    -->
+                    </div>
+
+                      <div class="form-group">
+                        <div class="col-sm-3" >
+                          {%cmtedtdatafldslpclcamount_cmttabindex10%}
+                        </div>
+                        
+                        <div class="CmtEDtFrm2Flds"></div>
+                        
+                        <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpprice%}</label>
+                      </div>
+
+                     
+                      <div class="form-group CmtDisplayNone">
                           <div id="CmtLblDescQFrToTimeGenLdTmplCmbDiv" class=" col-sm-3">  
 
                               <div class="dropdown">
@@ -259,7 +275,8 @@
       
                            </div>  
                       </div>
-                      <div class="form-group" style="display: none;">
+                      <!--
+                      <div class="form-group">
                           <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpclcamount%}</label>
                           <div class="col-sm-3" >
                             {%cmtedtdatafldslpclcamount_cmttabindex10%}
@@ -269,6 +286,8 @@
                           
                           <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpprice%}</label>
                         </div>
+                      -->
+                      
                       <div class="form-group  ">
                           <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpadjust%}</label>
                           <div class="col-sm-3" >
