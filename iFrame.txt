@@ -1,0 +1,15 @@
+The div we want the iFrame to only show this div
+    <div id="cmtslpEdtbleGuiSct" class="row CmtGenEdtForm CmtGenEdtFormLft CmtLineSpc">
+But most likely will still need to figure out some save part (if need div of save)
+    <input type="button" name="btnslpeditsave1" id="btnslpeditsave1" value="Save" onclick="CmtslpMakeSaveByCtrl(this)" class="btn btn-primary clsbtngenedit">
+Django call to save button
+    btnslpeditsave1
+
+Use this format to call a certain part
+    $('#target-div').load('http://www.mywebsite.com/portfolio.php #portfolio-sports');
+
+Problem is now to find out what is the page to this site
+
+Does not seem like it will work since we really cant have a unique account that will send to database.
+Thinking that to see if we can just have the contents saved to a file and then have on click of save 
+it begins to open/referesh the window untill all charges are cleared
