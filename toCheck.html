@@ -29,7 +29,7 @@
           // Computer Setup - Computer Setup 
           return "Computer Setup";
         }
-        if(WeirdWord === "ITMWQYN7Y267YCH845P4"){
+        if(weirdWord === "ITMWQYN7Y267YCH845P4"){
           // Emergency <24 - Emergency <24
           return "Emergency <24";
         }
@@ -65,7 +65,7 @@
           // yCMT-ContractFee. - Contract Fee
           return "Contract Fee";
         }
-        if(weridWord === "ITMCCRM123ZDICOADTGP"){
+        if(weirdWord === "ITMCCRM123ZDICOADTGP"){
           // yCMT-MngPC. - Managed Workstation
           return "Managed Workstation";
         }
@@ -81,7 +81,7 @@
           // zConsultation - Consultation
           return "Consultation";
         }
-        if(weridWord === "ITM50K7SNL0RANKAOF5S"){
+        if(weirdWord === "ITM50K7SNL0RANKAOF5S"){
           // zNetworkResearch - Network Research-DHCP Scope Expansion
           var zNetworkResearch = "1) Check current scope and see how big it is, what is excluded, what is reserved.\n" + 
           "2) IP scan of the network and see what has a web facing, ssh facing device and see if I have access to it. " + 
@@ -91,6 +91,29 @@
           return zNetworkResearch;
         }
       } 
+      var placeHold = "";
+      var texto = "";
+      function autoFillTech(){
+        if(!(placeHold === "Tech Day Summary")){
+          placeHold = "Tech Day Summary";
+          texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\n" + placeHold;
+          $("#cmtedtdatafldslpdesc").val(texto);
+        }
+      }
+      function autoFillNetwork(){
+        if(!(placeHold === "Network TS Summary")){
+          placeHold = "Network TS Summary";
+          texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\n" + placeHold;
+          $("#cmtedtdatafldslpdesc").val(texto);
+        }
+      }
+      function autoFillLV(){
+        if(!(placeHold === "LV Summary")){
+          placeHold = "LV Summary";
+          texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\n" + placeHold;
+          $("#cmtedtdatafldslpdesc").val(texto);
+        }
+      }
     </script>
   </head>
   <body>
@@ -413,31 +436,6 @@
                     <div class="d-flex justify-content-center">
                       <!-- Quick Clicks -->
                       <div class="d-flex justify-content-center">
-                        <script>
-                          var placeHold = "";
-                          var texto = "";
-                          function autoFillTech(){
-                            if(!(placeHold === "Tech Day Summary")){
-                              placeHold = "Tech Day Summary";
-                              texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\n" + placeHold;
-                              $("#cmtedtdatafldslpdesc").val(texto);
-                            }
-                          }
-                          function autoFillNetwork(){
-                            if(!(placeHold === "Network TS Summary")){
-                              placeHold = "Network TS Summary";
-                              texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\n" + placeHold;
-                              $("#cmtedtdatafldslpdesc").val(texto);
-                            }
-                          }
-                          function autoFillLV(){
-                            if(!(placeHold === "LV Summary")){
-                              placeHold = "LV Summary";
-                              texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\n" + placeHold;
-                              $("#cmtedtdatafldslpdesc").val(texto);
-                            }
-                          }
-                        </script> 
                         <button type="button" class="btn btn-light btn-sm" onclick="autoFillTech()">Tech&nbsp;Day&nbsp;Summary</button>
     	                  <button type="button" class="btn btn-light btn-sm" onclick="autoFillNetwork()">Network&nbsp;TS&nbsp;Summary</button>
                         <button type="button" class="btn btn-light btn-sm" onclick="autoFillLV()">LV&nbsp;Summary</button>
