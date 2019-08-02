@@ -3,6 +3,26 @@
   <head>
     <!-- Test test test -->
     <script type="text/javascript">
+      function pullInformation(){
+        // Want to use this function as way to get the information to hoepfully be uploaded in a hidden window
+        // Important / Needed to be saveable
+        var Account = "";
+        var Contact = "";
+        var TypeOfWork = "";
+        var Employee = "";
+        var Item = "";
+        var Date = "";
+        var TimeStart = "";
+        var TimeEnd = "";
+        var HoursUnits = "";
+        var Description = "";
+
+        // Not important, but should pull for copy to description box
+        var Quote = "";
+        var EquipmentDeployed = "";
+        var Billable = "";
+        var BreakTime = "";
+      }
       function CmtCreateGen(xcInx) { 
         getSubmitForm().cmthidecmbslplistcrg.value = xcInx; 
         getSubmitForm().cmthidegenslplist.value = "cmbgengencrg"; 
@@ -342,9 +362,9 @@
                       </div>
                     -->
 
-                     <!-- Break Length -->
-                     <div class="col-sm-3">
-                      <div id="CmtSlpTimeSpntFrmGrg" class="form-group  ">             
+                     <!-- Old Break Length -->
+                     <div class="col-sm-0">
+                      <div id="CmtSlpTimeSpntFrmGrg" class="form-group CmtDisplayNone">             
                         <div class="col-sm-12">
                           <!-- Start writing this text box myself -->
                           <!--Close By CommitCRM -->
@@ -361,9 +381,46 @@
                     -->
                     </div>
 
+                    <!-- Actual Break Length -->
+                    <div class="col-sm-3">
+                      <div id="breakLengths">
+                        <input type="text" value="" class="form-control CmtDateTimeInp" id="breakLengtho" placeholder="Break-Length (in minutes)" aria-label="Break-Length" aria-describedby="inputGroup-sizing-default">
+                      </div>
+                      <script type="text/javascript">
+                        document.getElementById('breakLengtho').onchange = change;
+                        function change(e){
+                          times();
+                        }
+                        $(function() {
+                          $("#breakLengths").on("dp.change", function(e){
+                            times();
+                          });
+                        });
+                      </script>
+                    </div>
+
+                    <script>
+                      // Here I need to pull the value from the three boxes and then input into Hours/Units
+                      function times(){
+                        var startTimeHours = parseInt(((($("#cmtedtdatafldslpstarttime").val()).substring(0,2)) * 60),10)
+                        var startTimeMinutes = parseInt((($("#cmtedtdatafldslpstarttime").val()).substring(3,5)),10);
+                        var startTime =  startTimeHours + startTimeMinutes;
+                        var endTimeHours = parseInt(((($("#cmtedtdatafldslpendtime").val()).substring(0,2)) * 60),10);
+                        var endTimeMinutes = parseInt((($("#cmtedtdatafldslpendtime").val()).substring(3,5)),10);
+                        var endTime = endTimeHours + endTimeMinutes;
+                        var breakLength = parseInt($("#breakLengtho").val(),10);
+                        var total = ((endTime - startTime) - breakLength) / 60;
+                        // Now we need to get the values correct 
+                        // Need to divide by 60 and get the value
+                        var hoursUnits = $("#cmtedtdatafldslpclcamount").val(total);
+                      }
+                    </script>
+
+                    <!-- Hours/Units -->
                       <div class="form-group">
                         <div class="col-sm-3" >
                           {%cmtedtdatafldslpclcamount_cmttabindex10%}
+                          <!-- <button type="button" class="btn btn-light btn-sm" onclick="times()">Calculate&nbsp;Time</button> -->
                         </div>
                         
                         <div class="CmtEDtFrm2Flds"></div>
