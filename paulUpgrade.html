@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Test test test -->
     <script type="text/javascript">
       function pullInformation(){
         // Want to use this function as way to get the information to hoepfully be uploaded in a hidden window
@@ -293,29 +292,18 @@
 
                 <div class="row CmtDataArea">
                   <div class="col-sm-12">
-                    <div class="form-group">
                       <div class="col-sm-3">
                         <!-- Quote # -->
-                        <div class="input-group mb-3">
-                          <input type="text" id="quoteNumber" class="form-control" placeholder="Quote #" aria-label="Quote #" aria-describedby="inputGroup-sizing-default">
-                        </div>
+                        <input type="text" id="quoteNumber" class="form-control" placeholder="Quote #" aria-label="Quote #" aria-describedby="inputGroup-sizing-default">
                         <script type="text/javascript">
                           document.getElementById('quoteNumber').onchange = change;
                           function change(e){
                             getQuoteNum();
                           }
                         </script>
-                        <!--
-                          <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Quote #" aria-label="Quote #" aria-describedby="inputGroup-sizing-default">
-                          </div>
-                        -->
                       </div>
 
-<!--
-  Start Completely new / want to add section
--->
-                      <div class="col-sm-7">
+                      <div class="col-sm-7" style="padding-top:5px;">
                         <!-- Equipment Deployed -->
                         <div class="form-group">
                           <div class="col-sm-6">
@@ -339,41 +327,19 @@
                             </script>
                           </div>
                         </div>
-                        <!--
-                          <div class="form-group">
-                            <div class="col-sm-6">
-                              <label class="col-sm-4">Equipment&nbsp;Deployed</label>
-                            </div>
-                            <div class="col-sm-6=">
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <span class="form-check-label1" for="inlineRadio1">N/A</span>
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1">
-                                <span class="form-check-label2" for="inlineRadio2">Yes</span>
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1">
-                                <span class="form-check-label3" for="inlineRadio3">No</span>
-                              </div>
-                            </div>
-                          </div>
-                        -->
                       </div>
 
 
-                      <div class="col-sm-2">
+                      <div class="col-sm-2" style="padding-top:5px;">
                         <!-- Billable -->
                         <input class="form-check-input" type="checkbox" value="" onclick="getBillable()" id="defaultCheck1">
                           <label class="form-check-label" for="defualtCheck1">Billable</label>
-                        <!-- 
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defualtCheck1">Billable</label>
-                        -->
+                          <script>
+                            
+                          </script>
                       </div>
                     </div>
-                  </div>
                 </div>
-<!--
-  End Completely new / want to add section
--->
                 <div class="CmtDataArea">
                   <div class="col-sm-12">
                     <div class="form-group">
@@ -387,42 +353,13 @@
                         {%cmtedtdatafldslpendtime_cmttabindex7%}
                       </div>
 
-                      <!-- Time Worked -->
-                      <!--
-                      <div class="col-sm-3">
-                        <div id="CmtSlpTimeSpntFrmGrg" class="form-group  ">
-                          
-                        </div>
-                        <div class="col-sm-2 CmtNoPdLeftNoMbl CmtMgCnBtn" style="display: none;">
-                            <span>
-    <a data-original-title="Copy Time Spent to the Hours Amount field (rounded)" 
-    id="btnslpeditFLDSLPCLCFROMTOTIME"
-     href="javascript: cmtmakeFLDSLPCLCFROMTOTIMEclick()" 
-    onmouseover="window.status='';return true" class="CmtGenDefMvUpDn" 
-    data-toggle="tooltip" data-placement="top" title=""><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></a>                        
-                            
-                            {%btggnslpeditfldslpclcfromtotime%}</span>
-                          </div> 
-                      </div>
-                    -->
-
                      <!-- Old Break Length -->
                      <div class="col-sm-0">
                       <div id="CmtSlpTimeSpntFrmGrg" class="form-group CmtDisplayNone">             
                         <div class="col-sm-12">
-                          <!-- Start writing this text box myself -->
-                          <!--Close By CommitCRM -->
-                          <!--<input type="text" name="cmtedtdatafldslptimespentinmin" id="cmtedtdatafldslptimespentinmin" value="" tabindex="8" maxlength="5" onchange="CmtCtrlFLDSLPTIMESPENTINMINChange(this)" class="form-control ClsGenIdfldslptimespentinmin" placeholder="Break Length"> -->  
                           {%cmtedtdataFLDSLPTIMESPENTINMIN_cmttabindex8%}
-                          <!-- End writing this text box myself -->
                         </div>
                       </div>
-                      <!--
-                      <div class="col-sm-3" >
-                          {%cmtedtdatafldslpprice_cmttabindex11%}
-                        </div>
-                      </div>
-                    -->
                     </div>
 
                     <!-- Actual Break Length -->
@@ -461,8 +398,9 @@
                     </script>
 
                     <!-- Hours/Units -->
+                    <div class="col-sm-3">
                       <div class="form-group">
-                        <div class="col-sm-3" >
+                        <div class="col-sm-12" >
                           {%cmtedtdatafldslpclcamount_cmttabindex10%}
                           <!-- <button type="button" class="btn btn-light btn-sm" onclick="times()">Calculate&nbsp;Time</button> -->
                         </div>
@@ -471,7 +409,7 @@
                         
                         <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpprice%}</label>
                       </div>
-
+                    </div>
                      
                       <div class="form-group CmtDisplayNone">
                           <div id="CmtLblDescQFrToTimeGenLdTmplCmbDiv" class=" col-sm-3">  
@@ -488,19 +426,7 @@
       
                            </div>  
                       </div>
-                      <!--
-                      <div class="form-group">
-                          <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpclcamount%}</label>
-                          <div class="col-sm-3" >
-                            {%cmtedtdatafldslpclcamount_cmttabindex10%}
-                          </div>
-                          
-                          <div class="CmtEDtFrm2Flds"></div>
-                          
-                          <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpprice%}</label>
-                        </div>
-                      -->
-                      
+
                       <div class="form-group  CmtDisplayNone">
                           <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpadjust%}</label>
                           <div class="col-sm-3" >
@@ -526,19 +452,19 @@
                               {%cmtedtdatafldslpbilltotal%}
                             </div>
                           </div>
-                      
                   </div>
                 </div>
 
                 <div class="row CmtDataArea">
                   <div class="col-sm-12">
-                    <div class="d-flex justify-content-center">
-                      <!-- Quick Clicks -->
+                    <div class="col-sm-12">
                       <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-light btn-sm" onclick="autoFillTech()">Tech&nbsp;Day&nbsp;Summary</button>
-    	                  <button type="button" class="btn btn-light btn-sm" onclick="autoFillNetwork()">Network&nbsp;TS&nbsp;Summary</button>
-                        <button type="button" class="btn btn-light btn-sm" onclick="autoFillLV()">LV&nbsp;Summary</button>
-                        <!-- These buttons need to access something, wrote in myself -->
+                        <!-- Quick Clicks -->
+                        <div class="d-flex justify-content-center">
+                          <button type="button" class="btn btn-light btn-sm" onclick="autoFillTech()">Tech&nbsp;Day&nbsp;Summary</button>
+                          <button type="button" class="btn btn-light btn-sm" onclick="autoFillNetwork()">Network&nbsp;TS&nbsp;Summary</button>
+                          <button type="button" class="btn btn-light btn-sm" onclick="autoFillLV()">LV&nbsp;Summary</button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -546,22 +472,15 @@
 
                 <div class="row CmtDataArea">
                   <div class="col-sm-12">
-                    <!-- Description -->
-                    <label class="col-sm-1 control-label CmtEdit ">{%ctpcmbxxxcmbMemoLstDrfldslpdesc%}</label>
-                    {%cmtedtdatafldslpdesc_cmttabindex15%}
-                    <!--
-                      <div class="form-group  ">
-                        <label class="col-sm-1 control-label CmtEdit ">{%cmtlbldescfldslpdesc%}{%ctpcmbxxxcmbMemoLstDrfldslpdesc%}</label>
-                        <div class="col-sm-10">
-                          {%cmtedtdatafldslpdesc_cmttabindex15%}
-                        </div>
-                      </div>
-                    -->
+                    <div class="col-sm-12">
+                      <!-- Description -->
+                      <label class="col-sm-1 control-label CmtEdit ">{%ctpcmbxxxcmbMemoLstDrfldslpdesc%}</label>
+                      {%cmtedtdatafldslpdesc_cmttabindex15%}
+                    </div>
                   </div>
                 </div>
 
                 <div class="row CmtDataArea">
-                  
                     <!-- Change by CommitCRM-->
                     <div class="col-sm-6 CmtDisplayNone">
                       <div class="form-group  ">
@@ -602,17 +521,7 @@
           }
         </script>
 
-        <!-- <iframe frameborder="0" id="frame1" src="http://192.168.1.100:4961" style="width: 1280px; height: 720px;" scrolling="no"></iframe> -->
-
-
-        <!-- <iframe frameborder="0" id="frame2" src="http://192.168.1.100:4961" style="width: 100%; height: 100%;" scrolling="no"></iframe> -->
-
-
-      <!--<a href="javascript:CmtCallToSrvEx('lnkgenslplist','cmthidegenslplist','btnXClickslplistinsertslpf_slp')">+ Add another entry</a>-->
-      <!-- <button type="button" class="btn btn-light btn-sm" onclick="newFrame()">+&nbsp;Add&nbsp;another&nbsp;entry</button> -->
-
         <div class="row CmtDataArea">
-
           <div class="col-xs-6 col-sm-6">
             <div class="pull-right">
               {%btnslpeditsave1%}
@@ -666,8 +575,6 @@
 
  {%cmtlbldesctkteditfldGenLabels%}
 
- <!--
- -->
 
 <!--cmmtBofRulesInx-->
 <!--                
