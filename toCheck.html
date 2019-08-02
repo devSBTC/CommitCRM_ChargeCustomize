@@ -109,27 +109,58 @@
           return zNetworkResearch;
         }
       } 
-      var placeHold = "";
+      quote="";
+      function getQuoteNum(){
+        quote = $("#quoteNumber").val();
+        fillDescription();
+      }
+      equipment="";
+      function naEquip(){
+        equipment = "N/A";
+        fillDescription();
+      }
+      function yesEquip(){
+        equipment = "Yes";
+        fillDescription();
+      }
+      function noEquip(){
+        equipment = "No";
+        fillDescription();
+      }
+      billable="No";
+      var billCount = 0;
+      function getBillable(){
+        if(billCount%2 == 0){
+          billable = "Yes";
+        }
+        else{
+          billable = "No";
+        }
+        billCount++;
+        fillDescription();
+      }
       var texto = "";
+      function fillDescription(){
+        texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\n" + placeHold + "\nQuote Number: " + quote + "\nEquipment Deployed: " + equipment + "\nBillable: " + billable;
+        $("#cmtedtdatafldslpdesc").val(texto);
+      }
+      var placeHold = "";
       function autoFillTech(){
         if(!(placeHold === "Tech Day Summary")){
           placeHold = "Tech Day Summary";
-          texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\n" + placeHold;
-          $("#cmtedtdatafldslpdesc").val(texto);
+          fillDescription();
         }
       }
       function autoFillNetwork(){
         if(!(placeHold === "Network TS Summary")){
           placeHold = "Network TS Summary";
-          texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\n" + placeHold;
-          $("#cmtedtdatafldslpdesc").val(texto);
+          fillDescription();
         }
       }
       function autoFillLV(){
         if(!(placeHold === "LV Summary")){
           placeHold = "LV Summary";
-          texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\n" + placeHold;
-          $("#cmtedtdatafldslpdesc").val(texto);
+          fillDescription();
         }
       }
     </script>
@@ -266,8 +297,14 @@
                       <div class="col-sm-3">
                         <!-- Quote # -->
                         <div class="input-group mb-3">
-                          <input type="text" class="form-control" placeholder="Quote #" aria-label="Quote #" aria-describedby="inputGroup-sizing-default">
+                          <input type="text" id="quoteNumber" class="form-control" placeholder="Quote #" aria-label="Quote #" aria-describedby="inputGroup-sizing-default">
                         </div>
+                        <script type="text/javascript">
+                          document.getElementById('quoteNumber').onchange = change;
+                          function change(e){
+                            getQuoteNum();
+                          }
+                        </script>
                         <!--
                           <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="Quote #" aria-label="Quote #" aria-describedby="inputGroup-sizing-default">
@@ -286,13 +323,20 @@
                           </div>
                           <div class="col-sm-6=">
                             <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                              <span class="form-check-label1" for="inlineRadio1">N/A</span>
-                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1">
-                              <span class="form-check-label2" for="inlineRadio2">Yes</span>
-                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1">
-                              <span class="form-check-label3" for="inlineRadio3">No</span>
+                              <form id="equipDeploy">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="naEquip()"/>
+                                <span class="form-check-label1" for="inlineRadio1">N/A</span>
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1" onclick="yesEquip()"/>
+                                <span class="form-check-label2" for="inlineRadio2">Yes</span>
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1" onclick="noEquip()"/>
+                                <span class="form-check-label3" for="inlineRadNio3">No</span>
+                              </form>
                             </div>
+                            <script>
+                              $('#equipDeploy input').on('change', function() {
+                                alert($('input[name=inlineRadioOptions]:checked', '#equipDeploy').val()); 
+                              });
+                            </script>
                           </div>
                         </div>
                         <!--
@@ -317,8 +361,11 @@
 
                       <div class="col-sm-2">
                         <!-- Billable -->
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <input class="form-check-input" type="checkbox" value="" onclick="getBillable()" id="defaultCheck1">
                           <label class="form-check-label" for="defualtCheck1">Billable</label>
+                          <script>
+                            
+                          </script>
                         <!-- 
                           <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                           <label class="form-check-label" for="defualtCheck1">Billable</label>
