@@ -21,6 +21,17 @@
         var EquipmentDeployed = "";
         var Billable = "";
         var BreakTime = "";
+
+
+        /*
+            var switchStatus = status.sS;
+
+            if(switchStatus) {
+                $('#togBtn').prop('checked', true);
+            } else {
+                $('#togBtn').prop('checked', false);
+            }
+        */
       }
       function CmtCreateGen(xcInx) { 
         getSubmitForm().cmthidecmbslplistcrg.value = xcInx; 
@@ -162,6 +173,51 @@
           fillDescription();
         }
       }
+      var chosenJob = 0;
+      function unhideTechs(){
+        if(chosenJob === 1){
+            document.getElementById("technicians").style.backgroundColor = "";
+            document.getElementById("technicians").style.color = "";
+            chosenJob = 0;
+            document.getElementById("techsasa").style.display = "none";
+            hideGeneral();
+        }
+        else {
+            document.getElementById("supports").style.backgroundColor = "";
+            document.getElementById("supports").style.color = "";
+            document.getElementById("technicians").style.backgroundColor = "#3e4444";
+            document.getElementById("technicians").style.color = "#F7F7F7";
+            chosenJob = 1;
+            document.getElementById("supportsasa").style.display = "none";
+            document.getElementById("techsasa").style.display = "block";
+            showGeneral();
+        }
+      }
+      function unhideSupports(){
+        if(chosenJob === 2){
+            document.getElementById("supports").style.backgroundColor = "";
+            document.getElementById("supports").style.color = "";
+            chosenJob = 0;
+            document.getElementById("supportsasa").style.display = "none";
+            hideGeneral();
+        }
+        else {
+            document.getElementById("technicians").style.backgroundColor = "";
+            document.getElementById("technicians").style.color = "";
+            document.getElementById("supports").style.backgroundColor = "#3e4444";
+            document.getElementById("supports").style.color = "#F7F7F7";
+            chosenJob = 2;
+            document.getElementById("techsasa").style.display = "none";
+            document.getElementById("supportsasa").style.display = "block";
+            showGeneral();
+        }
+      }
+      function showGeneral(){
+        document.getElementById("generalasa").style.display = "block";
+      }
+      function hideGeneral(){
+        document.getElementById("generalasa").style.display = "none";
+      }
     </script>
   </head>
   <body>
@@ -207,7 +263,7 @@
                   <div class="col-sm-12">
                     <div class="form-group">
                       <!-- Select Account -->
-                      <div class="col-sm-4">
+                      <div class="col-sm-3">
                           <div class=" col-sm-11 ">
                               <p hidden>
                                 <label  class=" col-sm-2 control-label CmtEdit ">{%cmtlnkdescfldslpcardid_fldcrdfullname%}</label>
@@ -221,285 +277,447 @@
                             <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpcardid_fldcrdfullname%}</span>
                           </div>
                       </div>
+                      <!-- End Select Account -->
 
-                      <div class="col-sm-4">
+                      <!-- Contact -->
+                      <div class="col-sm-3">
                           {%cmtedtdatafldslpcontactid_fldcrdcontact_cmttabindex2%}
                       </div>
+                      <!-- End Contact -->
 
-                      <!-- Select Ticket -->
-                      <div class="col-sm-4" style="display: none;">
-                        <div class="CmtCrdSellxx105 CmtNoPdRight">
-                            {%cmtedtdatafldslpticketid_FLDTKTCLCLNKRECIDSHORT%}
-                          <span class="CmtMgCnBtn visible-xs-block">
-                            <span>{%cmtseldatafldslpticketid_FLDTKTCLCINFO%}</span>
-                            <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpticketid_FLDTKTCLCINFO%}</span>
-                          </span>
-                        </div>
-                        <div id="fldgenLINKrecid_FLDGENCLCLNKRECIDMEMO" style="display:none;">
-                          {%cmtLBLdatafldslpticketid_FLDGENCLCLNKRECIDMEMO%}
+                      <!-- Employee -->
+                      <div class="col-sm-3">
+                        <span class="select2 select2-container select2-container--bootstrap select2-container--below" dir="ltr">
+                        <div class="form-group">
+                            <span class="select2 select2-container select2-container--bootstrap select2-container--below" dir="ltr">
+                                <label class="col-sm-4 control-label CmtEdit" style="text-align: right; padding-right: 5px">{%cmtlnkdescfldslpworkerid_fldwrknickname%}</label>
+                                <div class="col-sm-8 CmtEditEmpPriv" id="fldslpworkerid_fldwrknicknameData" style="text-align: left; padding-left: 20px">
+                                    {%cmtedtdatafldslpworkerid_fldwrknickname_cmttabindex4%}
+                                </div>
+                            </span> 
                         </div>
                       </div>
-                      
-                      <!-- Select Contract -->
-                      <div class="col-sm-4">
+                      <!-- End Employee -->
+
+                      <!-- Date -->
+                      <div class="col-sm-3">
+                        {%cmtedtdatafldslpslipdate_cmttabindex5%}
+                        <div class="CmtEDtFrm2Flds"></div>
+                      </div>
+                      <!-- End Date -->
+                    </div>
+
+                    <!-- Buttons to unhide -->
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <button type="button" class="btn btn-light btn-block" id="technicians" style="border-radius: 5px;" onclick="unhideTechs()">Technicians</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button type="button" class="btn btn-light btn-block" id="supports" style="border-radius: 5px;" onclick="unhideSupports()">Supports</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Buttons to unhide -->
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <!-- Place holder -->
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="switch" id="switchSaveable">
+                                <input type="checkbox">
+                                <div class="slider round" id="saveable">
+                                    <span class="on">Saveable</span>
+                                    <span class="off">NOT&nbsp;Saveable</span>
+                                </div>
+                            </label>
+                            <style>
+                                .switch {
+                                    position: relative;
+                                    display: inline-block;
+                                    width: 100%;
+                                    height: 40px;
+                                }
+
+                                .switch input {display:none;}
+
+                                .slider {
+                                    position: absolute;
+                                    cursor: pointer;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    background-color: #ca2222;
+                                    -webkit-transition: .4s;
+                                    transition: .4s;
+                                }
+
+                                input:checked + .slider {
+                                    background-color: #2ab934;
+                                }
+
+                                input:focus + .slider {
+                                    box-shadow: 0 0 1px #2196F3;
+                                }
+
+                                input:checked + .slider:before {
+                                    -webkit-transform: translateX(55px);
+                                    -ms-transform: translateX(55px);
+                                    transform: translateX(55px);
+                                }
+
+                                .on{
+                                    display: none;
+                                }
+
+                                .on, .off{
+                                    color: #F7F7F7;
+                                    position: absolute;
+                                    transform: translate(-50%,-50%);
+                                    top: 50%;
+                                    left: 50%;
+                                    font-size: 16px;
+                                    font-family: Verdana, sans-serif;
+                                }
+
+                                input:checked+ .slider .on
+                                {display: block;}
+
+                                input:checked + .slider .off
+                                {display: none;}
+
+                                /* Rounded sliders */
+                                .slider.round {
+                                    border-radius: 34px;
+                                }
+
+                                .slider.round:before {
+                                    border-radius: 50%;
+                                }
+                            </style>
+                        </div>
+                    </div>
+
+
+<!--
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+-->
+                <!-- Technicians -->
+                <div class="col-sm-12" id="techsasa" style="display:none;">
+                    <div class="form-group">
+                        <div class="row CmtDataArea">
+                            <!-- Select Ticket -->
+                            <div class="col-sm-4" style="padding-bottom:25px;">
+                                <div class="CmtCrdSellxx105 CmtNoPdRight">
+                                    {%cmtedtdatafldslpticketid_FLDTKTCLCLNKRECIDSHORT%}
+                                    <span class="CmtMgCnBtn visible-xs-block">
+                                        <span>{%cmtseldatafldslpticketid_FLDTKTCLCINFO%}</span>
+                                        <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpticketid_FLDTKTCLCINFO%}</span>
+                                        </span>
+                                </div>
+                                <div id="fldgenLINKrecid_FLDGENCLCLNKRECIDMEMO" style="display:none;">
+                                    {%cmtLBLdatafldslpticketid_FLDGENCLCLNKRECIDMEMO%}
+                                </div>
+                            </div>
+
+                            <!-- Quote Row -->
+                            <div class="col-sm-12">
+                                <div class="col-sm-3">
+                                    <!-- Quote # -->
+                                    <input type="text" id="quoteNumber" class="form-control" placeholder="Quote #" aria-label="Quote #" aria-describedby="inputGroup-sizing-default">
+                                    <script type="text/javascript">
+                                        document.getElementById('quoteNumber').onchange = change;
+                                        function change(e){
+                                          getQuoteNum();
+                                        }
+                                    </script>
+                                </div>
+                        
+                                <div class="col-sm-6" style="padding-top:5px;">
+                                    <!-- Equipment Deployed -->
+                                    <div class="form-group">
+                                      <div class="col-sm-6" style="text-align: right;">
+                                        <label class="col-sm-12" style="text-align: right;">Equipment&nbsp;Deployed</label>
+                                      </div>
+                                      <div class="col-sm-6" style="text-align: left;">
+                                        <div class="form-check form-check-inline">
+                                          <form id="equipDeploy">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="naEquip()"/>
+                                            <span class="form-check-label1" for="inlineRadio1">N/A</span>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1" onclick="yesEquip()"/>
+                                            <span class="form-check-label2" for="inlineRadio2">Yes</span>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1" onclick="noEquip()"/>
+                                            <span class="form-check-label3" for="inlineRadNio3">No</span>
+                                          </form>
+                                        </div>
+                                        <script>
+                                            $('#equipDeploy input').on('change', function() {
+                                                alert($('input[name=inlineRadioOptions]:checked', '#equipDeploy').val()); 
+                                            });
+                                        </script>
+                                      </div>
+                                    </div>
+                                </div>
+                        
+                        
+                                <div class="col-sm-3" style="padding-top:5px; text-align: center;">
+                                  <!-- Billable -->
+                                  <input class="form-check-input" type="checkbox" value="" onclick="getBillable()" id="defaultCheck1">
+                                    <label class="form-check-label" for="defualtCheck1">Billable</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-sm-12" id="supportsasa" style="display:none;">
+                    <div class="form-group">
+                        Hello Supports
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-sm-12" id="generalasa" style="display:none;">
+                    <div class="form-group">
+                        <!-- CONTRACT -->
+                        <!-- Select Contract -->
+                        <div class="col-sm-4">
                             {%cmtedtdatafldslpbcrecid_fldbctclccodename_cmttabindex3%}
-                          <div class="col-sm-offset-2  col-sm-8 ">
-                            <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl">{%cmtlnkdatafldslpbcrecid_fldbctclctypedates%}</div>
-                            <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl"> {%cmtlbldatafldslpbcrecid_fldbctclcbcrcurstate%}</div>
-                            <div class="CmtTextInstOfCtrl" id="tktedit12501_cmtlnkdatafldslpbcrecid_fldbctclccodename" style="display:none;">
-                              <br>
-                              <strong>{%cmtlbldescfldslpbcrecid_fldbctdescexternal%}</strong><br>
-                              {%cmtlbldatafldslpbcrecid_fldbctdescexternal%}<br><br>
-                              <strong>{%cmtlbldescfldslpbcrecid_fldbctdescinternal%}</strong><br>
-                              {%cmtlbldatafldslpbcrecid_fldbctdescinternal%}<br><br>
-                              <strong>{%cmtlbldescfldslpbcrecid_fldbctnote%}</strong><br>
-                              {%cmtlbldatafldslpbcrecid_fldbctnote%}<br><br>
+                            <div class="col-sm-offset-2  col-sm-8 ">
+                                <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl">{%cmtlnkdatafldslpbcrecid_fldbctclctypedates%}</div>
+                                <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl"> {%cmtlbldatafldslpbcrecid_fldbctclcbcrcurstate%}</div>
+                                <div class="CmtTextInstOfCtrl" id="tktedit12501_cmtlnkdatafldslpbcrecid_fldbctclccodename" style="display:none;">
+                                    <br>
+                                    <strong>{%cmtlbldescfldslpbcrecid_fldbctdescexternal%}</strong><br>
+                                    {%cmtlbldatafldslpbcrecid_fldbctdescexternal%}<br><br>
+                                    <strong>{%cmtlbldescfldslpbcrecid_fldbctdescinternal%}</strong><br>
+                                    {%cmtlbldatafldslpbcrecid_fldbctdescinternal%}<br><br>
+                                    <strong>{%cmtlbldescfldslpbcrecid_fldbctnote%}</strong><br>
+                                    {%cmtlbldatafldslpbcrecid_fldbctnote%}<br><br>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END CONTRACT -->
+                        <!-- ITEM / LABOR TYPE -->
+                        <div class="col-sm-4">
+                            <!-- Labor Type -->
+                            {%cmtedtdatafldslpitemid_flditmclccodename_cmttabindex9%}
+                        </div>
+                        <!-- END ITEM / LABOR TYPE-->
+
+                        <!-- TIME START -->
+                        <div class="CmtDataArea">
+                            <div class="col-sm-12">
+                              <div class="form-group">
+                                <!-- Start Time -->
+                                <div class="col-sm-3">
+                                  {%cmtedtdatafldslpstarttime_cmttabindex6%}
+                                </div>
+                  
+                                <!-- End Time -->
+                                <div class="col-sm-3">
+                                  {%cmtedtdatafldslpendtime_cmttabindex7%}
+                                </div>
+                  
+                               <!-- Old Break Length -->
+                               <div class="col-sm-0">
+                                <div id="CmtSlpTimeSpntFrmGrg" class="form-group CmtDisplayNone">             
+                                  <div class="col-sm-12">
+                                    {%cmtedtdataFLDSLPTIMESPENTINMIN_cmttabindex8%}
+                                  </div>
+                                </div>
+                              </div>
+                  
+                              <!-- Actual Break Length -->
+                              <div class="col-sm-3">
+                                <div id="breakLengths">
+                                  <input type="text" value="" class="form-control CmtDateTimeInp" id="breakLengtho" placeholder="Break-Length (in minutes)" aria-label="Break-Length" aria-describedby="inputGroup-sizing-default">
+                                </div>
+                                <script type="text/javascript">
+                                  document.getElementById('breakLengtho').onchange = change;
+                                  function change(e){
+                                    times();
+                                  }
+                                  $(function() {
+                                    $("#breakLengths").on("dp.change", function(e){
+                                      times();
+                                    });
+                                  });
+                                </script>
+                              </div>
+                  
+                              <script>
+                                // Here I need to pull the value from the three boxes and then input into Hours/Units
+                                function times(){
+                                  var startTimeHours = parseInt(((($("#cmtedtdatafldslpstarttime").val()).substring(0,2)) * 60),10)
+                                  var startTimeMinutes = parseInt((($("#cmtedtdatafldslpstarttime").val()).substring(3,5)),10);
+                                  var startTime =  startTimeHours + startTimeMinutes;
+                                  var endTimeHours = parseInt(((($("#cmtedtdatafldslpendtime").val()).substring(0,2)) * 60),10);
+                                  var endTimeMinutes = parseInt((($("#cmtedtdatafldslpendtime").val()).substring(3,5)),10);
+                                  var endTime = endTimeHours + endTimeMinutes;
+                                  var breakLength = parseInt($("#breakLengtho").val(),10);
+                                  var total = ((endTime - startTime) - breakLength) / 60;
+                                  // Now we need to get the values correct 
+                                  // Need to divide by 60 and get the value
+                                  var hoursUnits = $("#cmtedtdatafldslpclcamount").val(total);
+                                }
+                              </script>
+                  
+                              <!-- Hours/Units -->
+                              <div class="col-sm-3">
+                                <div class="form-group">
+                                  <div class="col-sm-12" >
+                                    {%cmtedtdatafldslpclcamount_cmttabindex10%}
+                                    <!-- <button type="button" class="btn btn-light btn-sm" onclick="times()">Calculate&nbsp;Time</button> -->
+                                  </div>
+                                  
+                                  <div class="CmtEDtFrm2Flds"></div>
+                                  
+                                  <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpprice%}</label>
+                                </div>
+                              </div>
+                               
+                                <div class="form-group CmtDisplayNone">
+                                    <div id="CmtLblDescQFrToTimeGenLdTmplCmbDiv" class=" col-sm-3">  
+                  
+                                        <div class="dropdown">
+                                          <button class="btn btn-default dropdown-toggle" type="button" id="CmtSlpQckTimEnrty" data-toggle="dropdown" aria-expanded="true">
+                                            {%CmtLblDescQFrToTimeGenLdTmplCmb%}&nbsp;
+                                            <span class="caret"></span>
+                                          </button>
+                                          <ul class="dropdown-menu" role="menu" aria-labelledby="CmtSlpQckTimEnrty">
+                                            {%CmtLblDataQFrToTimeGenLdTmplCmb%}
+                                          </ul>
+                                        </div>
+                    
+                                     </div>  
+                                </div>
+                  
+                                <div class="form-group  CmtDisplayNone">
+                                    <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpadjust%}</label>
+                                    <div class="col-sm-3" >
+                                      {%cmtedtdatafldslpadjust_cmttabindex12%}
+                                    </div>
+                      
+                                    <div class="CmtEDtFrm2Flds"></div>
+                                    
+                                    <div class="col-sm-2" >
+                                      {%cmtedtdatafldslpadjusttype_cmttabindex13%}
+                                    </div>
+                                    
+                                    <div class="CmtEDtFrm2Flds"></div>
+                                    
+                                    <div class="col-sm-3" >
+                                      {%cmtedtdatafldslpclcadjustamount_cmttabindex14%}
+                                    </div>                      
+                      
+                                  </div>
+                                  <div class="form-group  CmtDisplayNone">
+                                      <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpbilltotal%}</label>
+                                      <div class="col-sm-3" >
+                                        {%cmtedtdatafldslpbilltotal%}
+                                      </div>
+                                    </div>
                             </div>
                           </div>
-                      </div>
+                          <!-- TIME END -->
+
+                        <!-- DESCRIPTION START -->
+                        <div class="row CmtDataArea">
+                            <div class="col-sm-12">
+                                <div class="col-sm-12">
+                                    <!-- Description -->
+                                    <label class="col-sm-1 control-label CmtEdit ">{%ctpcmbxxxcmbMemoLstDrfldslpdesc%}</label>
+                                    {%cmtedtdatafldslpdesc_cmttabindex15%}
+                                </div>
+                            </div>
+                        </div>
+              
+                        <div class="row CmtDataArea">
+                            <!-- Change by CommitCRM-->
+                            <div class="col-sm-6 CmtDisplayNone">
+                                <div class="form-group  ">
+                                    <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpuser1%}</label>
+                                    <div class="col-sm-8">
+                                        {%cmtedtdatafldslpuser1_cmttabindex16%}
+                                    </div>
+                                </div>                    
+                            </div>
+              
+                            <div class="col-sm-6">
+                                <div class="form-group  ">
+                                    <label class="col-sm-2 control-label CmtEdit ">&nbsp;</label>
+                                    <div class="col-sm-8">
+                                        {%cmtedtdataFLDSLPCLCBILLKIND_cmttabindex17%} {%cmtlbldataFLDSLPBILLKIND%}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- DESCRIPTION END -->
+                    </div>
+                </div>
+
+<!--
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+-->
+
+
+                      
+                      
+                      
                     </div>
                   </div>
                 </div>
 
                 <div class="row CmtDataArea">
-                    <!-- Employee -->
-                    <div class="col-sm-4">
-                      <span class="select2 select2-container select2-container--bootstrap select2-container--below" dir="ltr">
-                      <div class="form-group">
-                        <span class="select2 select2-container select2-container--bootstrap select2-container--below" dir="ltr">
+                    
 
-                          <label class="col-sm-4 control-label CmtEdit ">{%cmtlnkdescfldslpworkerid_fldwrknickname%}</label>
-                          <div class="col-sm-8 CmtEditEmpPriv" id="fldslpworkerid_fldwrknicknameData">
-                            {%cmtedtdatafldslpworkerid_fldwrknickname_cmttabindex4%}
-                          </div>
-                        </span> 
-                      </div>
-                    </div>
+                    
 
-                    <div class="col-sm-4">
-                      <!-- Labor Type -->
-                      {%cmtedtdatafldslpitemid_flditmclccodename_cmttabindex9%}
-                    </div>
-
-                    <div class="col-sm-4">
-                      <!-- Date -->
-                      {%cmtedtdatafldslpslipdate_cmttabindex5%}
-                      <div class="CmtEDtFrm2Flds"></div>
-                    </div>
+                    
                   </div>
 
                 <label></label>
 
+                
+                
+                <!--
                 <div class="row CmtDataArea">
-                  <div class="col-sm-12">
-                      <div class="col-sm-3">
-                        <!-- Quote # -->
-                        <input type="text" id="quoteNumber" class="form-control" placeholder="Quote #" aria-label="Quote #" aria-describedby="inputGroup-sizing-default">
-                        <script type="text/javascript">
-                          document.getElementById('quoteNumber').onchange = change;
-                          function change(e){
-                            getQuoteNum();
-                          }
-                        </script>
-                      </div>
-
-                      <div class="col-sm-7" style="padding-top:5px;">
-                        <!-- Equipment Deployed -->
-                        <div class="form-group">
-                          <div class="col-sm-6">
-                            <label class="col-sm-4">Equipment&nbsp;Deployed</label>
-                          </div>
-                          <div class="col-sm-6=">
-                            <div class="form-check form-check-inline">
-                              <form id="equipDeploy">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="naEquip()"/>
-                                <span class="form-check-label1" for="inlineRadio1">N/A</span>
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1" onclick="yesEquip()"/>
-                                <span class="form-check-label2" for="inlineRadio2">Yes</span>
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1" onclick="noEquip()"/>
-                                <span class="form-check-label3" for="inlineRadNio3">No</span>
-                              </form>
-                            </div>
-                            <script>
-                              $('#equipDeploy input').on('change', function() {
-                                alert($('input[name=inlineRadioOptions]:checked', '#equipDeploy').val()); 
-                              });
-                            </script>
-                          </div>
-                        </div>
-                      </div>
-
-
-                      <div class="col-sm-2" style="padding-top:5px;">
-                        <!-- Billable -->
-                        <input class="form-check-input" type="checkbox" value="" onclick="getBillable()" id="defaultCheck1">
-                          <label class="form-check-label" for="defualtCheck1">Billable</label>
-                          <script>
-                            
-                          </script>
-                      </div>
-                    </div>
-                </div>
-                <div class="CmtDataArea">
-                  <div class="col-sm-12">
-                    <div class="form-group">
-                      <!-- Start Time -->
-                      <div class="col-sm-3">
-                        {%cmtedtdatafldslpstarttime_cmttabindex6%}
-                      </div>
-
-                      <!-- End Time -->
-                      <div class="col-sm-3">
-                        {%cmtedtdatafldslpendtime_cmttabindex7%}
-                      </div>
-
-                     <!-- Old Break Length -->
-                     <div class="col-sm-0">
-                      <div id="CmtSlpTimeSpntFrmGrg" class="form-group CmtDisplayNone">             
+                    <div class="col-sm-12">
                         <div class="col-sm-12">
-                          {%cmtedtdataFLDSLPTIMESPENTINMIN_cmttabindex8%}
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Actual Break Length -->
-                    <div class="col-sm-3">
-                      <div id="breakLengths">
-                        <input type="text" value="" class="form-control CmtDateTimeInp" id="breakLengtho" placeholder="Break-Length (in minutes)" aria-label="Break-Length" aria-describedby="inputGroup-sizing-default">
-                      </div>
-                      <script type="text/javascript">
-                        document.getElementById('breakLengtho').onchange = change;
-                        function change(e){
-                          times();
-                        }
-                        $(function() {
-                          $("#breakLengths").on("dp.change", function(e){
-                            times();
-                          });
-                        });
-                      </script>
-                    </div>
-
-                    <script>
-                      // Here I need to pull the value from the three boxes and then input into Hours/Units
-                      function times(){
-                        var startTimeHours = parseInt(((($("#cmtedtdatafldslpstarttime").val()).substring(0,2)) * 60),10)
-                        var startTimeMinutes = parseInt((($("#cmtedtdatafldslpstarttime").val()).substring(3,5)),10);
-                        var startTime =  startTimeHours + startTimeMinutes;
-                        var endTimeHours = parseInt(((($("#cmtedtdatafldslpendtime").val()).substring(0,2)) * 60),10);
-                        var endTimeMinutes = parseInt((($("#cmtedtdatafldslpendtime").val()).substring(3,5)),10);
-                        var endTime = endTimeHours + endTimeMinutes;
-                        var breakLength = parseInt($("#breakLengtho").val(),10);
-                        var total = ((endTime - startTime) - breakLength) / 60;
-                        // Now we need to get the values correct 
-                        // Need to divide by 60 and get the value
-                        var hoursUnits = $("#cmtedtdatafldslpclcamount").val(total);
-                      }
-                    </script>
-
-                    <!-- Hours/Units -->
-                    <div class="col-sm-3">
-                      <div class="form-group">
-                        <div class="col-sm-12" >
-                          {%cmtedtdatafldslpclcamount_cmttabindex10%}
-                          <!-- <button type="button" class="btn btn-light btn-sm" onclick="times()">Calculate&nbsp;Time</button> -->
-                        </div>
-                        
-                        <div class="CmtEDtFrm2Flds"></div>
-                        
-                        <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpprice%}</label>
-                      </div>
-                    </div>
-                     
-                      <div class="form-group CmtDisplayNone">
-                          <div id="CmtLblDescQFrToTimeGenLdTmplCmbDiv" class=" col-sm-3">  
-
-                              <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button" id="CmtSlpQckTimEnrty" data-toggle="dropdown" aria-expanded="true">
-                                  {%CmtLblDescQFrToTimeGenLdTmplCmb%}&nbsp;
-                                  <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="CmtSlpQckTimEnrty">
-                                  {%CmtLblDataQFrToTimeGenLdTmplCmb%}
-                                </ul>
-                              </div>
-      
-                           </div>  
-                      </div>
-
-                      <div class="form-group  CmtDisplayNone">
-                          <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpadjust%}</label>
-                          <div class="col-sm-3" >
-                            {%cmtedtdatafldslpadjust_cmttabindex12%}
-                          </div>
-    
-                          <div class="CmtEDtFrm2Flds"></div>
-                          
-                          <div class="col-sm-2" >
-                            {%cmtedtdatafldslpadjusttype_cmttabindex13%}
-                          </div>
-                          
-                          <div class="CmtEDtFrm2Flds"></div>
-                          
-                          <div class="col-sm-3" >
-                            {%cmtedtdatafldslpclcadjustamount_cmttabindex14%}
-                          </div>                      
-    
-                        </div>
-                        <div class="form-group  CmtDisplayNone">
-                            <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpbilltotal%}</label>
-                            <div class="col-sm-3" >
-                              {%cmtedtdatafldslpbilltotal%}
+                            <div class="d-flex justify-content-center">
+                            Quick Clicks
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-light btn-sm" onclick="autoFillTech()">Tech&nbsp;Day&nbsp;Summary</button>
+                                    <button type="button" class="btn btn-light btn-sm" onclick="autoFillNetwork()">Network&nbsp;TS&nbsp;Summary</button>
+                                    <button type="button" class="btn btn-light btn-sm" onclick="autoFillLV()">LV&nbsp;Summary</button>
+                                </div>
                             </div>
-                          </div>
-                  </div>
-                </div>
-
-                <div class="row CmtDataArea">
-                  <div class="col-sm-12">
-                    <div class="col-sm-12">
-                      <div class="d-flex justify-content-center">
-                        <!-- Quick Clicks -->
-                        <div class="d-flex justify-content-center">
-                          <button type="button" class="btn btn-light btn-sm" onclick="autoFillTech()">Tech&nbsp;Day&nbsp;Summary</button>
-                          <button type="button" class="btn btn-light btn-sm" onclick="autoFillNetwork()">Network&nbsp;TS&nbsp;Summary</button>
-                          <button type="button" class="btn btn-light btn-sm" onclick="autoFillLV()">LV&nbsp;Summary</button>
                         </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
-
-                <div class="row CmtDataArea">
-                  <div class="col-sm-12">
-                    <div class="col-sm-12">
-                      <!-- Description -->
-                      <label class="col-sm-1 control-label CmtEdit ">{%ctpcmbxxxcmbMemoLstDrfldslpdesc%}</label>
-                      {%cmtedtdatafldslpdesc_cmttabindex15%}
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row CmtDataArea">
-                    <!-- Change by CommitCRM-->
-                    <div class="col-sm-6 CmtDisplayNone">
-                      <div class="form-group  ">
-                        <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpuser1%}</label>
-                        <div class="col-sm-8">
-                          {%cmtedtdatafldslpuser1_cmttabindex16%}
-                        </div>
-                      </div>                    
-                    </div>
-
-                    <div class="col-sm-6">
-                      <div class="form-group  ">
-                          <label class="col-sm-2 control-label CmtEdit ">&nbsp;</label>
-                          <div class="col-sm-8">
-                            {%cmtedtdataFLDSLPCLCBILLKIND_cmttabindex17%} {%cmtlbldataFLDSLPBILLKIND%}
-                          </div>
-                      </div>
-                    </div>
-                  </div>
+                -->
+                
                 </div>
             </div>                    
         </div>

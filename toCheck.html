@@ -303,13 +303,13 @@
                         </script>
                       </div>
 
-                      <div class="col-sm-7" style="padding-top:5px;">
+                      <div class="col-sm-6" style="padding-top:5px;">
                         <!-- Equipment Deployed -->
                         <div class="form-group">
-                          <div class="col-sm-6">
-                            <label class="col-sm-4">Equipment&nbsp;Deployed</label>
+                          <div class="col-sm-6" style="text-align: right;">
+                            <label class="col-sm-12" style="text-align: right;">Equipment&nbsp;Deployed</label>
                           </div>
-                          <div class="col-sm-6=">
+                          <div class="col-sm-6" style="text-align: left;">
                             <div class="form-check form-check-inline">
                               <form id="equipDeploy">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="naEquip()"/>
@@ -330,7 +330,7 @@
                       </div>
 
 
-                      <div class="col-sm-2" style="padding-top:5px;">
+                      <div class="col-sm-3" style="padding-top:5px; text-align: center;">
                         <!-- Billable -->
                         <input class="form-check-input" type="checkbox" value="" onclick="getBillable()" id="defaultCheck1">
                           <label class="form-check-label" for="defualtCheck1">Billable</label>
@@ -346,11 +346,23 @@
                       <!-- Start Time -->
                       <div class="col-sm-3">
                         {%cmtedtdatafldslpstarttime_cmttabindex6%}
+                        <script type="text/javascript">
+                          document.getElementById('cmtedtdatafldslpstarttime').onchange = change;
+                          function change(e){
+                            times();
+                          }
+                        </script>
                       </div>
 
                       <!-- End Time -->
                       <div class="col-sm-3">
                         {%cmtedtdatafldslpendtime_cmttabindex7%}
+                        <script type="text/javascript">
+                          document.getElementById('cmtedtdatafldslpendtime').onchange = change;
+                          function change(e){
+                            times();
+                          }
+                        </script>
                       </div>
 
                      <!-- Old Break Length -->
@@ -385,15 +397,28 @@
                       function times(){
                         var startTimeHours = parseInt(((($("#cmtedtdatafldslpstarttime").val()).substring(0,2)) * 60),10)
                         var startTimeMinutes = parseInt((($("#cmtedtdatafldslpstarttime").val()).substring(3,5)),10);
+                        var startTimes = ($("#cmtedtdatafldslpstarttime").val()).substring(6,8);
+                        if(startTimes = "PM"){
+                          startTimeHours += 720;
+                        }
                         var startTime =  startTimeHours + startTimeMinutes;
                         var endTimeHours = parseInt(((($("#cmtedtdatafldslpendtime").val()).substring(0,2)) * 60),10);
                         var endTimeMinutes = parseInt((($("#cmtedtdatafldslpendtime").val()).substring(3,5)),10);
+                        var endTimes = ($("#cmtedtdatafldslpendtime").val()).substring(6,8);
+                        if(endTimes = "PM"){
+                          endTimeHours += 720;
+                        }
                         var endTime = endTimeHours + endTimeMinutes;
-                        var breakLength = parseInt($("#breakLengtho").val(),10);
-                        var total = ((endTime - startTime) - breakLength) / 60;
-                        // Now we need to get the values correct 
-                        // Need to divide by 60 and get the value
-                        var hoursUnits = $("#cmtedtdatafldslpclcamount").val(total);
+                        if(!(endTime < startTime)){
+                          var breakLength = parseInt($("#breakLengtho").val(),10);
+                          var total = ((endTime - startTime) - breakLength) / 60;
+                          // Now we need to get the values correct 
+                          // Need to divide by 60 and get the value
+                          var hoursUnits = $("#cmtedtdatafldslpclcamount").val(total);
+                        }
+                        else{
+                          alert("Check the time input");
+                        }
                       }
                     </script>
 
