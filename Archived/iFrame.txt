@@ -13,3 +13,21 @@ Problem is now to find out what is the page to this site
 Does not seem like it will work since we really cant have a unique account that will send to database.
 Thinking that to see if we can just have the contents saved to a file and then have on click of save 
 it begins to open/referesh the window untill all charges are cleared
+
+iFrame is not going to be 
+
+
+Used --> https://stackoverflow.com/questions/251420/invoking-javascript-code-in-an-iframe-from-the-parent-page
+need to Use
+  - document.getElementById('targetFrame').contentWindow.targetFunction();
+And the target function will be
+  - CmtCallToSrvEx('lnkgenslplist','cmthidegenslplist','btnXClickslplistinsertslpf_slp');
+
+This is a last attempt before archiving this
+
+
+See this solution on how to get to certain div
+https://stackoverflow.com/questions/14117763/how-do-you-put-only-a-certain-section-of-a-website-into-an-iframe 
+
+
+Doesn't seem to work - archiving
