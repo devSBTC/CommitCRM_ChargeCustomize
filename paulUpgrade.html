@@ -2,37 +2,49 @@
 <html lang="en">
   <head>
     <script type="text/javascript">
+      var Account = "";
+      var Contract = "";
+      var Dateo = "";
+      var Item = "";
+      var TimeStart = "";
+      var TimeEnd = "";
+      var HoursUnits = "";
       function pullInformation(){
-        // Want to use this function as way to get the information to hoepfully be uploaded in a hidden window
-        // Important / Needed to be saveable
-        var Account = "";
-        var Contact = "";
-        var TypeOfWork = "";
-        var Employee = "";
-        var Item = "";
-        var Date = "";
-        var TimeStart = "";
-        var TimeEnd = "";
-        var HoursUnits = "";
-        var Description = "";
+        Account = $("#select2-cmtedtdatafldslpcardid_fldcrdfullname-container").val();
+        alert("Account: " + Account);
+        Contract = $("#cmtedtdatafldslpbcrecid_fldbctclccodename_chosen").val();
+        alert("Contract: " + Contract);
+        Dateo = $("#cmtedtdatafldslpslipdate").val();
+        alert("Date: " + Dateo);
+        Item = $("#select2-cmtedtdatafldslpitemid_flditmclccodename-container").val();
+        alert("Item: " + Item);
+        TimeStart = $("#cmtedtdatafldslpstarttime").val();
+        alert("Time Start: " + TimeStart);
+        TimeEnd = $("#cmtedtdatafldslpendtime").val();
+        alert("Time End: " + TimeEnd);
+        HoursUnits = $("#cmtedtdatafldslpclcamount").val();
+        alert("Hours/Units: " + HoursUnits);
 
-        // Not important, but should pull for copy to description box
-        var Quote = "";
-        var EquipmentDeployed = "";
-        var Billable = "";
-        var BreakTime = "";
-
-
-        /*
-            var switchStatus = status.sS;
-
-            if(switchStatus) {
-                $('#togBtn').prop('checked', true);
-            } else {
-                $('#togBtn').prop('checked', false);
-            }
-        */
+        if((Account !== "") && (Contact !== "") && (Contract !== "") && (Dateo !== "") && (Item !== "") && (TimeStart !== "") && (TimeEnd !== "") && (HoursUnits !== "")){
+          document.getElementById("successBTN").style.display = "block";
+          document.getElementById("dangerBTN").style.display = "none";
+        }
+        else{
+          document.getElementById("dangerBTN").style.display = "block";
+          document.getElementById("successBTN").style.display = "none";
+        }
       }
+
+      /*
+      document.getElementById('select2-cmtedtdatafldslpcardid_fldcrdfullname-container').onchange = pullInformation();
+      document.getElementById('cmtedtdatafldslpbcrecid_fldbctclccodename_chosen').onchange = pullInformation();
+      document.getElementById('cmtedtdatafldslpslipdate').onchange = pullInformation();
+      document.getElementById('select2-cmtedtdatafldslpitemid_flditmclccodename-container').onchange = pullInformation();
+      document.getElementById('cmtedtdatafldslpstarttime').onchange = pullInformation();
+      document.getElementById('cmtedtdatafldslpendtime').onchange = pullInformation();
+      document.getElementById('cmtedtdatafldslpclcamount').onchange = pullInformation();
+      */
+      
       function CmtCreateGen(xcInx) { 
         getSubmitForm().cmthidecmbslplistcrg.value = xcInx; 
         getSubmitForm().cmthidegenslplist.value = "cmbgengencrg"; 
@@ -156,7 +168,9 @@
       var texto = "";
       function fillDescription(){
         texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\nSummary: " + placeHold + "\nTicket Number: " + ticketNum + "\nQuote Number: " + quote + "\nEquipment Deployed: " + equipment + "\nBillable: " + billable;
+        document.getElementById("cmtedtdatafldslpdesc").rows = "6"; 
         $("#cmtedtdatafldslpdesc").val(texto);
+        pullInformation();
       }
       var placeHold = "";
       function autoFillTech(){
@@ -293,7 +307,7 @@
                         <!-- Select Contract -->
                         <div class="col-sm-3">
                             {%cmtedtdatafldslpbcrecid_fldbctclccodename_cmttabindex3%}
-                            <div class="col-sm-offset-2  col-sm-8 ">
+                            <div class="col-sm-offset-2  col-sm-8 " style="display:none;">
                               <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl">{%cmtlnkdatafldslpbcrecid_fldbctclctypedates%}</div>
                               <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl"> {%cmtlbldatafldslpbcrecid_fldbctclcbcrcurstate%}</div>
                               <div class="CmtTextInstOfCtrl" id="tktedit12501_cmtlnkdatafldslpbcrecid_fldbctclccodename" style="display:none;">
@@ -317,16 +331,18 @@
                       <!-- End Date -->
                     </div>
 
+                    <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
+
                     <!-- Buttons to unhide -->
                     <div class="col-sm-6">
-                        <div class="form-group">
-                            <div class="col-sm-6">
-                                <button type="button" class="btn btn-light btn-block" id="technicians" style="border-radius: 5px;" onclick="unhideTechs()">Technicians</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <button type="button" class="btn btn-light btn-block" id="supports" style="border-radius: 5px;" onclick="unhideSupports()">Supports</button>
-                            </div>
+                      <div class="form-group">
+                        <div class="col-sm-6">
+                          <button type="button" class="btn btn-light btn-block" id="technicians" style="border-radius: 5px;" onclick="unhideTechs()">Technicians</button>
                         </div>
+                        <div class="col-sm-6">
+                          <button type="button" class="btn btn-light btn-block" id="supports" style="border-radius: 5px;" onclick="unhideSupports()">Supports</button>
+                        </div>
+                      </div>
                     </div>
                     <!-- End Buttons to unhide -->
                     <!-- Employee -->
@@ -351,81 +367,14 @@
                     <!-- Saveable button -->
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <label class="switch" id="switchSaveable">
-                                <input type="checkbox">
-                                <div class="slider round" id="saveable">
-                                    <span class="on">Saveable</span>
-                                    <span class="off">NOT&nbsp;Saveable</span>
-                                </div>
-                            </label>
-                            <style>
-                                .switch {
-                                    position: relative;
-                                    display: inline-block;
-                                    width: 100%;
-                                    height: 40px;
-                                }
-
-                                .switch input {display:none;}
-
-                                .slider {
-                                    position: absolute;
-                                    cursor: pointer;
-                                    top: 0;
-                                    left: 0;
-                                    right: 0;
-                                    bottom: 0;
-                                    background-color: #ca2222;
-                                    -webkit-transition: .4s;
-                                    transition: .4s;
-                                }
-
-                                input:checked + .slider {
-                                    background-color: #2ab934;
-                                }
-
-                                input:focus + .slider {
-                                    box-shadow: 0 0 1px #2196F3;
-                                }
-
-                                input:checked + .slider:before {
-                                    -webkit-transform: translateX(55px);
-                                    -ms-transform: translateX(55px);
-                                    transform: translateX(55px);
-                                }
-
-                                .on{
-                                    display: none;
-                                }
-
-                                .on, .off{
-                                    color: #F7F7F7;
-                                    position: absolute;
-                                    transform: translate(-50%,-50%);
-                                    top: 50%;
-                                    left: 50%;
-                                    font-size: 16px;
-                                    font-family: Verdana, sans-serif;
-                                }
-
-                                input:checked+ .slider .on
-                                {display: block;}
-
-                                input:checked + .slider .off
-                                {display: none;}
-
-                                /* Rounded sliders */
-                                .slider.round {
-                                    border-radius: 34px;
-                                }
-
-                                .slider.round:before {
-                                    border-radius: 50%;
-                                }
-                            </style>
+                          <div class="col-sm-12">
+                            <button type="button" class="btn btn-success btn-block" id="successBTN" style="border-radius: 5px; display:none;" disabled>Saveable</button>
+                          </div>
+                          <div class="col-sm-12">
+                            <button type="button" class="btn btn-danger btn-block" id="dangerBTN" style="border-radius: 5px; display:block;" disabled>NOT Saveable</button>
+                          </div>
                         </div>
                     </div>
-
 
 <!--
 *******************************************************************************
@@ -436,6 +385,10 @@
 *******************************************************************************
 *******************************************************************************
 -->
+
+                <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
+                <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
+
                 <!-- Technicians -->
                 <div class="col-sm-12" id="techsasa" style="display:none;">
                     <div class="form-group">
@@ -689,26 +642,17 @@
 *******************************************************************************
 *******************************************************************************
 -->
-
-
-                      
-                      
-                      
+           
                     </div>
                   </div>
                 </div>
 
                 <div class="row CmtDataArea">
                     
-
-                    
-
-                    
                   </div>
 
                 <label></label>
 
-                
                 
                 <!--
                 <div class="row CmtDataArea">
