@@ -28,16 +28,6 @@
         }
       }
 
-      /*
-      document.getElementById('select2-cmtedtdatafldslpcardid_fldcrdfullname-container').onchange = pullInformation();
-      document.getElementById('cmtedtdatafldslpbcrecid_fldbctclccodename_chosen').onchange = pullInformation();
-      document.getElementById('cmtedtdatafldslpslipdate').onchange = pullInformation();
-      document.getElementById('select2-cmtedtdatafldslpitemid_flditmclccodename-container').onchange = pullInformation();
-      document.getElementById('cmtedtdatafldslpstarttime').onchange = pullInformation();
-      document.getElementById('cmtedtdatafldslpendtime').onchange = pullInformation();
-      document.getElementById('cmtedtdatafldslpclcamount').onchange = pullInformation();
-      */
-      
       function CmtCreateGen(xcInx) { 
         getSubmitForm().cmthidecmbslplistcrg.value = xcInx; 
         getSubmitForm().cmthidegenslplist.value = "cmbgengencrg"; 
@@ -232,7 +222,9 @@
     </script>
   </head>
   <body>
-
+    <script>
+      pullInformation();
+    </script>
     <div class="container-fluid">
       <div class="row hidden-xs">
         <div class="col-sm-12">
@@ -287,6 +279,12 @@
                             <span>{%cmtseldatafldslpcardid_fldcrdfullname%}</span>
                             <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpcardid_fldcrdfullname%}</span>
                           </div>
+                          <script type="text/javascript">
+                            document.getElementById('select2-cmtedtdatafldslpcardid_fldcrdfullname-container').onchange = change1;
+                            function change1(e){
+                              pullInformation();
+                            }
+                          </script>
                       </div>
                       <!-- End Select Account -->
 
@@ -313,12 +311,24 @@
                                 {%cmtlbldatafldslpbcrecid_fldbctnote%}<br><br>
                               </div>
                             </div>
+                            <script type="text/javascript">
+                              document.getElementById('cmtedtdatafldslpbcrecid_fldbctclccodename_chosen').onchange = change2;
+                              function change2(e){
+                                pullInformation();
+                              }
+                            </script>
                           </div>
                           <!-- END CONTRACT -->
 
                       <!-- Date -->
                       <div class="col-sm-3">
                         {%cmtedtdatafldslpslipdate_cmttabindex5%}
+                        <script type="text/javascript">
+                          document.getElementById('cmtedtdatafldslpslipdate').onchange = change3;
+                          function change3(e){
+                            pullInformation();
+                          }
+                        </script>
                         <div class="CmtEDtFrm2Flds"></div>
                       </div>
                       <!-- End Date -->
@@ -432,11 +442,6 @@
                                             <span class="form-check-label3" for="inlineRadNio3">No</span>
                                           </form>
                                         </div>
-                                        <script>
-                                            $('#equipDeploy input').on('change', function() {
-                                                alert($('input[name=inlineRadioOptions]:checked', '#equipDeploy').val()); 
-                                            });
-                                        </script>
                                       </div>
                                     </div>
                                 </div>
@@ -467,6 +472,12 @@
                         <div class="col-sm-4">
                             <!-- Labor Type -->
                             {%cmtedtdatafldslpitemid_flditmclccodename_cmttabindex9%}
+                            <script type="text/javascript">
+                              document.getElementById('cmtedtdatafldslpitemid_flditmclccodename').onchange = change4;
+                              function change4(e){
+                                pullInformation();
+                              }
+                            </script>
                         </div>
                         <!-- END ITEM / LABOR TYPE-->
 
@@ -481,11 +492,23 @@
                                 <!-- Start Time -->
                                 <div class="col-sm-3">
                                   {%cmtedtdatafldslpstarttime_cmttabindex6%}
+                                  <script type="text/javascript">
+                                    document.getElementById('cmtedtdatafldslpstarttime').onchange = change5;
+                                    function change5(e){
+                                      pullInformation();
+                                    }
+                                  </script>
                                 </div>
                   
                                 <!-- End Time -->
                                 <div class="col-sm-3">
                                   {%cmtedtdatafldslpendtime_cmttabindex7%}
+                                  <script type="text/javascript">
+                                    document.getElementById('cmtedtdatafldslpendtime').onchange = change6;
+                                    function change6(e){
+                                      pullInformation();
+                                    }
+                                  </script>
                                 </div>
                   
                                <!-- Old Break Length -->
@@ -507,11 +530,6 @@
                                   function change(e){
                                     times();
                                   }
-                                  $(function() {
-                                    $("#breakLengths").on("dp.change", function(e){
-                                      times();
-                                    });
-                                  });
                                 </script>
                               </div>
                   
@@ -538,6 +556,12 @@
                                   <div class="col-sm-12" >
                                     {%cmtedtdatafldslpclcamount_cmttabindex10%}
                                     <!-- <button type="button" class="btn btn-light btn-sm" onclick="times()">Calculate&nbsp;Time</button> -->
+                                    <script type="text/javascript">
+                                      document.getElementById('cmtedtdatafldslpclcamount').onchange = change7;
+                                      function change7(e){
+                                        pullInformation();
+                                      }
+                                    </script>
                                   </div>
                                   
                                   <div class="CmtEDtFrm2Flds"></div>
