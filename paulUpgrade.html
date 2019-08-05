@@ -10,22 +10,15 @@
       var TimeEnd = "";
       var HoursUnits = "";
       function pullInformation(){
-        Account = $("#select2-cmtedtdatafldslpcardid_fldcrdfullname-container").val();
-        alert("Account: " + Account);
-        Contract = $("#cmtedtdatafldslpbcrecid_fldbctclccodename_chosen").val();
-        alert("Contract: " + Contract);
+        Account = $("#select2-cmtedtdatafldslpcardid_fldcrdfullname-container").text();
+        Contract = $("#cmtedtdatafldslpbcrecid_fldbctclccodename_chosen").text();
         Dateo = $("#cmtedtdatafldslpslipdate").val();
-        alert("Date: " + Dateo);
-        Item = $("#select2-cmtedtdatafldslpitemid_flditmclccodename-container").val();
-        alert("Item: " + Item);
+        Item = $("#cmtedtdatafldslpitemid_flditmclccodename").val();
         TimeStart = $("#cmtedtdatafldslpstarttime").val();
-        alert("Time Start: " + TimeStart);
         TimeEnd = $("#cmtedtdatafldslpendtime").val();
-        alert("Time End: " + TimeEnd);
         HoursUnits = $("#cmtedtdatafldslpclcamount").val();
-        alert("Hours/Units: " + HoursUnits);
 
-        if((Account !== "") && (Contact !== "") && (Contract !== "") && (Dateo !== "") && (Item !== "") && (TimeStart !== "") && (TimeEnd !== "") && (HoursUnits !== "")){
+        if((Account !== "") && (Contract !== "") && (Dateo !== "") && (Item !== "") && (TimeStart !== "") && (TimeEnd !== "") && (HoursUnits !== "")){
           document.getElementById("successBTN").style.display = "block";
           document.getElementById("dangerBTN").style.display = "none";
         }
@@ -368,10 +361,10 @@
                     <div class="col-sm-3">
                         <div class="form-group">
                           <div class="col-sm-12">
-                            <button type="button" class="btn btn-success btn-block" id="successBTN" style="border-radius: 5px; display:none;" disabled>Saveable</button>
+                            <button type="button" class="btn btn-success btn-block" id="successBTN" style="border-radius: 5px; display:none; border:0px;" disabled>Saveable</button>
                           </div>
                           <div class="col-sm-12">
-                            <button type="button" class="btn btn-danger btn-block" id="dangerBTN" style="border-radius: 5px; display:block;" disabled>NOT Saveable</button>
+                            <button type="button" class="btn btn-danger btn-block" id="dangerBTN" style="border-radius: 5px; display:block;  border:0px;" disabled>NOT Saveable</button>
                           </div>
                         </div>
                     </div>
