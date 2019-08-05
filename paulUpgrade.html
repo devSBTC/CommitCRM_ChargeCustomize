@@ -137,6 +137,10 @@
         equipment = "No";
         fillDescription();
       }
+      ticketNum="";
+      function getTicketNum(){
+        ticketNum=$("#cmtedtdatafldslpticketid_fldtktclclnkrecidshort").val();
+      }
       billable="";
       var billCount = 0;
       function getBillable(){
@@ -151,7 +155,7 @@
       }
       var texto = "";
       function fillDescription(){
-        texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\nSummary: " + placeHold + "\nQuote Number: " + quote + "\nEquipment Deployed: " + equipment + "\nBillable: " + billable;
+        texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\nSummary: " + placeHold + "\nTicket Number: " + ticketNum + "\nQuote Number: " + quote + "\nEquipment Deployed: " + equipment + "\nBillable: " + billable;
         $("#cmtedtdatafldslpdesc").val(texto);
       }
       var placeHold = "";
@@ -285,19 +289,25 @@
                       </div>
                       <!-- End Contact -->
 
-                      <!-- Employee -->
-                      <div class="col-sm-3">
-                        <span class="select2 select2-container select2-container--bootstrap select2-container--below" dir="ltr">
-                        <div class="form-group">
-                            <span class="select2 select2-container select2-container--bootstrap select2-container--below" dir="ltr">
-                                <label class="col-sm-4 control-label CmtEdit" style="text-align: right; padding-right: 5px">{%cmtlnkdescfldslpworkerid_fldwrknickname%}</label>
-                                <div class="col-sm-8 CmtEditEmpPriv" id="fldslpworkerid_fldwrknicknameData" style="text-align: left; padding-left: 20px">
-                                    {%cmtedtdatafldslpworkerid_fldwrknickname_cmttabindex4%}
-                                </div>
-                            </span> 
-                        </div>
-                      </div>
-                      <!-- End Employee -->
+                      <!-- CONTRACT -->
+                        <!-- Select Contract -->
+                        <div class="col-sm-3">
+                            {%cmtedtdatafldslpbcrecid_fldbctclccodename_cmttabindex3%}
+                            <div class="col-sm-offset-2  col-sm-8 ">
+                              <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl">{%cmtlnkdatafldslpbcrecid_fldbctclctypedates%}</div>
+                              <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl"> {%cmtlbldatafldslpbcrecid_fldbctclcbcrcurstate%}</div>
+                              <div class="CmtTextInstOfCtrl" id="tktedit12501_cmtlnkdatafldslpbcrecid_fldbctclccodename" style="display:none;">
+                                <br>
+                                <strong>{%cmtlbldescfldslpbcrecid_fldbctdescexternal%}</strong><br>
+                                {%cmtlbldatafldslpbcrecid_fldbctdescexternal%}<br><br>
+                                <strong>{%cmtlbldescfldslpbcrecid_fldbctdescinternal%}</strong><br>
+                                {%cmtlbldatafldslpbcrecid_fldbctdescinternal%}<br><br>
+                                <strong>{%cmtlbldescfldslpbcrecid_fldbctnote%}</strong><br>
+                                {%cmtlbldatafldslpbcrecid_fldbctnote%}<br><br>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- END CONTRACT -->
 
                       <!-- Date -->
                       <div class="col-sm-3">
@@ -319,11 +329,26 @@
                         </div>
                     </div>
                     <!-- End Buttons to unhide -->
+                    <!-- Employee -->
                     <div class="col-sm-3">
+                        <span class="select2 select2-container select2-container--bootstrap select2-container--below" dir="ltr">
                         <div class="form-group">
-                            <!-- Place holder -->
+                            <span class="select2 select2-container select2-container--bootstrap select2-container--below" dir="ltr">
+                                <label class="col-sm-4 control-label CmtEdit" style="text-align: right; padding-right: 5px">{%cmtlnkdescfldslpworkerid_fldwrknickname%}</label>
+                                <div class="col-sm-8 CmtEditEmpPriv" id="fldslpworkerid_fldwrknicknameData" style="text-align: left; padding-left: 20px">
+                                    {%cmtedtdatafldslpworkerid_fldwrknickname_cmttabindex4%}
+                                </div>
+                            </span> 
                         </div>
                     </div>
+                      <!-- End Employee -->
+                      <!--
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                        </div>
+                    </div>
+                      -->
+                    <!-- Saveable button -->
                     <div class="col-sm-3">
                         <div class="form-group">
                             <label class="switch" id="switchSaveable">
@@ -415,22 +440,24 @@
                 <div class="col-sm-12" id="techsasa" style="display:none;">
                     <div class="form-group">
                         <div class="row CmtDataArea">
-                            <!-- Select Ticket -->
-                            <div class="col-sm-4" style="padding-bottom:25px;">
-                                <div class="CmtCrdSellxx105 CmtNoPdRight">
-                                    {%cmtedtdatafldslpticketid_FLDTKTCLCLNKRECIDSHORT%}
-                                    <span class="CmtMgCnBtn visible-xs-block">
-                                        <span>{%cmtseldatafldslpticketid_FLDTKTCLCINFO%}</span>
-                                        <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpticketid_FLDTKTCLCINFO%}</span>
-                                        </span>
-                                </div>
-                                <div id="fldgenLINKrecid_FLDGENCLCLNKRECIDMEMO" style="display:none;">
-                                    {%cmtLBLdatafldslpticketid_FLDGENCLCLNKRECIDMEMO%}
-                                </div>
-                            </div>
+                            
 
                             <!-- Quote Row -->
                             <div class="col-sm-12">
+                                <!-- Select Ticket -->
+                                <div class="col-sm-3" style="padding-bottom:25px;">
+                                    <div class="CmtCrdSellxx105 CmtNoPdRight">
+                                        {%cmtedtdatafldslpticketid_FLDTKTCLCLNKRECIDSHORT%}
+                                        <span class="CmtMgCnBtn visible-xs-block">
+                                            <span>{%cmtseldatafldslpticketid_FLDTKTCLCINFO%}</span>
+                                            <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpticketid_FLDTKTCLCINFO%}</span>
+                                            </span>
+                                    </div>
+                                    <div id="fldgenLINKrecid_FLDGENCLCLNKRECIDMEMO" style="display:none;">
+                                        {%cmtLBLdatafldslpticketid_FLDGENCLCLNKRECIDMEMO%}
+                                    </div>
+                                </div>
+
                                 <div class="col-sm-3">
                                     <!-- Quote # -->
                                     <input type="text" id="quoteNumber" class="form-control" placeholder="Quote #" aria-label="Quote #" aria-describedby="inputGroup-sizing-default">
@@ -442,7 +469,7 @@
                                     </script>
                                 </div>
                         
-                                <div class="col-sm-6" style="padding-top:5px;">
+                                <div class="col-sm-5" style="padding-top:5px;">
                                     <!-- Equipment Deployed -->
                                     <div class="form-group">
                                       <div class="col-sm-6" style="text-align: right;">
@@ -469,7 +496,7 @@
                                 </div>
                         
                         
-                                <div class="col-sm-3" style="padding-top:5px; text-align: center;">
+                                <div class="col-sm-1" style="padding-top:5px; text-align: center;">
                                   <!-- Billable -->
                                   <input class="form-check-input" type="checkbox" value="" onclick="getBillable()" id="defaultCheck1">
                                     <label class="form-check-label" for="defualtCheck1">Billable</label>
@@ -480,8 +507,6 @@
                 </div>
 
 
-
-
                 <div class="col-sm-12" id="supportsasa" style="display:none;">
                     <div class="form-group">
                         Hello Supports
@@ -489,35 +514,19 @@
                 </div>
 
 
-
-
                 <div class="col-sm-12" id="generalasa" style="display:none;">
                     <div class="form-group">
-                        <!-- CONTRACT -->
-                        <!-- Select Contract -->
-                        <div class="col-sm-4">
-                            {%cmtedtdatafldslpbcrecid_fldbctclccodename_cmttabindex3%}
-                            <div class="col-sm-offset-2  col-sm-8 ">
-                                <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl">{%cmtlnkdatafldslpbcrecid_fldbctclctypedates%}</div>
-                                <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl"> {%cmtlbldatafldslpbcrecid_fldbctclcbcrcurstate%}</div>
-                                <div class="CmtTextInstOfCtrl" id="tktedit12501_cmtlnkdatafldslpbcrecid_fldbctclccodename" style="display:none;">
-                                    <br>
-                                    <strong>{%cmtlbldescfldslpbcrecid_fldbctdescexternal%}</strong><br>
-                                    {%cmtlbldatafldslpbcrecid_fldbctdescexternal%}<br><br>
-                                    <strong>{%cmtlbldescfldslpbcrecid_fldbctdescinternal%}</strong><br>
-                                    {%cmtlbldatafldslpbcrecid_fldbctdescinternal%}<br><br>
-                                    <strong>{%cmtlbldescfldslpbcrecid_fldbctnote%}</strong><br>
-                                    {%cmtlbldatafldslpbcrecid_fldbctnote%}<br><br>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END CONTRACT -->
+                        
                         <!-- ITEM / LABOR TYPE -->
                         <div class="col-sm-4">
                             <!-- Labor Type -->
                             {%cmtedtdatafldslpitemid_flditmclccodename_cmttabindex9%}
                         </div>
                         <!-- END ITEM / LABOR TYPE-->
+
+                        <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
+                        <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
+                        <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
 
                         <!-- TIME START -->
                         <div class="CmtDataArea">
