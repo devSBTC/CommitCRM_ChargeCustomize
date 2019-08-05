@@ -5,7 +5,7 @@
       var Account = "";
       var Contract = "";
       var Dateo = "";
-      var Item = "";
+      var Item = "--- Select Value ---";
       var TimeStart = "";
       var TimeEnd = "";
       var HoursUnits = "";
@@ -18,7 +18,7 @@
         TimeEnd = $("#cmtedtdatafldslpendtime").val();
         HoursUnits = $("#cmtedtdatafldslpclcamount").val();
 
-        if((Account !== "") && (Contract !== "") && (Dateo !== "") && (Item !== "") && (TimeStart !== "") && (TimeEnd !== "") && (HoursUnits !== "")){
+        if((Account !== "") && (Contract !== "") && (Dateo !== "") && (Item !== "--- Select Value ---") && (TimeStart !== "") && (TimeEnd !== "") && (HoursUnits !== "")){
           document.getElementById("successBTN").style.display = "block";
           document.getElementById("dangerBTN").style.display = "none";
         }
@@ -26,6 +26,30 @@
           document.getElementById("dangerBTN").style.display = "block";
           document.getElementById("successBTN").style.display = "none";
         }
+      }
+
+      function resetValues(){
+        // Here I need to set the values as stated in Google Drive to become reset
+      }
+
+      document.getElementById("btnslpeditsave1").onclick = pizza;
+      function pizza(){
+        // Need to reset values if store to window storage or what not
+        CmtslpMakeSaveByCtrl(this);
+      }
+
+      function times(){
+        setTimeout(function(){
+          var startTimeHours = parseInt(((($("#cmtedtdatafldslpstarttime").val()).substring(0,2)) * 60),10)
+          var startTimeMinutes = parseInt((($("#cmtedtdatafldslpstarttime").val()).substring(3,5)),10);
+          var startTime =  startTimeHours + startTimeMinutes;
+          var endTimeHours = parseInt(((($("#cmtedtdatafldslpendtime").val()).substring(0,2)) * 60),10);
+          var endTimeMinutes = parseInt((($("#cmtedtdatafldslpendtime").val()).substring(3,5)),10);
+          var endTime = endTimeHours + endTimeMinutes;
+          var breakLength = parseInt($("#breakLengtho").val(),10);
+          var total = ((endTime - startTime) - breakLength) / 60;
+          $("#cmtedtdatafldslpclcamount").val(total);
+        }, 100);  
       }
 
       function CmtCreateGen(xcInx) { 
@@ -379,16 +403,6 @@
                         </div>
                     </div>
 
-<!--
-*******************************************************************************
-*******************************************************************************
-*******************************************************************************
-*******************************************************************************
-*******************************************************************************
-*******************************************************************************
-*******************************************************************************
--->
-
                 <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
                 <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
 
@@ -495,6 +509,7 @@
                                   <script type="text/javascript">
                                     document.getElementById('cmtedtdatafldslpstarttime').onchange = change5;
                                     function change5(e){
+                                      times();
                                       pullInformation();
                                     }
                                   </script>
@@ -506,6 +521,7 @@
                                   <script type="text/javascript">
                                     document.getElementById('cmtedtdatafldslpendtime').onchange = change6;
                                     function change6(e){
+                                      times();
                                       pullInformation();
                                     }
                                   </script>
@@ -532,23 +548,6 @@
                                   }
                                 </script>
                               </div>
-                  
-                              <script>
-                                // Here I need to pull the value from the three boxes and then input into Hours/Units
-                                function times(){
-                                  var startTimeHours = parseInt(((($("#cmtedtdatafldslpstarttime").val()).substring(0,2)) * 60),10)
-                                  var startTimeMinutes = parseInt((($("#cmtedtdatafldslpstarttime").val()).substring(3,5)),10);
-                                  var startTime =  startTimeHours + startTimeMinutes;
-                                  var endTimeHours = parseInt(((($("#cmtedtdatafldslpendtime").val()).substring(0,2)) * 60),10);
-                                  var endTimeMinutes = parseInt((($("#cmtedtdatafldslpendtime").val()).substring(3,5)),10);
-                                  var endTime = endTimeHours + endTimeMinutes;
-                                  var breakLength = parseInt($("#breakLengtho").val(),10);
-                                  var total = ((endTime - startTime) - breakLength) / 60;
-                                  // Now we need to get the values correct 
-                                  // Need to divide by 60 and get the value
-                                  var hoursUnits = $("#cmtedtdatafldslpclcamount").val(total);
-                                }
-                              </script>
                   
                               <!-- Hours/Units -->
                               <div class="col-sm-3">
@@ -650,16 +649,6 @@
                     </div>
                 </div>
 
-<!--
-*******************************************************************************
-*******************************************************************************
-*******************************************************************************
-*******************************************************************************
-*******************************************************************************
-*******************************************************************************
-*******************************************************************************
--->
-           
                     </div>
                   </div>
                 </div>
