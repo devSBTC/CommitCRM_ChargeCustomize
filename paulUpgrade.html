@@ -3,7 +3,7 @@
   <head>
     <script type="text/javascript">
       var Account = "";
-      var Contract = "";
+      var Contract = "--- Select Value ---";
       var Dateo = "";
       var Item = "--- Select Value ---";
       var TimeStart = "";
@@ -18,7 +18,7 @@
         TimeEnd = $("#cmtedtdatafldslpendtime").val();
         HoursUnits = $("#cmtedtdatafldslpclcamount").val();
 
-        if((Account !== "") && (Contract !== "") && (Dateo !== "") && (Item !== "--- Select Value ---") && (TimeStart !== "") && (TimeEnd !== "") && (HoursUnits !== "")){
+        if((Account !== "") && (Contract !== "--- Select Value ---") && (Dateo !== "") && (Item !== "--- Select Value ---") && (TimeStart !== "") && (TimeEnd !== "") && (HoursUnits !== "")){
           document.getElementById("successBTN").style.display = "block";
           document.getElementById("dangerBTN").style.display = "none";
         }
@@ -29,13 +29,18 @@
       }
 
       function resetValues(){
-        // Here I need to set the values as stated in Google Drive to become reset
+        sessionStorage.clear();
       }
 
-      document.getElementById("btnslpeditsave1").onclick = pizza;
       function pizza(){
-        // Need to reset values if store to window storage or what not
+        alert('s')
+        // save button
+        resetValues();
         CmtslpMakeSaveByCtrl(this);
+      }
+
+      function refreshCounter(){
+        // Need to think if I want 
       }
 
       function times(){
@@ -141,19 +146,23 @@
       quote="";
       function getQuoteNum(){
         quote = $("#quoteNumber").val();
+        sessionStorage.setItem('quoteStore', quote);
         fillDescription();
       }
       equipment="";
       function naEquip(){
         equipment = "N/A";
+        sessionStorage.setItem('equipmentStore', equipment);
         fillDescription();
       }
       function yesEquip(){
         equipment = "Yes";
+        sessionStorage.setItem('equipmentStore', equipment);
         fillDescription();
       }
       function noEquip(){
         equipment = "No";
+        sessionStorage.setItem('equipmentStore', equipment);
         fillDescription();
       }
       ticketNum="";
