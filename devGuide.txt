@@ -1,0 +1,34 @@
+First thing is first, 
+Do not attempt to do much to change the database {%%} parts in the HTML code
+
+CommitCRM is not very helpful with changing anything database built
+But they are very kind about helping with know what simple are
+
+If you want to find specifics as to what is pulled (what the {%%} calls)
+You have to visit the fullCCRMHTML.html file and attempt to find it based on what divs are where
+
+Archived - The archived section is meant for files I was working on earlier,
+           and parts that did not become relative
+
+Files for Page Host - This is the JS and other files that I could pull 
+                      and then are present in case someone wants to change/add
+
+additionalJavaScript.js - This is the main javascript that I added to the head of slpedit22501.html
+
+backup.html - Is the original html file from CommitCRM that we use
+
+CCRMCharge.html - the entire page elements of backup (slpedit22501.html)
+
+devGuide.txt - Explanation on files
+
+djangoCompare.txt
+
+fullCCRMHTML.html
+
+paulUpgrade.html
+
+README.md
+
+slepdit22501Redo.html
+
+toCheck.html
