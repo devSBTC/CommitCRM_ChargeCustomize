@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <script type="text/javascript">
+      function clearValues(){
+        sessionStorage.removeItem("");
+      }
+
       var Account = "";
       var Contract = "--- Select Value ---";
       var Dateo = "";
@@ -47,6 +51,7 @@
         getSubmitForm().cmthidegenslplist.value = "cmbgengencrg"; 
         SubmitClickConfirm("lnkgenslplist","", true,""); 
       } 
+
       function getItem(weirdWord){
         if(weirdWord === "--- Select Value ---"){
           // --- Select Value ---
@@ -128,13 +133,27 @@
           return zNetworkResearch;
         }
       } 
-      quote="";
+
+      var quote="";
       function getQuoteNum(){
         quote = $("#quoteNumber").val();
         sessionStorage.setItem('quoteStore', quote);
         fillDescription();
       }
-      equipment="";
+
+      var equipment="";
+      if(sessionStorage.getItem('equipmentStore') !== null){
+        equipment = sessionStorage.getItem('equipmentStore');
+        if(equipment === "N/A"){
+          // Show N/A
+        }
+        if(equipment === "Yes"){
+          // show Yes
+        }
+        if(equipment === "No"){
+          // show No
+        }
+      }
       function naEquip(){
         equipment = "N/A";
         sessionStorage.setItem('equipmentStore', equipment);
@@ -150,11 +169,13 @@
         sessionStorage.setItem('equipmentStore', equipment);
         fillDescription();
       }
-      ticketNum="";
+
+      var ticketNum="";
       function getTicketNum(){
         ticketNum=$("#cmtedtdatafldslpticketid_fldtktclclnkrecidshort").val();
       }
-      billable="";
+
+      var billable="";
       var billCount = 0;
       function getBillable(){
         if(billCount%2 == 0){
@@ -164,7 +185,14 @@
           billable = "No";
         }
         billCount++;
+        sessionStorage.setItem('billableStore', billCount);
         fillDescription();
+      }
+      function billableShow(){
+        if(billCount%2 === 1){
+          $("#defaultCheck1").attr("checked", true);
+          //document.getElementById("defaultCheck1").checked=true;
+        }
       }
 
       var placeHoldz = "";
@@ -194,13 +222,43 @@
         $("#cmtedtdatafldslpdesc").val(texto);
         pullInformation();
       }
-      
+
       var chosenJob = 0;
+      function buttonStart(){
+        if(chosenJob === 0){
+          document.getElementById("technicians").style.backgroundColor = "";
+          document.getElementById("technicians").style.color = "";
+          document.getElementById("techsasa").style.display = "none";
+          document.getElementById("supports").style.backgroundColor = "";
+          document.getElementById("supports").style.color = "";
+          document.getElementById("supportsasa").style.display = "none";
+          hideGeneral();
+        }
+        if(chosenJob === 1){
+          document.getElementById("supports").style.backgroundColor = "";
+          document.getElementById("supports").style.color = "";
+          document.getElementById("technicians").style.backgroundColor = "#3e4444";
+          document.getElementById("technicians").style.color = "#F7F7F7";
+          document.getElementById("supportsasa").style.display = "none";
+          document.getElementById("techsasa").style.display = "block";
+          showGeneral();
+        }
+        if(chosenJob === 2){
+          document.getElementById("technicians").style.backgroundColor = "";
+          document.getElementById("technicians").style.color = "";
+          document.getElementById("supports").style.backgroundColor = "#3e4444";
+          document.getElementById("supports").style.color = "#F7F7F7";
+          document.getElementById("techsasa").style.display = "none";
+          document.getElementById("supportsasa").style.display = "block";
+          showGeneral();
+        }
+      }
       function unhideTechs(){
         if(chosenJob === 1){
             document.getElementById("technicians").style.backgroundColor = "";
             document.getElementById("technicians").style.color = "";
             chosenJob = 0;
+            sessionStorage.setItem('chosenJobStore', chosenJob);
             document.getElementById("techsasa").style.display = "none";
             hideGeneral();
         }
@@ -210,6 +268,7 @@
             document.getElementById("technicians").style.backgroundColor = "#3e4444";
             document.getElementById("technicians").style.color = "#F7F7F7";
             chosenJob = 1;
+            sessionStorage.setItem('chosenJobStore', chosenJob);
             document.getElementById("supportsasa").style.display = "none";
             document.getElementById("techsasa").style.display = "block";
             showGeneral();
@@ -220,6 +279,7 @@
             document.getElementById("supports").style.backgroundColor = "";
             document.getElementById("supports").style.color = "";
             chosenJob = 0;
+            sessionStorage.setItem('chosenJobStore', chosenJob);
             document.getElementById("supportsasa").style.display = "none";
             hideGeneral();
         }
@@ -229,11 +289,13 @@
             document.getElementById("supports").style.backgroundColor = "#3e4444";
             document.getElementById("supports").style.color = "#F7F7F7";
             chosenJob = 2;
+            sessionStorage.setItem('chosenJobStore', chosenJob);
             document.getElementById("techsasa").style.display = "none";
             document.getElementById("supportsasa").style.display = "block";
             showGeneral();
         }
       }
+      
       function showGeneral(){
         document.getElementById("generalasa").style.display = "block";
       }
@@ -549,6 +611,10 @@
                                         function change(e){
                                           getQuoteNum();
                                         }
+                                        if(sessionStorage.getItem('quoteStore') !== null){
+                                          quote = sessionStorage.getItem('quoteStore');
+                                          $("#quoteNumber").val(quote);
+                                        }
                                     </script>
                                 </div>
                         
@@ -578,6 +644,12 @@
                                   <!-- Billable -->
                                   <input class="form-check-input" type="checkbox" value="" onclick="getBillable()" id="defaultCheck1">
                                     <label class="form-check-label" for="defualtCheck1">Billable</label>
+                                    <script>
+                                      if(sessionStorage.getItem('billableStore') !== null){
+                                        billCount = sessionStorage.get('billableStore');
+                                        billableShow();
+                                      }
+                                    </script>
                                 </div>
                             </div>
                         </div>
@@ -683,6 +755,13 @@
 
 <hr>
 
+<script>
+    if(sessionStorage.getItem('chosenJobStore') !== null){
+      chosenJob = parseInt((sessionStorage.getItem('chosenJobStore')),10);
+      buttonStart();
+    }
+  </script>
+
         <script>
           function newFrame(){
             $('<iframe>', {
@@ -706,6 +785,7 @@
             <script>
               document.getElementById("btnslpeditsave1").onclick = function() {
                 // sessionStorage.clear();
+                // clearValues();
                 CmtslpMakeSaveByCtrl(this);
               }
             </script>
@@ -718,6 +798,7 @@
             <script>
               document.getElementById("btnslpeditsave1").onclick = function() {
                 // sessionStorage.clear();
+                // clearValues();
                 CmtslpMakeSaveByCtrl(this);
               }
             </script>
@@ -779,6 +860,10 @@ SysRuleXXYYZZCaptionsysrulexxyyzzcaptionTtlFLDTKTSCHEDLENESTIMlngHeb=
 
 <div id="GenEditHideDiv" style="display:hidden;">
 </div>
+
+<script>
+  pullInformation();
+</script>
 
   </body>
 <!-- slp SLP -->
