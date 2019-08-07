@@ -12,6 +12,7 @@
       var Item = "--- Select Value ---";
       var TimeStart = "";
       var TimeEnd = "";
+      var BreakLength = "";
       var HoursUnits = "";
       function pullInformation(){
         Account = $("#select2-cmtedtdatafldslpcardid_fldcrdfullname-container").text();
@@ -220,6 +221,7 @@
         texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\nSummary: " + placeHoldz + "\nTicket Number: " + ticketNum + "\nQuote Number: " + quote + "\nEquipment Deployed: " + equipment + "\nBillable: " + billable;
         document.getElementById("cmtedtdatafldslpdesc").rows = "6"; 
         $("#cmtedtdatafldslpdesc").val(texto);
+        sessionStorage.setItem('descriptionStore',texto);
         pullInformation();
       }
 
@@ -407,8 +409,15 @@
                       <div class="col-sm-3">
                         {%cmtedtdatafldslpslipdate_cmttabindex5%}
                         <script type="text/javascript">
+                          if(sessionStorage.getItem('dateStore') !== null){
+                            Dateo = sessionStorage.getItem('dateStore');
+                            $("#cmtedtdatafldslpslipdate").val(Dateo);
+                          }
+
                           document.getElementById('cmtedtdatafldslpslipdate').onchange = change3;
                           function change3(e){
+                            Dateo = $("#cmtedtdatafldslpslipdate").val();
+                            sessionStorage.setItem('dateStore', Dateo);
                             pullInformation();
                           }
                         </script>
@@ -462,8 +471,15 @@
                               <input type="text" value="" class="form-control CmtDateTimeInp" id="breakLengtho" placeholder="Break-Length (in minutes)" aria-label="Break-Length" aria-describedby="inputGroup-sizing-default">
                             </div>
                             <script type="text/javascript">
+                              if(sessionStorage.getItem('BreakLengthStore') !== null){
+                                BreakLength = sessionStorage.getItem('BreakLengthStore');
+                                $("#breakLengtho").val(BreakLength);
+                              }
+
                               document.getElementById('breakLengtho').onchange = change;
                               function change(e){
+                                BreakLength = $("#breakLengtho").val();
+                                sessionStorage.setItem('BreakLengthStore', BreakLength);
                                 times();
                               }
                             </script>
@@ -476,8 +492,15 @@
                                 {%cmtedtdatafldslpclcamount_cmttabindex10%}
                                 <!-- <button type="button" class="btn btn-light btn-sm" onclick="times()">Calculate&nbsp;Time</button> -->
                                 <script type="text/javascript">
+                                  if(sessionStorage.getItem('hoursUnitsStore') !== null){
+                                    HoursUnits = sessionStorage.getItem('hoursUnitsStore');
+                                    $("#cmtedtdatafldslpclcamount").val(HoursUnits);
+                                  }
+
                                   document.getElementById('cmtedtdatafldslpclcamount').onchange = change7;
                                   function change7(e){
+                                    HoursUnits = $("#cmtedtdatafldslpclcamount").val();
+                                    sessionStorage.setItem('hoursUnitsStore', HoursUnits);
                                     pullInformation();
                                   }
                                 </script>
@@ -672,8 +695,15 @@
                             <!-- Labor Type -->
                             {%cmtedtdatafldslpitemid_flditmclccodename_cmttabindex9%}
                             <script type="text/javascript">
+                              if(sessionStorage.getItem('itemStore')){
+                                Item = sessionStorage.getItem('itemStore');
+                                $('#cmtedtdatafldslpitemid_flditmclccodename').val(Item);
+                              }
+
                               document.getElementById('cmtedtdatafldslpitemid_flditmclccodename').onchange = change4;
                               function change4(e){
+                                Item = $('#cmtedtdatafldslpitemid_flditmclccodename').val();
+                                sessionStorage.setItem('itemStore', Item);
                                 pullInformation();
                               }
                             </script>
@@ -718,6 +748,13 @@
                             </div>
                         </div>
                         <!-- DESCRIPTION END -->
+                        <script>
+                          if(sessionStorage.getItem('descriptionStore') !== null){
+                            document.getElementById("cmtedtdatafldslpdesc").rows = "6";
+                            texto = sessionStorage.getItem('descriptionStore');
+                            $("#cmtedtdatafldslpdesc").val(texto);
+                          }
+                        </script>
                     </div>
                 </div>
 
@@ -862,6 +899,7 @@ SysRuleXXYYZZCaptionsysrulexxyyzzcaptionTtlFLDTKTSCHEDLENESTIMlngHeb=
 </div>
 
 <script>
+  times();
   pullInformation();
 </script>
 
