@@ -28,21 +28,6 @@
         }
       }
 
-      function resetValues(){
-        sessionStorage.clear();
-      }
-
-      function pizza(){
-        alert('s')
-        // save button
-        resetValues();
-        CmtslpMakeSaveByCtrl(this);
-      }
-
-      function refreshCounter(){
-        // Need to think if I want 
-      }
-
       function times(){
         setTimeout(function(){
           var startTimeHours = parseInt(((($("#cmtedtdatafldslpstarttime").val()).substring(0,2)) * 60),10)
@@ -181,32 +166,35 @@
         billCount++;
         fillDescription();
       }
-      var texto = "";
-      function fillDescription(){
-        texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\nSummary: " + placeHold + "\nTicket Number: " + ticketNum + "\nQuote Number: " + quote + "\nEquipment Deployed: " + equipment + "\nBillable: " + billable;
-        document.getElementById("cmtedtdatafldslpdesc").rows = "6"; 
-        $("#cmtedtdatafldslpdesc").val(texto);
-        pullInformation();
-      }
-      var placeHold = "";
+
+      var placeHoldz = "";
       function autoFillTech(){
-        if(!(placeHold === "Tech Day Summary")){
-          placeHold = "Tech Day Summary";
+        if(!(placeHoldz === "Tech Day Summary")){
+          placeHoldz = "Tech Day Summary";
           fillDescription();
         }
       }
       function autoFillNetwork(){
-        if(!(placeHold === "Network TS Summary")){
-          placeHold = "Network TS Summary";
+        if(!(placeHoldz === "Network TS Summary")){
+          placeHoldz = "Network TS Summary";
           fillDescription();
         }
       }
       function autoFillLV(){
-        if(!(placeHold === "LV Summary")){
-          placeHold = "LV Summary";
+        if(!(placeHoldz === "LV Summary")){
+          placeHoldz = "LV Summary";
           fillDescription();
         }
       }
+
+      var texto = "";
+      function fillDescription(){
+        texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\nSummary: " + placeHoldz + "\nTicket Number: " + ticketNum + "\nQuote Number: " + quote + "\nEquipment Deployed: " + equipment + "\nBillable: " + billable;
+        document.getElementById("cmtedtdatafldslpdesc").rows = "6"; 
+        $("#cmtedtdatafldslpdesc").val(texto);
+        pullInformation();
+      }
+      
       var chosenJob = 0;
       function unhideTechs(){
         if(chosenJob === 1){
@@ -712,6 +700,12 @@
             <div class="pull-right">
               {%btnslpeditsave1%}
             </div>
+            <script>
+              document.getElementById("btnslpeditsave1").onclick = function() {
+                sessionStorage.clear();
+                CmtslpMakeSaveByCtrl(this);
+              }
+            </script>
           </div>
 
           <div class="col-xs-6 col-sm-6">
