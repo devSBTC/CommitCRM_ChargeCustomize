@@ -3,7 +3,15 @@
   <head>
     <script type="text/javascript">
       function clearValues(){
-        sessionStorage.removeItem("");
+        sessionStorage.removeItem('quoteStore');
+        sessionStorage.removeItem('equipmentStore');
+        sessionStorage.removeItem('billableStore');
+        sessionStorage.removeItem('descriptionStore');
+        sessionStorage.removeItem('chosenJobStore');
+        sessionStorage.removeItem('BreakLengthStore');
+        sessionStorage.removeItem('hoursUnitsStore');
+        sessionStorage.removeItem('dateStore');
+        sessionStorage.removeItem('itemStore');
       }
 
       var Account = "";
@@ -143,18 +151,6 @@
       }
 
       var equipment="";
-      if(sessionStorage.getItem('equipmentStore') !== null){
-        equipment = sessionStorage.getItem('equipmentStore');
-        if(equipment === "N/A"){
-          // Show N/A
-        }
-        if(equipment === "Yes"){
-          // show Yes
-        }
-        if(equipment === "No"){
-          // show No
-        }
-      }
       function naEquip(){
         equipment = "N/A";
         sessionStorage.setItem('equipmentStore', equipment);
@@ -179,7 +175,7 @@
       var billable="";
       var billCount = 0;
       function getBillable(){
-        if(billCount%2 == 0){
+        if(billCount%2 === 0){
           billable = "Yes";
         }
         else{
@@ -188,12 +184,6 @@
         billCount++;
         sessionStorage.setItem('billableStore', billCount);
         fillDescription();
-      }
-      function billableShow(){
-        if(billCount%2 === 1){
-          $("#defaultCheck1").attr("checked", true);
-          //document.getElementById("defaultCheck1").checked=true;
-        }
       }
 
       var placeHoldz = "";
@@ -408,7 +398,7 @@
                       <!-- Date -->
                       <div class="col-sm-3">
                         {%cmtedtdatafldslpslipdate_cmttabindex5%}
-                        <script type="text/javascript">
+                        <script>
                           if(sessionStorage.getItem('dateStore') !== null){
                             Dateo = sessionStorage.getItem('dateStore');
                             $("#cmtedtdatafldslpslipdate").val(Dateo);
@@ -659,18 +649,39 @@
                                           </form>
                                         </div>
                                       </div>
+                                      <script>
+                                        if(sessionStorage.getItem('equipmentStore') !== null){
+                                          equipment = sessionStorage.getItem('equipmentStore');
+                                          if(equipment === "N/A"){
+                                            document.getElementById("inlineRadio1").checked = true;
+                                          }
+                                          if(equipment === "Yes"){
+                                            document.getElementById("inlineRadio2").checked = true;
+                                          }
+                                          if(equipment === "No"){
+                                            document.getElementById("inlineRadio3").checked = true;
+                                          }
+                                        }
+                                      </script>
                                     </div>
                                 </div>
                         
                         
                                 <div class="col-sm-1" style="padding-top:5px; text-align: center;">
                                   <!-- Billable -->
-                                  <input class="form-check-input" type="checkbox" value="" onclick="getBillable()" id="defaultCheck1">
+                                  <input class="form-check-input" type="checkbox" id="defaultCheck1" value="option2" onclick="getBillable()">
                                     <label class="form-check-label" for="defualtCheck1">Billable</label>
                                     <script>
                                       if(sessionStorage.getItem('billableStore') !== null){
-                                        billCount = sessionStorage.get('billableStore');
-                                        billableShow();
+                                        billCount = parseInt((sessionStorage.getItem('billableStore')),10);
+                                        if(billCount%2 === 1){
+                                          document.getElementById('defaultCheck1').checked = true;
+                                          billable = "Yes";
+                                        }
+                                        if(billable%2 === 0){
+                                          document.getElementById('defaultCheck1').checked = false;
+                                          billable = "No";
+                                        }
                                       }
                                     </script>
                                 </div>
@@ -821,8 +832,7 @@
             </div>
             <script>
               document.getElementById("btnslpeditsave1").onclick = function() {
-                // sessionStorage.clear();
-                // clearValues();
+                clearValues();
                 CmtslpMakeSaveByCtrl(this);
               }
             </script>
@@ -833,10 +843,9 @@
               {%btnslpeditcancel%}
             </div>
             <script>
-              document.getElementById("btnslpeditsave1").onclick = function() {
-                // sessionStorage.clear();
-                // clearValues();
-                CmtslpMakeSaveByCtrl(this);
+              document.getElementById("btnslpeditcancel").onclick = function() {
+                clearValues();
+                CmtMakeCancel_slp(this)
               }
             </script>
           </div>
