@@ -43,10 +43,24 @@
 
       function times(){
         setTimeout(function(){
+          var startTimePart = ($("#cmtedtdatafldslpstarttime").val()).substring(6,8);
           var startTimeHours = parseInt(((($("#cmtedtdatafldslpstarttime").val()).substring(0,2)) * 60),10)
+          if((startTimePart === "AM")&&(startTimeHours === 720)){
+            startTimeHours = 0;
+          }
+          if((startTimePart === "PM")&&(startTimeHours !== 720)){
+            startTimeHours += 720;
+          }
           var startTimeMinutes = parseInt((($("#cmtedtdatafldslpstarttime").val()).substring(3,5)),10);
           var startTime =  startTimeHours + startTimeMinutes;
+          var endTimePart = ($("#cmtedtdatafldslpendtime").val()).substring(6,8);
           var endTimeHours = parseInt(((($("#cmtedtdatafldslpendtime").val()).substring(0,2)) * 60),10);
+          if((endTimePart === "AM")&&(endTimeHours === 720)){
+            endTimeHours = 0;
+          }
+          if((endTimePart === "PM")&&(endTimeHours !== 720)){
+            endTimeHours += 720;
+          }
           var endTimeMinutes = parseInt((($("#cmtedtdatafldslpendtime").val()).substring(3,5)),10);
           var endTime = endTimeHours + endTimeMinutes;
           var breakLength = parseInt($("#breakLengtho").val(),10);
@@ -234,6 +248,7 @@
           document.getElementById("supportsasa").style.display = "none";
           document.getElementById("techsasa").style.display = "block";
           showGeneral();
+          showTechDescription();
         }
         if(chosenJob === 2){
           document.getElementById("technicians").style.backgroundColor = "";
@@ -243,6 +258,7 @@
           document.getElementById("techsasa").style.display = "none";
           document.getElementById("supportsasa").style.display = "block";
           showGeneral();
+          showSupportDescription();
         }
       }
       function unhideTechs(){
@@ -264,6 +280,7 @@
             document.getElementById("supportsasa").style.display = "none";
             document.getElementById("techsasa").style.display = "block";
             showGeneral();
+            showTechDescription();
         }
       }
       function unhideSupports(){
@@ -285,13 +302,21 @@
             document.getElementById("techsasa").style.display = "none";
             document.getElementById("supportsasa").style.display = "block";
             showGeneral();
+            showSupportDescription();
         }
       }
-      
+
+      function showSupportDescription(){
+        document.getElementById("descriptionasa").style.display = "block";
+      }
+      function showTechDescription(){
+        document.getElementById("descriptionasa").style.display = "block";
+      }
       function showGeneral(){
         document.getElementById("generalasa").style.display = "block";
       }
       function hideGeneral(){
+        document.getElementById("descriptionasa").style.display = "none";
         document.getElementById("generalasa").style.display = "none";
       }
     </script>
@@ -594,6 +619,36 @@
                 <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
                 <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
 
+
+                <!-- GENERALASA -->
+                <div id="generalasa" style="display:none;">
+                    <!-- ITEM / LABOR TYPE -->
+                    <div class="col-sm-4">
+                        <!-- Labor Type -->
+                        {%cmtedtdatafldslpitemid_flditmclccodename_cmttabindex9%}
+                        <script type="text/javascript">
+                          if(sessionStorage.getItem('itemStore')){
+                            Item = sessionStorage.getItem('itemStore');
+                            $('#cmtedtdatafldslpitemid_flditmclccodename').val(Item);
+                          }
+  
+                          document.getElementById('cmtedtdatafldslpitemid_flditmclccodename').onchange = change4;
+                          function change4(e){
+                            Item = $('#cmtedtdatafldslpitemid_flditmclccodename').val();
+                            sessionStorage.setItem('itemStore', Item);
+                            pullInformation();
+                          }
+                        </script>
+                    </div>
+                    <!-- END ITEM / LABOR TYPE-->
+  
+                    <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
+                    <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
+                    <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
+  
+                  </div>
+  
+
                 <!-- Technicians -->
                 <div class="col-sm-12" id="techsasa" style="display:none;">
                     <div class="form-group">
@@ -687,46 +742,49 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
+                        <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
+
+                        <div class="row CmtDataArea">
+                          <div class="col-sm-12">
+                            <div class="col-sm-12">
+                              <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-center">
+                                  <button type="button" class="btn btn-light btn-sm" onclick="autoFillTech()">Tech&nbsp;Day&nbsp;Summary</button>
+                                  <button type="button" class="btn btn-light btn-sm" onclick="autoFillNetwork()">Network&nbsp;TS&nbsp;Summary</button>
+                                  <button type="button" class="btn btn-light btn-sm" onclick="autoFillLV()">LV&nbsp;Summary</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                     </div>
                 </div>
 
 
                 <div class="col-sm-12" id="supportsasa" style="display:none;">
-                    <div class="form-group">
-                        Hello Supports
+                  <div class="form-group">
+                    <div class="row CmtDataArea">
+                      <div class="col-sm-12">
+                        <div class="col-sm-12">
+                          <div class="d-flex justify-content-center">
+                            <div class="d-flex justify-content-center">
+                              <button type="button" class="btn btn-light btn-sm" onclick="autoFillTech()">Tech&nbsp;Day&nbsp;Summary</button>
+                              <button type="button" class="btn btn-light btn-sm" onclick="autoFillNetwork()">Network&nbsp;TS&nbsp;Summary</button>
+                              <button type="button" class="btn btn-light btn-sm" onclick="autoFillLV()">LV&nbsp;Summary</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
 
 
-                <div class="col-sm-12" id="generalasa" style="display:none;">
+                <div class="col-sm-12" id="descriptionasa" style="display:none;">
                     <div class="form-group">
                         
-                        <!-- ITEM / LABOR TYPE -->
-                        <div class="col-sm-4">
-                            <!-- Labor Type -->
-                            {%cmtedtdatafldslpitemid_flditmclccodename_cmttabindex9%}
-                            <script type="text/javascript">
-                              if(sessionStorage.getItem('itemStore')){
-                                Item = sessionStorage.getItem('itemStore');
-                                $('#cmtedtdatafldslpitemid_flditmclccodename').val(Item);
-                              }
-
-                              document.getElementById('cmtedtdatafldslpitemid_flditmclccodename').onchange = change4;
-                              function change4(e){
-                                Item = $('#cmtedtdatafldslpitemid_flditmclccodename').val();
-                                sessionStorage.setItem('itemStore', Item);
-                                pullInformation();
-                              }
-                            </script>
-                        </div>
-                        <!-- END ITEM / LABOR TYPE-->
-
-                        <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
-                        <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
-                        <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
-
-                        
-
                         <!-- DESCRIPTION START -->
                         <div class="row CmtDataArea">
                             <div class="col-sm-12">
@@ -779,24 +837,6 @@
 
                 <label></label>
 
-                
-                <!--
-                <div class="row CmtDataArea">
-                    <div class="col-sm-12">
-                        <div class="col-sm-12">
-                            <div class="d-flex justify-content-center">
-                            Quick Clicks
-                                <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-light btn-sm" onclick="autoFillTech()">Tech&nbsp;Day&nbsp;Summary</button>
-                                    <button type="button" class="btn btn-light btn-sm" onclick="autoFillNetwork()">Network&nbsp;TS&nbsp;Summary</button>
-                                    <button type="button" class="btn btn-light btn-sm" onclick="autoFillLV()">LV&nbsp;Summary</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                -->
-                
                 </div>
             </div>                    
         </div>
