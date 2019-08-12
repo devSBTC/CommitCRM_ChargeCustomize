@@ -13,24 +13,24 @@ Archived - The archived section is meant for files I was working on earlier,
 Files for Page Host - This is the JS and other files that I could pull 
                       and then are present in case someone wants to change/add
 
-additionalJavaScript.js - This is the main javascript that I added to the head of slpedit22501.html
-
 backup.html - Is the original html file from CommitCRM that we use
 
 CCRMCharge.html - the entire page elements of backup (slpedit22501.html)
 
-devGuide.txt - Explanation on files
+devGuide.txt - Explanation on files for anyone want to build on this project
 
 djangoCompare.txt - meant to describe what difference occurs once that section is removed
                     Current code calls {%%} functions that create the webpage
 
-fullCCRMHTML.html - full copy/paste of the CommitCRM Labor Charge page
+fullCCRMHTML.html - full copy/paste of the CommitCRM Labor Charge page (of my changes)
                     A way to see what a {%%} call produces
 
 paulUpgrade.html - The edit Paul wanted me to work on to replace the slpedit22501.html file
 
+paulUpgradeJS.js - This is the main javascript that I added to the head of paulUpgrade.html
+
 README.md - Quick overview for anyone visiting the github page
 
-slepdit22501Redo.html - The regular edit wanted, but not fully completed
+versionOne.html - The regular edit they wanted me to work on to replace the slpedit22501.html file
 
-toCheck.html - The regular edit they wanted me to work on to replace the slpedit22501.html file
+versionOneJS.js - This is the main javascript that I added to the head of versionOne.html
