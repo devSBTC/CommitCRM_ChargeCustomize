@@ -218,29 +218,37 @@
       }
 
       var placeHoldz = "";
+      var placeNum = 0;
       function autoFillTech(){
-        if(!(placeHoldz === "Tech Day Summary")){
-          placeHoldz = "Tech Day Summary";
-          fillDescription();
-        }
+        placeHoldz = "Tickets Closed (#): \nEscalations if any: \nItems needing attention: \nFollow-ups / notes for companion techs: \nProjects worked on (#'s): \nTicket Number: " + ticketNum + "\nQuote Number: " + quote + "\nEquipment Deployed: " + equipment + "\nBillable: " + billable;
+        placeNum = 1;
+        document.getElementById("TechDayParts").style.display = "block";
+        document.getElementById("cmtedtdatafldslpdesc").rows = "10"; 
+        fillDescription();
       }
       function autoFillNetwork(){
-        if(!(placeHoldz === "Network TS Summary")){
-          placeHoldz = "Network TS Summary";
+        if(!(placeNum === 2)){
+          placeHoldz = "Project #(s):\n\tWork Performed: \n\tWork Remaining: \n\tLicenses used: \n\tDocumentation status / notes: ";
+          placeNum = 2;
+          document.getElementById("TechDayParts").style.display = "none";
+          document.getElementById("cmtedtdatafldslpdesc").rows = "6"; 
           fillDescription();
         }
       }
       function autoFillLV(){
-        if(!(placeHoldz === "LV Summary")){
-          placeHoldz = "LV Summary";
+        if(!(placeNum === 3)){
+          placeHoldz = "Project #(s):\n\tWork Performed: \n\tWork Remaining: \n\tConsumable Needed: \n\tProblems Encountered: \n\tExtra time / tools needed: "
+          placeNum = 3;
+          document.getElementById("TechDayParts").style.display = "none";
+          document.getElementById("cmtedtdatafldslpdesc").rows = "7"; 
           fillDescription();
         }
       }
 
       var texto = "";
       function fillDescription(){
-        texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\nSummary: " + placeHoldz + "\nTicket Number: " + ticketNum + "\nQuote Number: " + quote + "\nEquipment Deployed: " + equipment + "\nBillable: " + billable;
-        document.getElementById("cmtedtdatafldslpdesc").rows = "6"; 
+        // texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\nSummary: " + placeHoldz + "\nTicket Number: " + ticketNum + "\nQuote Number: " + quote + "\nEquipment Deployed: " + equipment + "\nBillable: " + billable;
+        texto = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val()) + "\n" + placeHoldz;
         $("#cmtedtdatafldslpdesc").val(texto);
         sessionStorage.setItem('descriptionStore',texto);
         pullInformation();
@@ -255,6 +263,7 @@
           document.getElementById("supports").style.backgroundColor = "";
           document.getElementById("supports").style.color = "";
           document.getElementById("supportsasa").style.display = "none";
+          document.getElementById("TechDayParts").style.display = "none";
           hideGeneral();
         }
         if(chosenJob === 1){
@@ -264,6 +273,7 @@
           document.getElementById("technicians").style.color = "#F7F7F7";
           document.getElementById("supportsasa").style.display = "none";
           document.getElementById("techsasa").style.display = "block";
+          document.getElementById("TechDayParts").style.display = "none";
           showGeneral();
           showTechDescription();
         }
@@ -274,6 +284,7 @@
           document.getElementById("supports").style.color = "#F7F7F7";
           document.getElementById("techsasa").style.display = "none";
           document.getElementById("supportsasa").style.display = "block";
+          document.getElementById("TechDayParts").style.display = "none";
           showGeneral();
           showSupportDescription();
         }
@@ -285,6 +296,7 @@
             chosenJob = 0;
             sessionStorage.setItem('chosenJobStore', chosenJob);
             document.getElementById("techsasa").style.display = "none";
+            document.getElementById("TechDayParts").style.display = "none";
             hideGeneral();
         }
         else {
@@ -296,6 +308,7 @@
             sessionStorage.setItem('chosenJobStore', chosenJob);
             document.getElementById("supportsasa").style.display = "none";
             document.getElementById("techsasa").style.display = "block";
+            document.getElementById("TechDayParts").style.display = "none";
             showGeneral();
             showTechDescription();
         }
@@ -307,6 +320,7 @@
             chosenJob = 0;
             sessionStorage.setItem('chosenJobStore', chosenJob);
             document.getElementById("supportsasa").style.display = "none";
+            document.getElementById("TechDayParts").style.display = "none";
             hideGeneral();
         }
         else {
@@ -318,6 +332,7 @@
             sessionStorage.setItem('chosenJobStore', chosenJob);
             document.getElementById("techsasa").style.display = "none";
             document.getElementById("supportsasa").style.display = "block";
+            document.getElementById("TechDayParts").style.display = "none";
             showGeneral();
             showSupportDescription();
         }
@@ -665,10 +680,7 @@
   
                   </div>
   
-
-                <!-- Technicians -->
-                <div class="col-sm-12" id="techsasa" style="display:none;">
-                  <!-- Entire unique technician section -->
+                  <div class="col-sm-12" id="TechDayParts" style="display:none;">
                     <div class="form-group">
                         <div class="row CmtDataArea">
                             <!-- Quote Row -->
@@ -758,19 +770,22 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                  </div>
 
-                        <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
-                        <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
-
+                <!-- Technicians -->
+                <div class="col-sm-12" id="techsasa" style="display:none;">
+                  <!-- Entire unique technician section -->
+                    <div class="form-group">
                         <div class="row CmtDataArea">
                           <div class="col-sm-12">
                             <div class="col-sm-12">
                               <div class="d-flex justify-content-center">
                                 <div class="d-flex justify-content-center">
                                   <!-- Buttons to change Tech Buttons -->
-                                  <button type="button" class="btn btn-light btn-sm" onclick="autoFillTech()">Tech&nbsp;Day&nbsp;Summary</button>
-                                  <button type="button" class="btn btn-light btn-sm" onclick="autoFillNetwork()">Network&nbsp;TS&nbsp;Summary</button>
-                                  <button type="button" class="btn btn-light btn-sm" onclick="autoFillLV()">LV&nbsp;Summary</button>
+                                  <button type="button" class="btn btn-light btn-sm" id="TechDaySum" onclick="autoFillTech()">Tech&nbsp;Day&nbsp;Summary</button>
+                                  <button type="button" class="btn btn-light btn-sm" id="NetWorkSum" onclick="autoFillNetwork()">Network&nbsp;TS&nbsp;Summary</button>
+                                  <button type="button" class="btn btn-light btn-sm" id="LowVoltSum" onclick="autoFillLV()">LV&nbsp;Summary</button>
                                 </div>
                               </div>
                             </div>
@@ -789,10 +804,7 @@
                         <div class="col-sm-12">
                           <div class="d-flex justify-content-center">
                             <div class="d-flex justify-content-center">
-                              <!-- Buttons to change Support Buttons -->
-                              <button type="button" class="btn btn-light btn-sm" onclick="autoFillTech()">Tech&nbsp;Day&nbsp;Summary</button>
-                              <button type="button" class="btn btn-light btn-sm" onclick="autoFillNetwork()">Network&nbsp;TS&nbsp;Summary</button>
-                              <button type="button" class="btn btn-light btn-sm" onclick="autoFillLV()">LV&nbsp;Summary</button>
+                              
                             </div>
                           </div>
                         </div>
@@ -893,7 +905,9 @@
             </div>
             <script>
               document.getElementById("btnslpeditsave1").onclick = function() {
-                clearValues();
+                if(isSaveable()){
+                  clearValues();
+                }
                 CmtslpMakeSaveByCtrl(this);
               }
             </script>
@@ -905,10 +919,8 @@
             </div>
             <script>
               document.getElementById("btnslpeditcancel").onclick = function() {
-                if(isSaveable()){
-                  clearValues();
-                  CmtMakeCancel_slp(this);
-                }
+                clearValues();
+                CmtMakeCancel_slp(this);
               }
             </script>
           </div>
