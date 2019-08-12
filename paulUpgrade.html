@@ -41,6 +41,23 @@
         }
       }
 
+      function isSaveable(){
+        Account = $("#select2-cmtedtdatafldslpcardid_fldcrdfullname-container").text();
+        Contract = $("#cmtedtdatafldslpbcrecid_fldbctclccodename_chosen").text();
+        Dateo = $("#cmtedtdatafldslpslipdate").val();
+        Item = $("#cmtedtdatafldslpitemid_flditmclccodename").val();
+        TimeStart = $("#cmtedtdatafldslpstarttime").val();
+        TimeEnd = $("#cmtedtdatafldslpendtime").val();
+        HoursUnits = $("#cmtedtdatafldslpclcamount").val();
+
+        if((Account !== "") && (Contract !== "--- Select Value ---") && (Dateo !== "") && (Item !== "--- Select Value ---") && (TimeStart !== "") && (TimeEnd !== "") && (HoursUnits !== "")){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+
       function times(){
         setTimeout(function(){
           var startTimePart = ($("#cmtedtdatafldslpstarttime").val()).substring(6,8);
@@ -888,8 +905,10 @@
             </div>
             <script>
               document.getElementById("btnslpeditcancel").onclick = function() {
-                clearValues();
-                CmtMakeCancel_slp(this)
+                if(isSaveable()){
+                  clearValues();
+                  CmtMakeCancel_slp(this);
+                }
               }
             </script>
           </div>
