@@ -21,14 +21,16 @@ CCRMCharge.html - the entire page elements of backup (slpedit22501.html)
 
 devGuide.txt - Explanation on files
 
-djangoCompare.txt
+djangoCompare.txt - meant to describe what difference occurs once that section is removed
+                    Current code calls {%%} functions that create the webpage
 
-fullCCRMHTML.html
+fullCCRMHTML.html - full copy/paste of the CommitCRM Labor Charge page
+                    A way to see what a {%%} call produces
 
-paulUpgrade.html
+paulUpgrade.html - The edit Paul wanted me to work on to replace the slpedit22501.html file
 
-README.md
+README.md - Quick overview for anyone visiting the github page
 
-slepdit22501Redo.html
+slepdit22501Redo.html - The regular edit wanted, but not fully completed
 
-toCheck.html
+toCheck.html - The regular edit they wanted me to work on to replace the slpedit22501.html file
