@@ -1,3 +1,8 @@
+----------------------------------------------------------------------------------------------------
+
+
+INTRODUCTION
+
 First thing is first, 
 Do not attempt to do much to change the database {%%} parts in the HTML code
 
@@ -25,12 +30,113 @@ djangoCompare.txt - meant to describe what difference occurs once that section i
 fullCCRMHTML.html - full copy/paste of the CommitCRM Labor Charge page (of my changes)
                     A way to see what a {%%} call produces
 
-paulUpgrade.html - The edit Paul wanted me to work on to replace the slpedit22501.html file
-
-paulUpgradeJS.js - This is the main javascript that I added to the head of paulUpgrade.html
-
 README.md - Quick overview for anyone visiting the github page
 
 versionOne.html - The regular edit they wanted me to work on to replace the slpedit22501.html file
 
 versionOneJS.js - This is the main javascript that I added to the head of versionOne.html
+
+versionTwo.html - The edit Paul wanted me to work on to replace the slpedit22501.html file
+
+versionTwoJS.js - This is the main javascript that I added to the head of paulUpgrade.html
+
+
+----------------------------------------------------------------------------------------------------
+
+
+BASIC START
+
+If you are trying to do any changes, make sure you are working around CommitCRM database
+You must work with CommitCRM items since they do not allow you to change anything backend
+This is why new sections are instead filled into the description instead of vice-versa
+
+You need to use djangoCompare.txt to understand what needs to be done
+It explains each call and how you can use it
+Note: Sometimes certain calls must be made before others in order pulls to be correct
+      (if there are certain issues reach out to CommitCRM Support --> support@commitcrm.com)
+      (I reached out when certain parts were not working correct and they will reorganize)
+
+When attempting to make changes, follow these steps
+  1. Make the changes in your HTML file
+  2. Copy the entire file
+  3. Remote into the Virtual Machine hosting a copy of CommitCRM
+  4. Open the HTML file hosting the page (in this case slpedit22501.html)
+  5. Remove all the code and paste in your own
+  6. Save the page
+  7. Refresh the CommitCRM page
+  8. Observe your changes
+If the change is larger and is not appearing, try this
+  - Through Windows Services, restart Advantage Website Server and/or CommitWebInterface
+    - Note: You must restart the Advantage Website server first 
+            this is due to the Web Interface pulling information from it 
+
+
+----------------------------------------------------------------------------------------------------
+
+
+ISSUES
+
+Here are some of the issues that could be fixed 
+I experienced these issues, which will take a while to fix, 
+but not necessary based on how CommitCRM has built there software
+
+Most of these issues are not huge since there are errors from CommitCRM vanilla that mirror these
+That is why I did not tackle some of them
+
+1. If you click the save button (and it is not saveable) and refresh the page,
+   you will lose non-CommitCRM information (Quote#, billable, etc.)
+   This is due to this information being saved to session storage 
+   and the only way for it not to appear later is to eventually delete it 
+2. If you remove the ending part (i.e. /1z11qjg1vkgk8q1czndh80knm0dc/$)
+   to start from the beginning, the information you had stored before appears
+   This is due to the values still being stored to the session since the session wasn't ended
+   Possible Solution: Might just need a remove session storage on the starting ticket page
+3. If the page is not saveable, you click save, and refresh the page
+   Usually the information to check the saveable button does not pull correctly
+   Usually is fixed with a re-click of the Item
+4. Not an issue but design problem
+   On refreshes everything kind-of bulk loads, should try to smoothen transitions
+
+
+----------------------------------------------------------------------------------------------------
+
+
+USING THIS DESIGN
+
+To use these designs
+    version 1 --> versionTwo.html
+    version 2 --> versionTwo.html
+CommitCRM wants you to make a new file and name it slpedit22501customng1.html
+and then paste the code from that version into your new file.
+This should result in your changes appearing
+
+I attempted this but it did not seem to work.
+
+This is the proper way and should be attempted,
+but in case it does not work just paste it into slpedit22501.html
+
+
+----------------------------------------------------------------------------------------------------
+
+
+STARTING ANEW
+
+In case you want to start all over from the design given from CommitCRM
+paste the code from backup.html
+
+backup.html is the original file of the original charge page
+
+
+----------------------------------------------------------------------------------------------------
+
+
+JOHN'S DEV NOTES
+
+If you want to see my notes on the changes you can check this Google Doc
+  --> https://drive.google.com/open?id=1LSvonMe6PzOQ86JuXLWkzr0V15ZTbnrv4jl-poGfnCg
+
+In case you did not use GitHub to get here
+  --> https://github.com/Paunczki/CommitCRM_ChargeCustomize
+
+
+----------------------------------------------------------------------------------------------------
