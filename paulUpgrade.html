@@ -254,6 +254,15 @@
         pullInformation();
       }
 
+      var textos = "";
+      function fillSupportDescription(){
+        textos = getItem($("#cmtedtdatafldslpitemid_flditmclccodename").val());
+        $("#cmtedtdatafldslpdesc").val(textos);
+        sessionStorage.setItem('descriptionStore',textos);
+        document.getElementById("cmtedtdatafldslpdesc").rows = "5"; 
+        pullInformation();
+      }
+
       var chosenJob = 0;
       function buttonStart(){
         if(chosenJob === 0){
@@ -340,6 +349,7 @@
 
       function showSupportDescription(){
         document.getElementById("descriptionasa").style.display = "block";
+        fillSupportDescription();
       }
       function showTechDescription(){
         document.getElementById("descriptionasa").style.display = "block";
