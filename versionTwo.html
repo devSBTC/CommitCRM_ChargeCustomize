@@ -401,9 +401,7 @@
         </div>
 
         <div id="cmtslpEdtbleGuiSct" class="row CmtGenEdtForm CmtGenEdtFormLft CmtLineSpc">
-
             <div class="form-horizontal" role="form">
-
               <div class="row CmtDataArea">
                   <div class="col-sm-12">
                     <div class="form-group">
@@ -439,28 +437,28 @@
                       <!-- CONTRACT -->
                         <!-- Select Contract -->
                         <div class="col-sm-3">
-                            {%cmtedtdatafldslpbcrecid_fldbctclccodename_cmttabindex3%}
-                            <div class="col-sm-offset-2  col-sm-8 " style="display:none;">
-                              <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl">{%cmtlnkdatafldslpbcrecid_fldbctclctypedates%}</div>
-                              <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl"> {%cmtlbldatafldslpbcrecid_fldbctclcbcrcurstate%}</div>
-                              <div class="CmtTextInstOfCtrl" id="tktedit12501_cmtlnkdatafldslpbcrecid_fldbctclccodename" style="display:none;">
-                                <br>
-                                <strong>{%cmtlbldescfldslpbcrecid_fldbctdescexternal%}</strong><br>
-                                {%cmtlbldatafldslpbcrecid_fldbctdescexternal%}<br><br>
-                                <strong>{%cmtlbldescfldslpbcrecid_fldbctdescinternal%}</strong><br>
-                                {%cmtlbldatafldslpbcrecid_fldbctdescinternal%}<br><br>
-                                <strong>{%cmtlbldescfldslpbcrecid_fldbctnote%}</strong><br>
-                                {%cmtlbldatafldslpbcrecid_fldbctnote%}<br><br>
-                              </div>
+                          {%cmtedtdatafldslpbcrecid_fldbctclccodename_cmttabindex3%}
+                          <div class="col-sm-offset-2  col-sm-8 " style="display:none;">
+                            <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl">{%cmtlnkdatafldslpbcrecid_fldbctclctypedates%}</div>
+                            <div style="padding-top:7px" class="CmtLangDir CmtTextInstOfCtrl"> {%cmtlbldatafldslpbcrecid_fldbctclcbcrcurstate%}</div>
+                            <div class="CmtTextInstOfCtrl" id="tktedit12501_cmtlnkdatafldslpbcrecid_fldbctclccodename" style="display:none;">
+                              <br>
+                              <strong>{%cmtlbldescfldslpbcrecid_fldbctdescexternal%}</strong><br>
+                              {%cmtlbldatafldslpbcrecid_fldbctdescexternal%}<br><br>
+                              <strong>{%cmtlbldescfldslpbcrecid_fldbctdescinternal%}</strong><br>
+                              {%cmtlbldatafldslpbcrecid_fldbctdescinternal%}<br><br>
+                              <strong>{%cmtlbldescfldslpbcrecid_fldbctnote%}</strong><br>
+                              {%cmtlbldatafldslpbcrecid_fldbctnote%}<br><br>
                             </div>
-                            <script type="text/javascript">
-                              document.getElementById('cmtedtdatafldslpbcrecid_fldbctclccodename_chosen').onchange = change2;
-                              function change2(e){
-                                pullInformation();
-                              }
-                            </script>
                           </div>
-                          <!-- END CONTRACT -->
+                          <script type="text/javascript">
+                            document.getElementById('cmtedtdatafldslpbcrecid_fldbctclccodename_chosen').onchange = change2;
+                            function change2(e){
+                              pullInformation();
+                            }
+                          </script>
+                        </div>
+                      <!-- END CONTRACT -->
 
                       <!-- Date -->
                       <div class="col-sm-3">
@@ -570,46 +568,39 @@
                           </div>
                            
                             <div class="form-group CmtDisplayNone">
-                                <div id="CmtLblDescQFrToTimeGenLdTmplCmbDiv" class=" col-sm-3">  
-              
-                                    <div class="dropdown">
-                                      <button class="btn btn-default dropdown-toggle" type="button" id="CmtSlpQckTimEnrty" data-toggle="dropdown" aria-expanded="true">
-                                        {%CmtLblDescQFrToTimeGenLdTmplCmb%}&nbsp;
-                                        <span class="caret"></span>
-                                      </button>
-                                      <ul class="dropdown-menu" role="menu" aria-labelledby="CmtSlpQckTimEnrty">
-                                        {%CmtLblDataQFrToTimeGenLdTmplCmb%}
-                                      </ul>
-                                    </div>
-                
-                                 </div>  
+                              <div id="CmtLblDescQFrToTimeGenLdTmplCmbDiv" class=" col-sm-3">
+                                <div class="dropdown">
+                                  <button class="btn btn-default dropdown-toggle" type="button" id="CmtSlpQckTimEnrty" data-toggle="dropdown" aria-expanded="true">
+                                    {%CmtLblDescQFrToTimeGenLdTmplCmb%}&nbsp;
+                                    <span class="caret"></span>
+                                  </button>
+                                  <ul class="dropdown-menu" role="menu" aria-labelledby="CmtSlpQckTimEnrty">
+                                    {%CmtLblDataQFrToTimeGenLdTmplCmb%}
+                                  </ul>
+                                </div>
+                               </div>  
                             </div>
               
                             <div class="form-group  CmtDisplayNone">
-                                <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpadjust%}</label>
-                                <div class="col-sm-3" >
-                                  {%cmtedtdatafldslpadjust_cmttabindex12%}
-                                </div>
-                  
-                                <div class="CmtEDtFrm2Flds"></div>
-                                
-                                <div class="col-sm-2" >
-                                  {%cmtedtdatafldslpadjusttype_cmttabindex13%}
-                                </div>
-                                
-                                <div class="CmtEDtFrm2Flds"></div>
-                                
-                                <div class="col-sm-3" >
-                                  {%cmtedtdatafldslpclcadjustamount_cmttabindex14%}
-                                </div>                      
-                  
+                              <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpadjust%}</label>
+                              <div class="col-sm-3" >
+                                {%cmtedtdatafldslpadjust_cmttabindex12%}
                               </div>
-                              <div class="form-group  CmtDisplayNone">
-                                  <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpbilltotal%}</label>
-                                  <div class="col-sm-3" >
-                                    {%cmtedtdatafldslpbilltotal%}
-                                  </div>
-                                </div>
+                              <div class="CmtEDtFrm2Flds"></div>
+                              <div class="col-sm-2" >
+                                {%cmtedtdatafldslpadjusttype_cmttabindex13%}
+                              </div>
+                              <div class="CmtEDtFrm2Flds"></div>
+                              <div class="col-sm-3" >
+                                {%cmtedtdatafldslpclcadjustamount_cmttabindex14%}
+                              </div>
+                            </div>
+                            <div class="form-group  CmtDisplayNone">
+                              <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpbilltotal%}</label>
+                              <div class="col-sm-3" >
+                                {%cmtedtdatafldslpbilltotal%}
+                              </div>
+                            </div>
                         </div>
                       </div>
                       <!-- TIME END -->
@@ -627,17 +618,18 @@
                       </div>
                     </div>
                     <!-- End Buttons to unhide -->
+
                     <!-- Employee -->
                     <div class="col-sm-3">
+                      <span class="select2 select2-container select2-container--bootstrap select2-container--below" dir="ltr">
+                      <div class="form-group">
                         <span class="select2 select2-container select2-container--bootstrap select2-container--below" dir="ltr">
-                        <div class="form-group">
-                            <span class="select2 select2-container select2-container--bootstrap select2-container--below" dir="ltr">
-                                <label class="col-sm-4 control-label CmtEdit" style="text-align: right; padding-right: 5px">{%cmtlnkdescfldslpworkerid_fldwrknickname%}</label>
-                                <div class="col-sm-8 CmtEditEmpPriv" id="fldslpworkerid_fldwrknicknameData" style="text-align: left; padding-left: 20px">
-                                    {%cmtedtdatafldslpworkerid_fldwrknickname_cmttabindex4%}
-                                </div>
-                            </span> 
-                        </div>
+                          <label class="col-sm-4 control-label CmtEdit" style="text-align: right; padding-right: 5px">{%cmtlnkdescfldslpworkerid_fldwrknickname%}</label>
+                          <div class="col-sm-8 CmtEditEmpPriv" id="fldslpworkerid_fldwrknicknameData" style="text-align: left; padding-left: 20px">
+                              {%cmtedtdatafldslpworkerid_fldwrknickname_cmttabindex4%}
+                          </div>
+                        </span> 
+                      </div>
                     </div>
                       <!-- End Employee -->
                       <!--
@@ -648,14 +640,14 @@
                       -->
                     <!-- Saveable button -->
                     <div class="col-sm-3">
-                        <div class="form-group">
-                          <div class="col-sm-12">
-                            <button type="button" class="btn btn-success btn-block" id="successBTN" style="border-radius: 5px; display:none; border:0px;" disabled>Saveable</button>
-                          </div>
-                          <div class="col-sm-12">
-                            <button type="button" class="btn btn-danger btn-block" id="dangerBTN" style="border-radius: 5px; display:block;  border:0px;" disabled>NOT Saveable</button>
-                          </div>
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          <button type="button" class="btn btn-success btn-block" id="successBTN" style="border-radius: 5px; display:none; border:0px;" disabled>Saveable</button>
                         </div>
+                        <div class="col-sm-12">
+                          <button type="button" class="btn btn-danger btn-block" id="dangerBTN" style="border-radius: 5px; display:block;  border:0px;" disabled>NOT Saveable</button>
+                        </div>
+                      </div>
                     </div>
 
                 <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
@@ -664,143 +656,143 @@
 
                 <!-- GENERALASA -->
                 <div id="generalasa" style="display:none;">
-                    <!-- ITEM / LABOR TYPE -->
-                    <div class="col-sm-4">
-                        <!-- Labor Type -->
-                        {%cmtedtdatafldslpitemid_flditmclccodename_cmttabindex9%}
-                        <script type="text/javascript">
-                          if(sessionStorage.getItem('itemStore')){
-                            Item = sessionStorage.getItem('itemStore');
-                            $('#cmtedtdatafldslpitemid_flditmclccodename').val(Item);
-                          }
+                  <!-- ITEM / LABOR TYPE -->
+                  <div class="col-sm-4">
+                    <!-- Labor Type -->
+                    {%cmtedtdatafldslpitemid_flditmclccodename_cmttabindex9%}
+                    <script type="text/javascript">
+                      if(sessionStorage.getItem('itemStore')){
+                        Item = sessionStorage.getItem('itemStore');
+                        $('#cmtedtdatafldslpitemid_flditmclccodename').val(Item);
+                      }
   
-                          document.getElementById('cmtedtdatafldslpitemid_flditmclccodename').onchange = change4;
-                          function change4(e){
-                            Item = $('#cmtedtdatafldslpitemid_flditmclccodename').val();
-                            sessionStorage.setItem('itemStore', Item);
-                            pullInformation();
-                          }
-                        </script>
-                    </div>
-                    <!-- END ITEM / LABOR TYPE-->
-  
-                    <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
-                    <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
-                    <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
-  
+                      document.getElementById('cmtedtdatafldslpitemid_flditmclccodename').onchange = change4;
+                      function change4(e){
+                        Item = $('#cmtedtdatafldslpitemid_flditmclccodename').val();
+                        sessionStorage.setItem('itemStore', Item);
+                        pullInformation();
+                      }
+                    </script>
                   </div>
+                  <!-- END ITEM / LABOR TYPE-->
   
-                  <div class="col-sm-12" id="TechDayParts" style="display:none;">
-                    <div class="form-group">
-                        <div class="row CmtDataArea">
-                            <!-- Quote Row -->
-                            <div class="col-sm-12">
-                                <!-- Select Ticket -->
-                                <div class="col-sm-3" style="padding-bottom:25px;">
-                                    <div class="CmtCrdSellxx105 CmtNoPdRight">
-                                        {%cmtedtdatafldslpticketid_FLDTKTCLCLNKRECIDSHORT%}
-                                        <span class="CmtMgCnBtn visible-xs-block">
-                                            <span>{%cmtseldatafldslpticketid_FLDTKTCLCINFO%}</span>
-                                            <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpticketid_FLDTKTCLCINFO%}</span>
-                                            </span>
-                                    </div>
-                                    <div id="fldgenLINKrecid_FLDGENCLCLNKRECIDMEMO" style="display:none;">
-                                        {%cmtLBLdatafldslpticketid_FLDGENCLCLNKRECIDMEMO%}
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-3">
-                                    <!-- Quote # -->
-                                    <input type="text" id="quoteNumber" class="form-control" placeholder="Quote #" aria-label="Quote #" aria-describedby="inputGroup-sizing-default">
-                                    <script type="text/javascript">
-                                        document.getElementById('quoteNumber').onchange = change;
-                                        function change(e){
-                                          getQuoteNum();
-                                        }
-                                        if(sessionStorage.getItem('quoteStore') !== null){
-                                          quote = sessionStorage.getItem('quoteStore');
-                                          $("#quoteNumber").val(quote);
-                                        }
-                                    </script>
-                                </div>
-                        
-                                <div class="col-sm-5" style="padding-top:5px;">
-                                    <!-- Equipment Deployed -->
-                                    <div class="form-group">
-                                      <div class="col-sm-6" style="text-align: right;">
-                                        <label class="col-sm-12" style="text-align: right;">Equipment&nbsp;Deployed</label>
-                                      </div>
-                                      <div class="col-sm-6" style="text-align: left;">
-                                        <div class="form-check form-check-inline">
-                                          <form id="equipDeploy">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="naEquip()"/>
-                                            <span class="form-check-label1" for="inlineRadio1">N/A</span>
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1" onclick="yesEquip()"/>
-                                            <span class="form-check-label2" for="inlineRadio2">Yes</span>
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1" onclick="noEquip()"/>
-                                            <span class="form-check-label3" for="inlineRadNio3">No</span>
-                                          </form>
-                                        </div>
-                                      </div>
-                                      <script>
-                                        if(sessionStorage.getItem('equipmentStore') !== null){
-                                          equipment = sessionStorage.getItem('equipmentStore');
-                                          if(equipment === "N/A"){
-                                            document.getElementById("inlineRadio1").checked = true;
-                                          }
-                                          if(equipment === "Yes"){
-                                            document.getElementById("inlineRadio2").checked = true;
-                                          }
-                                          if(equipment === "No"){
-                                            document.getElementById("inlineRadio3").checked = true;
-                                          }
-                                        }
-                                      </script>
-                                    </div>
-                                </div>
-                        
-                        
-                                <div class="col-sm-1" style="padding-top:5px; text-align: center;">
-                                  <!-- Billable -->
-                                  <input class="form-check-input" type="checkbox" id="defaultCheck1" value="option2" onclick="getBillable()">
-                                    <label class="form-check-label" for="defualtCheck1">Billable</label>
-                                    <script>
-                                      if(sessionStorage.getItem('billableStore') !== null){
-                                        billCount = parseInt((sessionStorage.getItem('billableStore')),10);
-                                        if(billCount%2 === 1){
-                                          document.getElementById('defaultCheck1').checked = true;
-                                          billable = "Yes";
-                                        }
-                                        if(billable%2 === 0){
-                                          document.getElementById('defaultCheck1').checked = false;
-                                          billable = "No";
-                                        }
-                                      }
-                                    </script>
-                                </div>
-                            </div>
+                  <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
+                  <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
+                  <div class="col-sm-12"> <div class="form-group"> <!-- placeholder --> </div> </div>
+  
+                </div>
+  
+                <div class="col-sm-12" id="TechDayParts" style="display:none;">
+                  <div class="form-group">
+                    <div class="row CmtDataArea">
+                      <!-- Quote Row -->
+                      <div class="col-sm-12">
+                        <!-- Select Ticket -->
+                        <div class="col-sm-3" style="padding-bottom:25px;">
+                          <div class="CmtCrdSellxx105 CmtNoPdRight">
+                            {%cmtedtdatafldslpticketid_FLDTKTCLCLNKRECIDSHORT%}
+                            <span class="CmtMgCnBtn visible-xs-block">
+                                <span>{%cmtseldatafldslpticketid_FLDTKTCLCINFO%}</span>
+                                <span class="CmtMgCnBtnSpc">{%cmtclrdatafldslpticketid_FLDTKTCLCINFO%}</span>
+                              </span>
+                          </div>
+                          <div id="fldgenLINKrecid_FLDGENCLCLNKRECIDMEMO" style="display:none;">
+                              {%cmtLBLdatafldslpticketid_FLDGENCLCLNKRECIDMEMO%}
+                          </div>
                         </div>
+
+                        <div class="col-sm-3">
+                          <!-- Quote # -->
+                          <input type="text" id="quoteNumber" class="form-control" placeholder="Quote #" aria-label="Quote #" aria-describedby="inputGroup-sizing-default">
+                          <script type="text/javascript">
+                            document.getElementById('quoteNumber').onchange = change;
+                            function change(e){
+                              getQuoteNum();
+                            }
+                            if(sessionStorage.getItem('quoteStore') !== null){
+                              quote = sessionStorage.getItem('quoteStore');
+                              $("#quoteNumber").val(quote);
+                            }
+                          </script>
+                        </div>
+                    
+                        <div class="col-sm-5" style="padding-top:5px;">
+                          <!-- Equipment Deployed -->
+                          <div class="form-group">
+                            <div class="col-sm-6" style="text-align: right;">
+                              <label class="col-sm-12" style="text-align: right;">Equipment&nbsp;Deployed</label>
+                            </div>
+                            <div class="col-sm-6" style="text-align: left;">
+                              <div class="form-check form-check-inline">
+                                <form id="equipDeploy">
+                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="naEquip()"/>
+                                  <span class="form-check-label1" for="inlineRadio1">N/A</span>
+                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1" onclick="yesEquip()"/>
+                                  <span class="form-check-label2" for="inlineRadio2">Yes</span>
+                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1" onclick="noEquip()"/>
+                                  <span class="form-check-label3" for="inlineRadNio3">No</span>
+                                </form>
+                              </div>
+                            </div>
+                            <script>
+                              if(sessionStorage.getItem('equipmentStore') !== null){
+                                equipment = sessionStorage.getItem('equipmentStore');
+                                if(equipment === "N/A"){
+                                  document.getElementById("inlineRadio1").checked = true;
+                                }
+                                if(equipment === "Yes"){
+                                  document.getElementById("inlineRadio2").checked = true;
+                                }
+                                if(equipment === "No"){
+                                  document.getElementById("inlineRadio3").checked = true;
+                                }
+                              }
+                            </script>
+                          </div>
+                        </div>
+                    
+                    
+                        <div class="col-sm-1" style="padding-top:5px; text-align: center;">
+                          <!-- Billable -->
+                          <input class="form-check-input" type="checkbox" id="defaultCheck1" value="option2" onclick="getBillable()">
+                            <label class="form-check-label" for="defualtCheck1">Billable</label>
+                            <script>
+                              if(sessionStorage.getItem('billableStore') !== null){
+                                billCount = parseInt((sessionStorage.getItem('billableStore')),10);
+                                if(billCount%2 === 1){
+                                  document.getElementById('defaultCheck1').checked = true;
+                                  billable = "Yes";
+                                }
+                                if(billable%2 === 0){
+                                  document.getElementById('defaultCheck1').checked = false;
+                                  billable = "No";
+                                }
+                              }
+                            </script>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                </div>
 
                 <!-- Technicians -->
                 <div class="col-sm-12" id="techsasa" style="display:none;">
                   <!-- Entire unique technician section -->
                     <div class="form-group">
-                        <div class="row CmtDataArea">
+                      <div class="row CmtDataArea">
+                        <div class="col-sm-12">
                           <div class="col-sm-12">
-                            <div class="col-sm-12">
+                            <div class="d-flex justify-content-center">
                               <div class="d-flex justify-content-center">
-                                <div class="d-flex justify-content-center">
-                                  <!-- Buttons to change Tech Buttons -->
-                                  <button type="button" class="btn btn-light btn-sm" id="TechDaySum" onclick="autoFillTech()">Tech&nbsp;Day&nbsp;Summary</button>
-                                  <button type="button" class="btn btn-light btn-sm" id="NetWorkSum" onclick="autoFillNetwork()">Network&nbsp;TS&nbsp;Summary</button>
-                                  <button type="button" class="btn btn-light btn-sm" id="LowVoltSum" onclick="autoFillLV()">LV&nbsp;Summary</button>
-                                </div>
+                                <!-- Buttons to change Tech Buttons -->
+                                <button type="button" class="btn btn-light btn-sm" id="TechDaySum" onclick="autoFillTech()">Tech&nbsp;Day&nbsp;Summary</button>
+                                <button type="button" class="btn btn-light btn-sm" id="NetWorkSum" onclick="autoFillNetwork()">Network&nbsp;TS&nbsp;Summary</button>
+                                <button type="button" class="btn btn-light btn-sm" id="LowVoltSum" onclick="autoFillLV()">LV&nbsp;Summary</button>
                               </div>
                             </div>
                           </div>
                         </div>
+                      </div>
                     </div>
                     <!-- End technician section -->
                 </div>
@@ -814,7 +806,7 @@
                         <div class="col-sm-12">
                           <div class="d-flex justify-content-center">
                             <div class="d-flex justify-content-center">
-                              
+
                             </div>
                           </div>
                         </div>
@@ -826,48 +818,47 @@
 
 
                 <div class="col-sm-12" id="descriptionasa" style="display:none;">
-                    <div class="form-group">
-                        
-                        <!-- DESCRIPTION START -->
-                        <div class="row CmtDataArea">
-                            <div class="col-sm-12">
-                                <div class="col-sm-12">
-                                    <!-- Description -->
-                                    <label class="col-sm-1 control-label CmtEdit ">{%ctpcmbxxxcmbMemoLstDrfldslpdesc%}</label>
-                                    {%cmtedtdatafldslpdesc_cmttabindex15%}
-                                </div>
-                            </div>
+                  <div class="form-group">
+                    <!-- DESCRIPTION START -->
+                    <div class="row CmtDataArea">
+                      <div class="col-sm-12">
+                        <div class="col-sm-12">
+                          <!-- Description -->
+                          <label class="col-sm-1 control-label CmtEdit ">{%ctpcmbxxxcmbMemoLstDrfldslpdesc%}</label>
+                          {%cmtedtdatafldslpdesc_cmttabindex15%}
                         </div>
-              
-                        <div class="row CmtDataArea">
-                            <!-- Change by CommitCRM-->
-                            <div class="col-sm-6 CmtDisplayNone">
-                                <div class="form-group  ">
-                                    <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpuser1%}</label>
-                                    <div class="col-sm-8">
-                                        {%cmtedtdatafldslpuser1_cmttabindex16%}
-                                    </div>
-                                </div>                    
-                            </div>
-              
-                            <div class="col-sm-6">
-                                <div class="form-group  ">
-                                    <label class="col-sm-2 control-label CmtEdit ">&nbsp;</label>
-                                    <div class="col-sm-8">
-                                        {%cmtedtdataFLDSLPCLCBILLKIND_cmttabindex17%} {%cmtlbldataFLDSLPBILLKIND%}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- DESCRIPTION END -->
-                        <script>
-                          if(sessionStorage.getItem('descriptionStore') !== null){
-                            document.getElementById("cmtedtdatafldslpdesc").rows = "6";
-                            texto = sessionStorage.getItem('descriptionStore');
-                            $("#cmtedtdatafldslpdesc").val(texto);
-                          }
-                        </script>
+                      </div>
                     </div>
+              
+                    <div class="row CmtDataArea">
+                      <!-- Change by CommitCRM-->
+                      <div class="col-sm-6 CmtDisplayNone">
+                        <div class="form-group  ">
+                          <label class="col-sm-2 control-label CmtEdit ">{%cmtlbldescfldslpuser1%}</label>
+                          <div class="col-sm-8">
+                              {%cmtedtdatafldslpuser1_cmttabindex16%}
+                          </div>
+                        </div>                    
+                      </div>
+              
+                      <div class="col-sm-6">
+                        <div class="form-group  ">
+                          <label class="col-sm-2 control-label CmtEdit ">&nbsp;</label>
+                          <div class="col-sm-8">
+                              {%cmtedtdataFLDSLPCLCBILLKIND_cmttabindex17%} {%cmtlbldataFLDSLPBILLKIND%}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- DESCRIPTION END -->
+                    <script>
+                      if(sessionStorage.getItem('descriptionStore') !== null){
+                        document.getElementById("cmtedtdatafldslpdesc").rows = "6";
+                        texto = sessionStorage.getItem('descriptionStore');
+                        $("#cmtedtdatafldslpdesc").val(texto);
+                      }
+                    </script>
+                  </div>
                 </div>
 
                     </div>
@@ -876,9 +867,7 @@
 
                 <div class="row CmtDataArea">
                     
-                  </div>
-
-                <label></label>
+                </div>
 
                 </div>
             </div>                    
@@ -886,14 +875,12 @@
 
 <hr>
 
-<script>
-    if(sessionStorage.getItem('chosenJobStore') !== null){
-      chosenJob = parseInt((sessionStorage.getItem('chosenJobStore')),10);
-      buttonStart();
-    }
-  </script>
-
         <script>
+          if(sessionStorage.getItem('chosenJobStore') !== null){
+            chosenJob = parseInt((sessionStorage.getItem('chosenJobStore')),10);
+            buttonStart();
+          }
+        
           function newFrame(){
             $('<iframe>', {
               src: "http://192.168.1.100:4961",
@@ -933,8 +920,7 @@
                 CmtMakeCancel_slp(this);
               }
             </script>
-          </div>
-                  
+          </div> 
         </div>
 
       <div class="row CmtLineSpc"></div><div class="row CmtLineSpc"></div><div class="row CmtLineSpc"></div>
@@ -963,19 +949,15 @@
       </div>
     </div>
 
-
 <DIV ID="CmtGenSrNtSlct" class="ClsCmtGenLblDiv" style="border-width:1px;border-style:solid;border-color:#7f9db9;background-color:white;height:60px;width:243px;position:absolute;visibility:hidden;text-align:left;">
-
   <DIV ID="CmtDatdocNtSlct" style="height:60px;overflow:auto;">
     <table cellspacing="3" cellpadding="1" id="CmtGenSrNtSlctTBL" width="100%">
 
     </table>
   </div>
-
 </div>
 
  {%cmtlbldesctkteditfldGenLabels%}
-
 
 <!--cmmtBofRulesInx-->
 <!--                
