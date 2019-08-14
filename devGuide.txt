@@ -83,20 +83,13 @@ but not necessary based on how CommitCRM has built there software
 Most of these issues are not huge since there are errors from CommitCRM vanilla that mirror these
 That is why I did not tackle some of them
 
-1. If you click the save button (and it is not saveable) and refresh the page,
-   you will lose non-CommitCRM information (Quote#, billable, etc.)
-   This is due to this information being saved to session storage 
-   and the only way for it not to appear later is to eventually delete it 
-2. If you remove the ending part (i.e. /1z11qjg1vkgk8q1czndh80knm0dc/$)
+1. If you remove the ending part (i.e. /1z11qjg1vkgk8q1czndh80knm0dc/$)
    to start from the beginning, the information you had stored before appears
    This is due to the values still being stored to the session since the session wasn't ended
    Possible Solution: Might just need a remove session storage on the starting ticket page
-3. If the page is not saveable, you click save, and refresh the page
-   Usually the information to check the saveable button does not pull correctly
-   Usually is fixed with a re-click of the Item
-4. Not an issue but design problem
+2. Not an issue but design problem
    On refreshes everything kind-of bulk loads, should try to smoothen transitions
-5. Tab indexing, when pressing tab by going from end time to break length does not work properly
+3. Tab indexing, when pressing tab by going from end time to break length does not work properly
    Currently there is nothing you can do with this for web browsers
    The way going from box to box with pressing tab key is it jumps to the next div/box
    They are next to each other based on HTML code, but within backend/database probably not

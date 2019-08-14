@@ -31,14 +31,72 @@
         TimeEnd = $("#cmtedtdatafldslpendtime").val();
         HoursUnits = $("#cmtedtdatafldslpclcamount").val();
 
-        if((Account !== "") && (Contract !== "--- Select Value ---") && (Dateo !== "") && (Item !== "--- Select Value ---") && (TimeStart !== "") && (TimeEnd !== "") && (HoursUnits !== "")){
+        if((Account !== "") && (Account !== "Select Account...") && (Contract !== "--- Select Value ---") && (Contract !== "...") && (Dateo !== "") && (Item !== "--- Select Value ---") && (TimeStart !== "") && (TimeEnd !== "") && (HoursUnits !== "")){
+          document.getElementById("btnslpeditsave1").disabled = false;
           document.getElementById("successBTN").style.display = "block";
           document.getElementById("dangerBTN").style.display = "none";
         }
         else{
+          document.getElementById("btnslpeditsave1").disabled = true;
           document.getElementById("dangerBTN").style.display = "block";
           document.getElementById("successBTN").style.display = "none";
         }
+      }
+
+      var toolTipAmigo = "";
+      var missingAccount = "";
+      var missingContract = "";
+      var missingDate = "";
+      var missingItem = "";
+      var missingStart = "";
+      var missingEnd = "";
+      var missingHoursUnits = "";
+      function titleSetter(node){
+        pullInformation();
+        if((Account === "") || (Account === "Select Account...")){
+          missingAccount = " - Account";
+        }
+        else{
+          missingAccount = "";
+        }
+        if((Contract === "--- Select Value ---") || (Contract === "...")){
+          missingContract = " - Contract";
+        }
+        else{
+          missingContract = "";
+        }
+        if(Dateo === ""){
+          missingDate = " - Date";
+        }
+        else{
+          missingDate = "";
+        }
+        if(Item === "--- Select Value ---"){
+          missingItem = " - Item";
+        }
+        else{
+          missingItem = "";
+        }
+        if(TimeStart === ""){
+          missingStart = " - Start Time   ";
+        }
+        else{
+          missingStart = "";
+        }
+        if(TimeEnd === ""){
+          missingEnd = " - End Time";
+        }
+        else{
+          missingEnd = "";
+        }
+        if(HoursUnits === ""){
+          missingHoursUnits = " - Hours/Units";
+        }
+        else{
+          missingHoursUnits = "";
+        }
+        toolTipAmigo = "Missing Parts " + missingAccount + missingContract + missingDate + missingItem + missingStart + missingEnd + missingHoursUnits;
+        return toolTipAmigo;
       }
 
       function isSaveable(){
@@ -645,7 +703,15 @@
                           <button type="button" class="btn btn-success btn-block" id="successBTN" style="border-radius: 5px; display:none; border:0px;" disabled>Saveable</button>
                         </div>
                         <div class="col-sm-12">
-                          <button type="button" class="btn btn-danger btn-block" id="dangerBTN" style="border-radius: 5px; display:block;  border:0px;" disabled>NOT Saveable</button>
+                          <span class="tool-tip" data-toggle="tooltip1" data-placement="top">
+                            <button type="button" class="btn btn-danger btn-block" id="dangerBTN" data-placement="bottom" style="border-radius: 5px; display:block;  border:0px;" disabled>NOT Saveable</button>
+                          </span>
+
+                          <script>
+                            $('[data-toggle="tooltip1"]').tooltip({
+                              title: titleSetter
+                            });
+                          </script>
                         </div>
                       </div>
                     </div>
@@ -898,7 +964,15 @@
         <div class="row CmtDataArea">
           <div class="col-xs-6 col-sm-6">
             <div class="pull-right">
-              {%btnslpeditsave1%}
+              <span class="tool-tip" data-toggle="tooltip2" data-placement="top">
+                {%btnslpeditsave1%}
+              </span>
+              
+              <script>
+                $('[data-toggle="tooltip2"]').tooltip({
+                  title: titleSetter
+                });
+              </script>
             </div>
             <script>
               document.getElementById("btnslpeditsave1").onclick = function() {
