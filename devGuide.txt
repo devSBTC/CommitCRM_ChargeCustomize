@@ -96,6 +96,10 @@ That is why I did not tackle some of them
    Usually is fixed with a re-click of the Item
 4. Not an issue but design problem
    On refreshes everything kind-of bulk loads, should try to smoothen transitions
+5. Tab indexing, when pressing tab by going from end time to break length does not work properly
+   Currently there is nothing you can do with this for web browsers
+   The way going from box to box with pressing tab key is it jumps to the next div/box
+   They are next to each other based on HTML code, but within backend/database probably not
 
 
 ----------------------------------------------------------------------------------------------------
