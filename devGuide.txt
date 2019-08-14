@@ -108,7 +108,7 @@ That is why I did not tackle some of them
 USING THIS DESIGN
 
 To use these designs
-    version 1 --> versionTwo.html
+    version 1 --> versionOne.html
     version 2 --> versionTwo.html
 CommitCRM wants you to make a new file and name it slpedit22501customng1.html
 and then paste the code from that version into your new file.
